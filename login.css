@@ -8,28 +8,59 @@ body{
     padding-top: 3%;
 }
 
-form{
-    border: solid 2px black;
-    text-align: center;
-    width:65%;
-    height:70%;
-}
-
 .container{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
-.info label {
-    display: inline;
+
+form{
+    border: solid 2px black;
+    text-align: center;
+    width:65%;
+    height:70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.info{
+    width: 30%;
+    justify-content: center;
+    text-align: left;
+
+}
+#esqueceu{
+    float: right;
+    margin-top: 2%;
+}
+
+
+.info>label {
+    display: block;
     
 }
 .info>input {
     margin-bottom: 2%;
-    width: 30%;
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 25%;
 }
 
 .info>button{
-   margin-right: 30%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 25%;
+    width: 35%;
+    margin-top: 2%;
+    transition-duration: 0.5s;
+
 }
+
+.info>button:hover{
+    background-color: #6892d3;
+}
+
