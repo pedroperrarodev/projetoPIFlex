@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.imgLogin{
+    padding-top: 3%;
+}
+
+form{
+    border: solid 2px black;
+    text-align: center;
+    width:65%;
+    height:70%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.info label {
+    display: inline;
+    
+}
+.info>input {
+    margin-bottom: 2%;
+    width: 30%;
+}
+
+.info>button{
+   margin-right: 30%;
+}
