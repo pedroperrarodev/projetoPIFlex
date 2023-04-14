@@ -1,0 +1,80 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+/* HEADER CABEÇALHO E LOGO                 */
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    justify-content: space-evenly;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 180px;
+    background-color: whitesmoke;
+}
+
+header img{
+    width: 384px;
+    height: 184px;
+}
+
+header button{
+    width: 5vw;
+    height: 5vh;
+    border-radius: 15px;
+    background-color: rgb(23, 145, 200);
+    margin-right: 30px;
+    margin-bottom: 80px;
+    padding: 15px;
+    align-items: center;
+}
+
+/* SIDE BAR OU MENU DE NAVEGAÇÃO                                  */
+.menu{
+    border-radius: 10px;
+    width: 12vw;
+    height: 70vh;
+    background-color: rgb(240, 240, 240);
+    margin: 5px;
+}
+
+.sobre{
+    padding-top: 20px;
+    padding-left: 8px;
+}
+
+.sobre h1{
+    font-size: 22px;
+}
+
+.sobre p{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.sidebar div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 25px;
+    height: 9vh;
+}
+.sidebar button{
+    background-color: lightskyblue;
+    width: 110px;
+    height: 40px;
+    border-radius: 12px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid black;
+    border-left: 0px;
+}
