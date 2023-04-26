@@ -47,13 +47,13 @@ form{
     width: 100%;
     background-color: white;
     border: 1px solid black;
-    border-radius: 25%;
+    border-radius: 5%;
 }
 
 .info>button{
     background-color: white;
     border: 1px solid black;
-    border-radius: 25%;
+    border-radius:      5%;
     width: 35%;
     margin-top: 2%;
     transition-duration: 0.5s;
