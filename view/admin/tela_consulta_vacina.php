@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/tela_profile.css">
     <link rel="stylesheet" type="text/css" href="../css/corpo.css">
     <link rel="stylesheet" type="text/css" href="../css/table_posto.css">
+    <script src="../../static/js/jquery-3.6.4.min.js"></script> 
     <script type="text/javascript">
 			function excluir(id){
 				retorno = confirm("Tem certeza que deseja excluir o ID="+id+" ?")

@@ -4,6 +4,7 @@
 
     class admin{
        
+        private $id;
         private $nome_completo;
         private $razao_social;
         private $cnpj;
@@ -153,7 +154,7 @@
 
         public function deletar_vacina($id)
         {
-            $db = new Database();
+            $db = new database();
             $con = $db->connect();
     
             $sql = "DELETE FROM vacina WHERE id = :id";
