@@ -1,0 +1,55 @@
+input[type=text],input[type=password]{
+   width: 100%;
+   background-color: #f1f1f1;
+   padding: 15px;
+   margin: 5px 0 22px 0;
+   display: inline-block;
+   border: none;
+   box-sizing: border-box;
+   
+}
+
+.container {   
+   margin-top: 10%;
+   margin-left: 25%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 50%;  
+
+}
+
+.img_container {
+
+   padding-top: 2% ;
+   padding-bottom: 2% ;
+}
+
+.div_cpf {
+   width: 60%;
+}
+
+.div_senha {
+   width: 60%; 
+}
+
+.div_botao_login{
+   width: 60%;
+}
+
+#botao_login{
+
+   width: 100%;
+   color: white;
+   background-color: #04AA6D;
+   padding: 14px 20px;
+   border: none;
+   cursor: pointer;
+   margin-bottom: 10%;
+   align-items: center; 
+   
+
+}
+
+
+
