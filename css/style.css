@@ -5,8 +5,11 @@
     text-decoration: none;
 }
 
-.main{
+#main{
     display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
 /* HEADER CABEÇALHO E LOGO                 */
@@ -45,7 +48,7 @@ header button{
 /* SIDE BAR OU MENU DE NAVEGAÇÃO                                  */
 .menu{
     border-radius: 10px;
-    width: 12vw;
+    width: 14vw;
     height: 70vh;
     background-color: rgb(240, 240, 240);
     margin: 5px;
@@ -172,6 +175,11 @@ input[type=text], input[type=password] {
 /*____________________  CADASTRO PESSOAL ____________________*/
 
 
+.containercadastro{
+    width: 84vw;
+    display: flex;
+    padding-top: 15px;
+}
 
 /*____________________               ____________________*/
 
