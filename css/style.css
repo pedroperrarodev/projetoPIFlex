@@ -90,26 +90,6 @@ header button{
 }
 
 
-
-/*___________________________________CSS CADASTRO___________________________________*/
-
-
-.bodycadastro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.maincadastro{
-    display: flex;
-    width: 30vw;    
-    align-items: center;
-    justify-content: center;
-    padding: 5% 3% 5% 3%;
-}
-
-
 /*     w3 codigo         */
 
 

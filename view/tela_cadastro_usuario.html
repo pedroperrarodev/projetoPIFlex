@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/cadastro.css">
     
     <title>Tela de cadastro</title>
 </head>
@@ -13,34 +13,40 @@
         <div class="maincadastro">
             <div class="telacadastro">
                 <a><img src=""></img></a>
-                <form action="/action_page.php">
+                <form action="/action_page.php" method="post">
                     <div class="formulariocadastro">
                       <h1>Criar conta</h1>
                       <p>Por favor preencha o formulário para criar a conta.</p>
                       <hr>
-                  
-                      <label for="email"><b>Email</b></label>
-                      <input type="text" placeholder="Insira o Email" name="email" id="email" required>
+
+                      <label for="email"><b>Nome Completo</b></label>
+                      <input type="text" placeholder="Insira o Nome Completo" name="nome" id="nome" required>
                       
                       <label for="email"><b>CPF</b></label>
-                      <input type="text" placeholder="Insira seu CPF" name="email" id="email" required>
+                      <input type="text" placeholder="Insira seu CPF" name="cpf" id="cpf" required>
+                      
+                      <label for="email"><b>CEP</b></label>
+                      <input type="text" placeholder="Insira o CEP" name="cep" id="cep" required>
                       
                       <label for="email"><b>Número de Telefone</b></label>
-                      <input type="text" placeholder="Insira o Número de Telefone" name="email" id="email" required>
+                      <input type="text" placeholder="Insira o Número de Telefone" name="num_telefone" id="num_telefone" required>
+
+                      <label for="email"><b>Email</b></label>
+                      <input type="text" placeholder="Insira o Email" name="email" id="email" required>
                   
                       <label for="psw"><b>Senha</b></label>
-                      <input type="password" placeholder="Digita sua senha" name="psw" id="psw" required>
+                      <input type="password" placeholder="Digita sua Senha" name="senha" id="senha" required>
                   
                       <label for="psw-repeat"><b>Confirmar Senha</b></label>
-                      <input type="password" placeholder="Repita sua senha" name="psw-repeat" id="psw-repeat" required>
+                      <input type="password" placeholder="Repita sua Senha" name="conf_senha" id="conf_senha" required>
                       <hr>
                       <p>Criando sua conta você aceita com nossos <a href="#">Termos & Privacidade</a>.</p>
                   
-                      <button type="submit" class="registerbtn">Registar</button>
+                      <button type="submit" class="botao_registrar">Registar</button>
                     </div>
                     
                     <div class="container signin">
-                      <p>Já possui uma conta? <a href="#">Sign in</a>.</p>
+                      <p>Já possui uma conta? <a href="tela_login.html">Entrar</a>.</p>
                     </div>
                   </form>
             </div>
