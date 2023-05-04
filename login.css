@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.imgLogin{
+    padding-top: 3%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form{
+    border: solid 2px black;
+    text-align: center;
+    width:65%;
+    height:70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.info{
+    width: 30%;
+    justify-content: center;
+    text-align: left;
+
+}
+#esqueceu{
+    float: right;
+    margin-top: 2%;
+}
+
+
+.info>label {
+    display: block;
+    
+}
+.info>input {
+    margin-bottom: 2%;
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.info>button{
+    background-color: white;
+    border: 1px solid black;
+    border-radius:      5%;
+    width: 35%;
+    margin-top: 2%;
+    transition-duration: 0.5s;
+
+}
+
+.info>button:hover{
+    background-color: #6892d3;
+}
+

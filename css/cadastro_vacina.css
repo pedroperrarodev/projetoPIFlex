@@ -44,7 +44,6 @@ header button{
     padding: 15px;
     align-items: center;
 }
-
 /* SIDE BAR OU MENU DE NAVEGAÇÃO                                  */
 .menu{
     border-radius: 10px;
@@ -89,10 +88,6 @@ header button{
     border-left: 0px;
 }
 
-
-/*     w3 codigo         */
-
-
 .formulariocadastro {
     padding: 10px;
     background-color: white;
@@ -128,7 +123,6 @@ input[type=text], input[type=password] {
     margin-bottom: 25px;
   }
   
-  /* Set a style for the submit button */
   .registerbtn {
     background-color: #04aaa5;
     color: white;
@@ -144,20 +138,16 @@ input[type=text], input[type=password] {
     opacity: 1;
   }
   
-  /* Add a blue text color to links */
   a {
     color: dodgerblue;
   }
   
-  /* Set a grey background color and center the text of the "sign in" section */
   .signin {
     background-color: #f1f1f1;
     text-align: center;
   }
 
-
-/*____________________  CADASTRO PESSOAL ____________________*/
-
+  /*____________________  CADASTRO PESSOAL ____________________*/
 
 .containercadastro{
     width: 84vw;
@@ -165,7 +155,3 @@ input[type=text], input[type=password] {
     padding-top: 2%;
     justify-content: center;
 }
-
-/*____________________               ____________________*/
-
-
