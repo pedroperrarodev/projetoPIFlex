@@ -1,6 +1,5 @@
 /*___________________________________CSS CADASTRO___________________________________*/
 
-
 .bodycadastro{
     display: flex;
     justify-content: center;
@@ -16,7 +15,6 @@
     padding: 5% 3% 5% 3%;
 }
 
-
 input[type=text], input[type=password] {
     width: 100%;
     padding: 15px;
@@ -25,20 +23,20 @@ input[type=text], input[type=password] {
     border: none;
     background: #f1f1f1;
     box-sizing: border-box;
-  }
+}
 
-  input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;
   }
   
-  hr {
+hr {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
-  }
+}
   
   /* Set a style for the submit button */
-  .botao_registrar {
+.botao_registrar {
     background-color: #04aaa5;
     color: white;
     padding: 16px 20px;
@@ -47,8 +45,14 @@ input[type=text], input[type=password] {
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
-  }
+}
 
-  .botao_registrar:hover {
+.botao_registrar:hover {
     opacity: 1;
-  }
+}
+
+.tem_cadastro{
+  display: flex;
+  flex-direction: row;
+
+}

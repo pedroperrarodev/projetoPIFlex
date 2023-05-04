@@ -2,16 +2,13 @@
 
 CREATE DATABASE projeto_pi;
 
-CREATE TABLE admin {
-    id int auto_increment primary key,
-    login varchar(100),
-    senha varchar(100)
-};
-
 CREATE TABLE usuario {
+
     id int auto_increment primary key,
     
-    nome_completo varchar(250),
+    nome varchar(250),
+
+    sobrenome varchar(250),
 
     CPF varchar(13),
 
@@ -21,10 +18,31 @@ CREATE TABLE usuario {
 
     email varchar(100),
 
-    senha(250)
+    senha(250),
+
+    perfil int,
+
+    //botar em uma funcao, buscar se é admin ou user....
+    //1 vai ser admin e 2 usuario normal...
+    usar em um if
 };
 
 
+CREATE TABLE vacina{
+
+}
+
+CREATE TABLE vacina_usuario{
+
+    id user
+    id vacina
+    id posto
+}
+
+CREATE TABLE posto_vacinacao{
+
+
+}
 
 
 
