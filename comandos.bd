@@ -5,21 +5,13 @@ CREATE DATABASE projeto_pi;
 CREATE TABLE usuario {
 
     id int auto_increment primary key,
-    
     nome varchar(250),
-
     sobrenome varchar(250),
-
     CPF varchar(13) UNIQUE,
-
     CEP varchar(11),
-
     num_telefone varchar(15),
-
     email varchar(100),
-
     senha(250),
-
     perfil int,
 
     //botar em uma funcao, buscar se é admin ou user....
