@@ -10,7 +10,7 @@ CREATE TABLE usuario {
 
     sobrenome varchar(250),
 
-    CPF varchar(13),
+    CPF varchar(13) UNIQUE,
 
     CEP varchar(11),
 
