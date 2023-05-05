@@ -30,6 +30,11 @@ CREATE TABLE usuario {
 
 CREATE TABLE vacina{
 
+    id int primary key auto_increment,
+    nome varchar(250),
+    fabricante varchar(250),
+    doenca_alvo varchar(250)
+
 }
 
 CREATE TABLE vacina_usuario{
@@ -40,6 +45,14 @@ CREATE TABLE vacina_usuario{
 }
 
 CREATE TABLE posto_vacinacao{
+
+    id int primary key auto_increment,
+    nome_ponto varchar(250),
+    cnpj int UNIQUE,
+    rua varchar(250),
+    cidade varchar(250),
+    bairro varchar(250),
+    numero int(100)
 
 
 }
