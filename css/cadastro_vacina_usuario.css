@@ -9,7 +9,6 @@
 #main{
     display: flex;
     width: 100vw;
-    justify-content: space-between;
     min-height: 100vh;
 }
 
@@ -61,8 +60,9 @@ header img{
 .sidebar div{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     padding-left: 25px;
-    height: 9vh;
+    height: auto;
 }
 
 /* MENU ATIVO */
@@ -95,19 +95,19 @@ header img{
 
 
 .botaosair{
-  padding: 1%;
+    padding: 1%;
 }
 
 .noselect {
-  -webkit-touch-callout: none;
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-		-webkit-tap-highlight-color: transparent;
-
-
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    
+    
     width: 150px;
     height: 50px;
     cursor: pointer;
@@ -163,16 +163,10 @@ header img{
 .botaosair button:focus {
 	outline: none;
 }
+/*                  CONFIGURAÇÕES GERAIS                 */
 
 
-
-
-
-
-
-
-
-
+/*                  CONFIGURAÇÕES DA PAGINA                 */
 
 
 /*     w3 codigo         */
@@ -208,12 +202,11 @@ input[type=text], input[type=password] {
   /* ALTERAR PARA ESTÉTICA DE PAGINAÇÃO ESPECIFICA*/
 
   
-  hr {
+/*   hr {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
   }
-  
-  /* Set a style for the submit button */
+
   .registerbtn {
     background-color: #04aaa5;
     color: white;
@@ -224,103 +217,57 @@ input[type=text], input[type=password] {
     width: 100%;
     opacity: 0.9;
   }
-
   .registerbtn:hover {
     opacity: 1;
   }
   
-  /* Add a blue text color to links */
   a {
     color: dodgerblue;
   }
   
-  /* Set a grey background color and center the text of the "sign in" section */
   .signin {
     background-color: #f1f1f1;
     text-align: center;
-  }
+  } */
 
 
-/*____________________  CADASTRO PESSOAL ____________________*/
 
-
-.containerprofile1{
-  background-color: whitesmoke;
-    width: 40vw;
+  .containercadastro{
+    width: 70vw;
     display: flex;
-    flex-direction: column;
-    /* padding-top: 2%; */
-    padding: 4% 5% 4% 5%;
+    padding-top: 2%;
     justify-content: start;
-    /* justify-content: space-between; */
-}
-.containerprofile2{
-    background-color: whitesmoke;
-    width: 40vw;
-    display: flex;
-    /* padding-top: 2%; */
-    padding: 4% 5% 4% 5%;
-    justify-content: end;
-    /* justify-content: space-between; */
 }
 
 
-/*____________________  PÁGINA DE PERFIL             ____________________*/
-
-.containerprofile2 img{
-    width: 90px;
-    display: flex;
-}
-.containerprofile2 h3{
-    display: flex;
-    
-}
-
-#campopesquisa{
-    width: 80%;
-    height: 25px;
-}
-
-#tabelavacinas{
-    display: flex;
-    /* width: 75%; */
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-  #tabelavacinas td, #tabelavacinas th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-
-#tabelavacinas tr:nth-child(even){background-color: #f2f2f2;}
-
-#tabelavacinas tr:hover {background-color: #ddd;}
-
-#tabelavacinas th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
+.botao_registrar {
     background-color: #04aaa5;
     color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
   }
-
-
-#iconeconfig{
+  
+  .botao_voltar{
+    background-color: black;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .botao_registrar:hover {
+    opacity: 1;
+  }
+  
+  .tem_cadastro{
   display: flex;
-  width: 30px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+  flex-direction: row;
+  
+  }

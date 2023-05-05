@@ -160,10 +160,10 @@ input[type=text], input[type=password] {
 
 
 .containercadastro{
-    width: 84vw;
+    width: 50vw;
     display: flex;
     padding-top: 2%;
-    justify-content: center;
+    justify-content: start;
 }
 
 /*____________________               ____________________*/
