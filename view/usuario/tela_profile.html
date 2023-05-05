@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <HEAD:view/usuario/index.html></HEAD:view>
+    <link rel="stylesheet" type="text/css" href="../../css/tela_profile.css">
+
+    <title>Cadastro de Vacinas</title>
+</head>
+<body>  
+    <header>
+        <div id="logo">
+            <a><img src="../../img/Horizontal Logo Projeto PI fundo transp.png"></a>
+        </div>
+        <button>Sair</button>
+    </header>
+
+    <div id="main">
+        <div class="menu">
+            <div class="sidebar">
+                <div>
+                    <a><button>Perfil</button></a>
+                </div>
+                <div>
+                    <button>Menu 2</button>
+                </div>
+                <div>
+                    <button>Menu 3</button>
+                </div>
+                <div>
+                    <button>Menu 4</button>
+                </div>
+            </div>
+            <div class="sobre">
+                <h3>Sobre</h3>
+                <p>Sistema criado por meros mortais querendo ser deuses</p>
+
+            </div>
+
+        </div>
+
+       <div class="containerprofile1">
+        <div>
+            <form name="cadastro_vacinas" action="grava_cadastrovacina.php" method="POST" enctype="multipart/form-data">
+                <h2>Seu cartão de vacinas.</h2><!-- <br> -->
+                <div class="div_form">
+                    <p>Informações do banco de dados do usuario</p>
+                    <input id="campopesquisa" type="text" placeholder="Pesquise">
+                </div>
+            </form>
+        </div>
+           
+            <table id= "tabelavacinas">
+                <tr>
+                    <th>Id</th>
+                    <th>Numero da Matricula</th>
+                    <th>Nome Completo</th>
+                    <th>Data Nascimento</th>
+                    <th>Data Contratação</th>
+                </tr>
+                <!--<?php
+                    for ($i=0; $i<sizeof($dados); $i++){
+                        echo "<tr>";
+                        echo "<td>".$dados[$i]["id"]."</td>";
+                        echo "<td>".$dados[$i]["no_matricula"]."</td>";
+                        echo "<td>".$dados[$i]["nome"]. " ".$dados[$i]["sobrenome"]."</td>";
+                        echo "<td>".$dados[$i]["data_nascimento"]."</td>";
+                        echo "<td>".$dados[$i]["data_contratacao"]."</td>";
+                        echo "</tr>";
+                    }
+                    ?> -->
+            </table>
+            
+       </div>
+       <div class="containerprofile2">
+        <div>
+            <a><img src="../../img/profileicon.png"></a><br>
+            <h3>Bem vindo</h3>
+            <p>Nome de profile</p>
+            <p>Informações de profile</p>
+            
+        </div>
+        <a><button>Configurações</button></a>
+
+
+       </div>
+
+    </div>
+    
+</body>
+</html>
