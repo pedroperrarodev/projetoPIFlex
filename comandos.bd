@@ -5,21 +5,13 @@ CREATE DATABASE projeto_pi;
 CREATE TABLE usuario {
 
     id int auto_increment primary key,
-    
     nome varchar(250),
-
     sobrenome varchar(250),
-
-    CPF varchar(13),
-
+    CPF varchar(13) UNIQUE,
     CEP varchar(11),
-
     num_telefone varchar(15),
-
     email varchar(100),
-
     senha(250),
-
     perfil int,
 
     //botar em uma funcao, buscar se é admin ou user....
@@ -46,6 +38,14 @@ CREATE TABLE vacina_usuario{
 
 CREATE TABLE posto_vacinacao{
 
+    id int primary key auto_increment,
+    nome_ponto varchar(250),
+    cnpj int UNIQUE,
+    rua varchar(250),
+    cidade varchar(250),
+    bairro varchar(250),
+    numero int(100)
+
 
 }
 
@@ -69,4 +69,3 @@ create table vacinas(id int auto_increment, nomevacina VARCHAR(250), local VARCH
 
 
 
- 
