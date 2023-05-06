@@ -10,6 +10,7 @@
     display: flex;
     width: 100vw;
     min-height: 100vh;
+    background-color: whitesmoke;
 }
 
 /* HEADER CABEÇALHO E LOGO                 */
@@ -163,10 +164,6 @@ header img{
 .botaosair button:focus {
 	outline: none;
 }
-/*                  CONFIGURAÇÕES GERAIS                 */
-
-
-/*                  CONFIGURAÇÕES DA PAGINA                 */
 
 
 /*     w3 codigo         */
@@ -202,41 +199,16 @@ input[type=text], input[type=password] {
   /* ALTERAR PARA ESTÉTICA DE PAGINAÇÃO ESPECIFICA*/
 
   
-/*   hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
 
-  .registerbtn {
-    background-color: #04aaa5;
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
-  .registerbtn:hover {
-    opacity: 1;
-  }
-  
-  a {
-    color: dodgerblue;
-  }
-  
-  .signin {
-    background-color: #f1f1f1;
-    text-align: center;
-  } */
 
 
 
   .containercadastro{
-    width: 70vw;
+    width: 100vw;
     display: flex;
-    padding-top: 2%;
-    justify-content: start;
+    padding-top: 3%;
+    padding-left: 28%;
+    /* justify-content: center; */
 }
 
 
@@ -271,3 +243,4 @@ input[type=text], input[type=password] {
   flex-direction: row;
   
   }
+

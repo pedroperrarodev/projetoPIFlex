@@ -26,8 +26,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 17vh;
-    background-color: whitesmoke;
+    height: 14vh;
     background-color: #04aaa5;
 }
 
@@ -40,8 +39,7 @@ header img{
 /* SIDE BAR OU MENU DE NAVEGAÇÃO                                  */
 .menu{
     width: 10vw;
-    height: 70vh;
-    background-color: whitesmoke;
+    height: 100vh;
     background-color: #04aaa5;
 }
 

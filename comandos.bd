@@ -29,8 +29,13 @@ CREATE TABLE usuario {
 
 
 CREATE TABLE vacina{
-
-}
+    id int auto_increment primary key,
+    nome_vacina varchar(250),
+    local varchar(250),
+    fabricante varchar(250),
+    lote varchar(250),
+    
+};
 
 CREATE TABLE vacina_usuario{
 
@@ -46,3 +51,22 @@ CREATE TABLE posto_vacinacao{
 
 
 
+
+
+
+CRIAR TABELA VACINAS 
+
+create table vacinas(id int auto_increment, nomevacina VARCHAR(250), local VARCHAR(250), fabricante VARCHAR(250),
+ lote VARCHAR(150), PRIMARY KEY (id));
+
+
+ EXEMPLO DE VACINA FICTICIA 
+
+
+ insert into vacinas (nomevacina, local, fabricante, lote) values ("Vacina influenza trivalente", "sao leopoldo", "fabricante 1", "001");
+
+ insert into vacinas (nomevacina, local, fabricante, lote) values ("Vacina ficticia 2", "novo hamburgo", "fabricante 2", "003");
+
+
+
+ 
