@@ -13,11 +13,11 @@ CREATE TABLE usuario {
     email varchar(100),
     senha(250),
     perfil int,
+};
 
     //botar em uma funcao, buscar se é admin ou user....
     //1 vai ser admin e 2 usuario normal...
     usar em um if
-};
 
 
 CREATE TABLE vacina{

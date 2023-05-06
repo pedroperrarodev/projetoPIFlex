@@ -1,7 +1,8 @@
 <?php
+
     require_once ("../infra/database.php");
 
-    class usuario{
+    class admin{
        
         private $nome_completo;
         private $cpf;
@@ -34,5 +35,4 @@
 
         
     }
-
 ?>
