@@ -13,48 +13,43 @@
         <div class="maincadastro">
             <div class="telacadastro">
                 <a><img src=""></img></a>
-                <form action="/action_page.php" method="post">
+                <form action="../controller/usuario_controller.php" method="POST">
                     <div class="formulariocadastro">
                       <h1>Criar conta</h1>
                       <p>Por favor preencha o formulário para criar a conta.</p>
                       <hr>
 
-                      <label for="email"><b>Nome Completo</b></label>
-                      <input type="text" placeholder="Insira o Nome Completo" name="nome" id="nome" required>
+                      <label for="nome_completo"><b>Nome Completo</b></label>
+                      <input type="text" placeholder="Insira o Nome Completo" name="nome_completo" id="nome"/>
                       
-                      <label for="email"><b>CPF</b></label>
-                      <input type="text" placeholder="Insira seu CPF" name="cpf" id="cpf" required>
+                      <label for="cpf"><b>CPF</b></label>
+                      <input type="text" placeholder="Insira seu CPF" name="cpf" id="cpf"/>
                       
-                      <label for="email"><b>Rua</b></label>
-                      <input type="text" placeholder="Insira a Rua" name="rua" id="rua" required>
+                      <label for="rua"><b>Rua</b></label>
+                      <input type="text" placeholder="Insira a Rua" name="rua" id="rua"/>
 
-                      <label for="email"><b>Bairro</b></label>
-                      <input type="text" placeholder="Insira o Bairro" name="bairro" id="bairro" required>
+                      <label for="bairro"><b>Bairro</b></label>
+                      <input type="text" placeholder="Insira o Bairro" name="bairro" id="bairro"/>
 
-                      <label for="email"><b>Cidade</b></label>
-                      <input type="text" placeholder="Insira a cidade " name="cidade" id="cidade" required>
+                      <label for="cidade"><b>Cidade</b></label>
+                      <input type="text" placeholder="Insira a cidade " name="cidade" id="cidade"/>
 
-                      <label for="email"><b>Número</b></label>
-                      <input type="text" placeholder="Insira o Número da Casa" name="num_casa" id="num_casa" required>
+                      <label for="numero"><b>Número</b></label>
+                      <input type="text" placeholder="Insira o Número da Casa" name="numero" id="numero"/>
                       
-                      <label for="email"><b>Número de Telefone</b></label>
-                      <input type="text" placeholder="Insira o Número de Telefone" name="num_telefone" id="num_telefone" required>
+                      <label for="num_telefone"><b>Número de Telefone</b></label>
+                      <input type="text" placeholder="Insira o Número de Telefone" name="num_telefone" id="num_telefone"/>
 
                       <label for="email"><b>Email</b></label>
-                      <input type="text" placeholder="Insira o Email" name="email" id="email" required>
+                      <input type="text" placeholder="Insira o Email" name="email" id="email"/>
                   
-                      <label for="psw"><b>Senha</b></label>
-                      <input type="password" placeholder="Digita sua Senha" name="senha" id="senha" required>
+                      <label for="senha"><b>Senha</b></label>
+                      <input type="password" placeholder="Digita sua Senha" name="senha" id="senha"/>
                   
-                      <label for="psw-repeat"><b>Confirmar Senha</b></label>
-                      <input type="password" placeholder="Repita sua Senha" name="conf_senha" id="conf_senha" required>
-                      Sexo: 
-                      <input type="radio" name="sexo" value="lote" id="homem">
-                      <label for="homem">Homem</label>
-                      <input type="radio" name="sexo" value="Apartamento" id="mulher">
-                      <label for="mulher">Mulher</label>
+                      <label for="conf_senha"><b>Confirmar Senha</b></label>
+                      <input type="password" placeholder="Repita sua Senha" name="conf_senha" id="conf_senha"/>
                       <hr>
-                      <button type="submit" class="botao_registrar">Registar</button>
+                      <button type="submit" class="botao_registrar">Cadastrar</button>
                     </div>
                     
                     <div class="container signin">
