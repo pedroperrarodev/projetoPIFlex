@@ -32,7 +32,7 @@
             $con = $db->connect();
 
             $sql = "INSERT INTO adm_e_usuario(nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email, senha, perfil) 
-            VALUES(:nome_completo, :cpf, :rua, :bairro, :cidade, :numero, :num_telefone, :email, :senha,:perfil = 2)";
+            VALUES(:nome_completo, :cpf, :rua, :bairro, :cidade, :numero, :num_telefone, :email, :senha,:perfil)";
 
             $st = $con->prepare($sql);
             $st->bindParam(':nome_completo', $this->nome_completo);
@@ -44,6 +44,7 @@
             $st->bindParam(':num_telefone', $this->num_telefone);
             $st->bindParam(':email', $this->email);
             $st->bindParam(':senha', $this->senha);
+            $st->bindParam(':perfil', 2);
             $status = $st->execute();
 
             $idUsuario = $con->lastInsertId();

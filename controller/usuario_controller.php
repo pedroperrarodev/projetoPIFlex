@@ -6,6 +6,9 @@
 
         public function execute($post, $get){
             $acao = $get['acao'];
+
+            echo "antes do banco";
+            
             if($acao == "cadastrar"){
                 $usuario = new usuario();
 
@@ -43,6 +46,8 @@
                     if ($senha == $confirmar_senha){
                         $senha_hash = hash("sha3-256", $senha);
                         $usuario->__set("senha", $senha_hash);
+
+                        
                        
                         if($usuario->cadastrar() == true){
                             echo "Usuario Cadastrado com Sucesso!";
@@ -57,5 +62,8 @@
     }
 
 }
+
+    $controller = new usuario_controller();
+    $controller->execute($_POST, $_GET);
 
 ?>
