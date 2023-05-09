@@ -2,52 +2,52 @@
 
 CREATE DATABASE projeto_pi;
 
-CREATE TABLE usuario {
+CREATE TABLE adm_e_usuario (
 
     id int auto_increment primary key,
-    nome varchar(250),
-    sobrenome varchar(250),
-    CPF varchar(13) UNIQUE,
-    CEP varchar(11),
-    num_telefone varchar(15),
-    email varchar(100),
-    senha(250),
-    perfil int,
+    nome_completo varchar(250) not null,
+    cpf varchar(14) UNIQUE not null,
+    rua varchar(250) not null,
+    bairro varchar(250) not null, 
+    cidade varchar(250) not null,
+    numero varchar(6) not null,
+    num_telefone varchar(15) not null,
+    email varchar(100) not null,
+    senha varchar(250) not null,
+    perfil int not null 
+);
 
     //botar em uma funcao, buscar se é admin ou user....
     //1 vai ser admin e 2 usuario normal...
     usar em um if
-};
 
 
-CREATE TABLE vacina{
+CREATE TABLE vacina(
     id int auto_increment primary key,
     nome_vacina varchar(250),
     local varchar(250),
-    fabricante varchar(250),
-    lote varchar(250),
-    
-};
+    fabricante varchar(250)
+);
 
-CREATE TABLE vacina_usuario{
+CREATE TABLE posto_vacinacao(
+
+    id int primary key auto_increment,
+    nome_posto varchar(250),
+    cnpj varchar(16) UNIQUE,
+    rua varchar(200),
+    cidade varchar(250),
+    bairro varchar(200),
+    numero int(100)
+);
+
+CREATE TABLE vacina_usuario(
 
     id user
     id vacina
     id posto
-}
-
-CREATE TABLE posto_vacinacao{
-
-    id int primary key auto_increment,
-    nome_ponto varchar(250),
-    cnpj int UNIQUE,
-    rua varchar(250),
-    cidade varchar(250),
-    bairro varchar(250),
-    numero int(100)
+);
 
 
-}
 
 
 

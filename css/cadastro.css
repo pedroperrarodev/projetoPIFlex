@@ -51,6 +51,17 @@ hr {
     opacity: 1;
 }
 
+.botao_voltar{
+    background-color: black;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
 .tem_cadastro{
   display: flex;
   flex-direction: row;
