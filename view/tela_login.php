@@ -25,7 +25,7 @@
       </div>
       <div class="tem_cadastro">
         <label for="ja_tem_cadastro">Ja possui cadastro? Caso não, <a
-            href="tela_cadastro_usuario.html">Cadastre-se aqui</a></label>
+            href="tela_cadastro_usuario.php">Cadastre-se aqui</a></label>
       </div>
 
     </div>

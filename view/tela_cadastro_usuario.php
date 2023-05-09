@@ -4,59 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../css/cadastro.css">
+    <link rel="stylesheet" type="text/css" href="../css/cadastro.css">
     
-    <title>Tela de admin</title>
+    <title>Tela de cadastro</title>
 </head>
 <body>
     <div class="bodycadastro">
         <div class="maincadastro">
             <div class="telacadastro">
                 <a><img src=""></img></a>
-                <form action="/action_page.php" method="post">
+                <form action="../controller/usuario_controller.php?acao=cadastrar" method="POST">
                     <div class="formulariocadastro">
-                      <h1>Cadastre um novo admin</h1>
-                      <p>Por favor preencha o formulário para cadastrar um novo administrador.</p>
+                      <h1>Criar conta</h1>
+                      <p>Por favor preencha o formulário para criar a conta.</p>
                       <hr>
 
-                      <label for="email"><b>Nome Completo</b></label>
-                      <input type="text" placeholder="Insira o Nome Completo" name="nome" id="nome">
+                      <label for="nome_completo"><b>Nome Completo</b></label>
+                      <input type="text" placeholder="Insira o Nome Completo" name="nome_completo" id="nome">
                       
-                      <label for="email"><b>CPF</b></label>
+                      <label for="cpf"><b>CPF</b></label>
                       <input type="text" placeholder="Insira seu CPF" name="cpf" id="cpf">
                       
-                      <label for="email"><b>Rua</b></label>
+                      <label for="rua"><b>Rua</b></label>
                       <input type="text" placeholder="Insira a Rua" name="rua" id="rua">
 
-                      <label for="email"><b>Bairro</b></label>
+                      <label for="bairro"><b>Bairro</b></label>
                       <input type="text" placeholder="Insira o Bairro" name="bairro" id="bairro">
 
-                      <label for="email"><b>Cidade</b></label>
+                      <label for="cidade"><b>Cidade</b></label>
                       <input type="text" placeholder="Insira a cidade " name="cidade" id="cidade">
 
-                      <label for="email"><b>Número</b></label>
-                      <input type="text" placeholder="Insira o Número da Casa" name="num_casa" id="num_casa">
+                      <label for="numero"><b>Número</b></label>
+                      <input type="text" placeholder="Insira o Número da Casa" name="numero" id="numero">
                       
-                      <label for="email"><b>Número de Telefone</b></label>
+                      <label for="num_telefone"><b>Número de Telefone</b></label>
                       <input type="text" placeholder="Insira o Número de Telefone" name="num_telefone" id="num_telefone">
 
                       <label for="email"><b>Email</b></label>
                       <input type="text" placeholder="Insira o Email" name="email" id="email">
                   
-                      <label for="psw"><b>Senha</b></label>
+                      <label for="senha"><b>Senha</b></label>
                       <input type="password" placeholder="Digita sua Senha" name="senha" id="senha">
                   
-                      <label for="psw-repeat"><b>Confirmar Senha</b></label>
+                      <label for="conf_senha"><b>Confirmar Senha</b></label>
                       <input type="password" placeholder="Repita sua Senha" name="conf_senha" id="conf_senha">
-                      Sexo: 
-                      <input type="radio" name="sexo" value="homem" id="homem">
-                      <label for="homem">Homem</label>
-                      <input type="radio" name="sexo" value="mulher" id="mulher">
-                      <label for="mulher">Mulher</label>
                       <hr>
                       <button type="submit" class="botao_registrar">Cadastrar</button>
-                      <a href="../tela_principal.html"><button type="button" class="botao_voltar">Voltar</button></a>
                     </div>
+                    <div class="container signin">
+                    <p>Já possui uma conta? <a href="tela_login.html">Entrar</a>.</p>
+                  </div>
                   </form>
             </div>
         </div>

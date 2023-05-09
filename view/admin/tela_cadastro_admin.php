@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/cadastro.css">
+    <link rel="stylesheet" type="text/css" href="../../css/cadastro.css">
     
-    <title>Tela de cadastro</title>
+    <title>Tela de admin</title>
 </head>
 <body>
     <div class="bodycadastro">
         <div class="maincadastro">
             <div class="telacadastro">
                 <a><img src=""></img></a>
-                <form action="../controller/usuario_controller.php?acao=cadastrar" method="POST">
+                <form action="../../controller/admin_controller.php?acao=cadastrar_admin" method="post">
                     <div class="formulariocadastro">
-                      <h1>Criar conta</h1>
-                      <p>Por favor preencha o formulário para criar a conta.</p>
+                      <h1>Cadastre um novo admin</h1>
+                      <p>Por favor preencha o formulário para cadastrar um novo administrador.</p>
                       <hr>
 
                       <label for="nome_completo"><b>Nome Completo</b></label>
-                      <input type="text" placeholder="Insira o Nome Completo" name="nome_completo" id="nome">
+                      <input type="text" placeholder="Insira o Nome Completo" name="nome_completo" id="nome_completo">
                       
                       <label for="cpf"><b>CPF</b></label>
                       <input type="text" placeholder="Insira seu CPF" name="cpf" id="cpf">
@@ -46,15 +46,13 @@
                       <label for="senha"><b>Senha</b></label>
                       <input type="password" placeholder="Digita sua Senha" name="senha" id="senha">
                   
-                      <label for="conf_senha"><b>Confirmar Senha</b></label>
-                      <input type="password" placeholder="Repita sua Senha" name="conf_senha" id="conf_senha">
+                      <label for="confirmar_senha"><b>Confirmar Senha</b></label>
+                      <input type="password" placeholder="Repita sua Senha" name="confirmar_senha" id="confirmar_senha">
                       <hr>
                       <button type="submit" class="botao_registrar">Cadastrar</button>
                     </div>
+                    <a href=""><button type="button" class="botao_voltar">Voltar</button></a>
                   </form>
-                  <div class="container signin">
-                    <p>Já possui uma conta? <a href="tela_login.html">Entrar</a>.</p>
-                  </div>
             </div>
         </div>
     </div>

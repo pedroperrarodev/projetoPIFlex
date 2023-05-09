@@ -6,9 +6,6 @@
 
         public function execute($post, $get){
             $acao = $get['acao'];
-
-            echo "antes do banco";
-            
             if($acao == "cadastrar"){
                 $usuario = new usuario();
 
@@ -39,9 +36,11 @@
                     $email = $post["email"];
                     $usuario->__set("email", $email);
 
+                    $usuario->__set("perfil", 2);
     
                     $senha = $post["senha"];
                     $confirmar_senha = $post["conf_senha"];
+
                     
                     if ($senha == $confirmar_senha){
                         $senha_hash = hash("sha3-256", $senha);

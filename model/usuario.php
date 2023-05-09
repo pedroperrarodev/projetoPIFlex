@@ -12,6 +12,7 @@
         private $num_telefone;
         private $email;
         private $senha;
+        private $perfi;
 
         public function __set($atributo, $valor)
         {
@@ -44,7 +45,7 @@
             $st->bindParam(':num_telefone', $this->num_telefone);
             $st->bindParam(':email', $this->email);
             $st->bindParam(':senha', $this->senha);
-            $st->bindParam(':perfil', 2);
+            $st->bindValue(':perfil', 2);
             $status = $st->execute();
 
             $idUsuario = $con->lastInsertId();

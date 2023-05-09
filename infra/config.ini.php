@@ -3,7 +3,7 @@
     $config = [ 
                     "server" => "localhost",
                     "user" => "root",
-                    "passoword" => "",
+                    "password" => "",
                     "port" => 3306,
                     "nome_db" => "projeto_pi",
                     "db_type" => "mysql"
