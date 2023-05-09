@@ -26,8 +26,6 @@
 
         </div>
 
-
-
     </header>
 
     <div id="main">
@@ -69,41 +67,26 @@
                 <tr>
                     <!-- <th>Id</th> -->
                     <th>Nome da vacina</th>
+                    <th>Local</th>
                     <th>Fabricante</th>
-                    <th>Doença</th>
+                    <th>Lote</th>
                 </tr>
+                
+                <?php
+                for ($i=0; $i<sizeof($dados);$i++){
+                    echo "<tr>";	
+                    /* echo "<td><a href=\"../../../controller/usuario_controller.php?acao=editar&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>"; */
+                    echo "<td>".$dados[$i]["nomevacina"]."</td>";
+                    echo "<td>".$dados[$i]["local"]."</td>";
+                    echo "<td>".$dados[$i]["fabricante"]."</td>";
+                    echo "<td>".$dados[$i]["lote"]."</td>";
+                    /* echo "<td align='center'><a href=\"../../../controller/usuario_controller.php?acao=deletar&id=".$dados[$i]["id"]."\">x</a></td>"; */
+                    echo "</tr>";
+                }
+                ?>
+                
 
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                  </tr>
-                  <tr>
-                    <td>Berglunds snabbköp</td>
-                    <td>Christina Berglund</td>
-                    <td>Sweden</td>
-                  </tr>
-                  <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                  </tr>
-                  <tr>
-                    <td>Ernst Handel</td>
-                    <td>Roland Mendel</td>
-                    <td>Austria</td>
-                  </tr>
-                <!--<?php
-                    for ($i=0; $i<sizeof($dados); $i++){
-                        echo "<tr>";
-                        echo "<td>".$dados[$i]["id"]."</td>";
-                        echo "<td>".$dados[$i]["no_matricula"]."</td>";
-                        echo "<td>".$dados[$i]["nome"]. " ".$dados[$i]["sobrenome"]."</td>";
-                        echo "<td>".$dados[$i]["data_nascimento"]."</td>";
-                        echo "<td>".$dados[$i]["data_contratacao"]."</td>";
-                        echo "</tr>";
-                    }
-                    ?> -->
+
             </table>
             
        </div>
