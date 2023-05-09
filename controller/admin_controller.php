@@ -6,8 +6,6 @@
 
         public function execute($post, $get){
             $acao = $get['acao'];
-            if($acao == "cadastrar_admin"){
-                $admin = new admin();
                 if ($acao == "cadastrar_admin"){
                     $admin = new admin();
     
@@ -53,9 +51,42 @@
                         //enviar msg de erro
                     }
             }
+            else if($acao == "cadastrar_posto"){
+
+                $admin = new admin();
+
+                $razao_social = $post["razao_social"];
+                $admin->__set("razao_social",$razao_social);
+
+                $cnpj = $post["cnpj"];
+                $admin->__set("cnpj",$cnpj);
+
+                $rua = $post["rua"];
+                $admin->__set("rua", $rua);
+
+                $bairro = $post["bairro"];
+                $admin->__set("bairro", $bairro);
+    
+                $cidade = $post["cidade"];
+                $admin->__set("cidade", $cidade);
+
+                $numero = $post["numero"];
+                $admin->__set("numero", $numero);
+
+                $num_telefone = $post["num_telefone"];
+                $admin->__set("num_telefone", $num_telefone);
+
+                $email = $post["email"];
+                $admin->__set("email", $email);
+
+                if($admin->cadastrar_posto() == true){
+                    echo "Posto de saúde cadastrado com sucesso!";
+                }
+
+            }
             
         }
-    }
+    
 
 }
 

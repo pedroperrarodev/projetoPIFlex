@@ -5,6 +5,8 @@
     class admin{
        
         private $nome_completo;
+        private $razao_social;
+        private $cnpj;
         private $cpf;
         private $rua;
         private $bairro;
@@ -54,6 +56,32 @@
                  return true;
             }
         }
+
+        public function cadastrar_posto(){
+            $db = new database();
+            $con = $db->connect();
+
+            $sql = "INSERT INTO posto_vacinacao(razao_social, cnpj, rua, bairro, cidade, numero, num_telefone, email) 
+            VALUES(:razao_social, :cnpj, :rua, :bairro, :cidade, :numero, :num_telefone, :email)";
+
+            $st = $con->prepare($sql);
+            $st->bindParam(':razao_social', $this->razao_social);
+            $st->bindParam(':cnpj', $this->cnpj);
+            $st->bindParam(':rua', $this->rua);
+            $st->bindParam(':bairro', $this->bairro);
+            $st->bindParam(':cidade', $this->cidade);
+            $st->bindParam(':numero', $this->numero);
+            $st->bindParam(':num_telefone', $this->num_telefone);
+            $st->bindParam(':email', $this->email);
+            $status = $st->execute();
+
+            $idUsuario = $con->lastInsertId();
+
+             if ($status == true){
+                 return true;
+            }
+        }
+
 
         
     }

@@ -12,30 +12,30 @@
         <div class="maincadastro">
             <div class="telacadastro">
                 <a><img src=""></img></a>
-                <form action="" method="">
+                <form action="../../controller/admin_controller.php?acao=cadastrar_posto" method="POST">
                     <div class="formulariocadastro">
                       <h1>Posto de Saúde</h1>
                       <p>Cadastre um novo posto de saúde abaixo:</p>
                       <hr>
-                      <label for="email"><b>Razão Social</b></label>
+                      <label for="razao_social"><b>Razão Social</b></label>
                       <input type="text" placeholder="Insira a Razão Social" name="razao_social" id="razao_social">
                       
-                      <label for="email"><b>CNPJ</b></label>
+                      <label for="cnpj"><b>CNPJ</b></label>
                       <input type="text" placeholder="Insira o CNPJ" name="cnpj" id="cnpj">
 
-                      <label for="email"><b>Rua</b></label>
+                      <label for="rua"><b>Rua</b></label>
                       <input type="text" placeholder="Insira a Rua" name="rua" id="rua">
 
-                      <label for="email"><b>Cidade</b></label>
+                      <label for="cidade"><b>Cidade</b></label>
                       <input type="text" placeholder="Insira a Cidade" name="cidade" id="cidade">
 
-                      <label for="email"><b>Bairro</b></label>
-                      <input type="text" placeholder="Insira o Bairro" name="Bairro" id="bairro">
+                      <label for="bairro"><b>Bairro</b></label>
+                      <input type="text" placeholder="Insira o Bairro" name="bairro" id="bairro">
 
-                      <label for="email"><b>Número</b></label>
+                      <label for="numero"><b>Número</b></label>
                       <input type="text" placeholder="Insira o Número" name="numero" id="numero">
                                         
-                      <label for="email"><b>Número de Telefone</b></label>
+                      <label for="num_telefone"><b>Número de Telefone</b></label>
                       <input type="text" placeholder="Insira o Número de Telefone" name="num_telefone" id="num_telefone">
 
                       <label for="email"><b>Email</b></label>

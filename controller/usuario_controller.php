@@ -6,9 +6,6 @@
 
         public function execute($post, $get){
             $acao = $get['acao'];
-            if($acao == "cadastrar"){
-                $usuario = new usuario();
-
                 if ($acao == "cadastrar"){
                     $usuario = new Usuario();
     
@@ -56,8 +53,7 @@
                         //enviar msg de erro
                     }
             }
-            
-        }
+        
     }
 
 }

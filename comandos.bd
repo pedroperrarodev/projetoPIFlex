@@ -32,12 +32,14 @@ CREATE TABLE vacina(
 CREATE TABLE posto_vacinacao(
 
     id int primary key auto_increment,
-    nome_posto varchar(250),
-    cnpj varchar(16) UNIQUE,
-    rua varchar(200),
-    cidade varchar(250),
-    bairro varchar(200),
-    numero int(100)
+    razao_social varchar(250) not null,
+    cnpj varchar(20) UNIQUE,
+    num_telefone varchar(15) not null,
+    email varchar(100) not null,
+    rua varchar(200) not null,
+    cidade varchar(250) not null,
+    bairro varchar(200) not null,
+    numero int(100) not null
 );
 
 CREATE TABLE vacina_usuario(

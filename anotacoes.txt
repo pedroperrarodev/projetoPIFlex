@@ -1,3 +1,0 @@
-nova coluna atualizar senha
-
-fazendo uma função alterar senha
