@@ -52,7 +52,7 @@
                       <button type="submit" class="botao_registrar">Cadastrar</button>
                     </div>
                     <div class="container signin">
-                    <p>Já possui uma conta? <a href="tela_login.html">Entrar</a>.</p>
+                    <p>Já possui uma conta? <a href="tela_login.php">Entrar</a>.</p>
                   </div>
                   </form>
             </div>

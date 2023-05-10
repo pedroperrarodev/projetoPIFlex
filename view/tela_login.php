@@ -17,7 +17,7 @@
         <input type="text" placeholder="Informe seu CPF">
       </div>
       <div class="div_senha">
-        <label for="password">SENHA</label>
+        <label for="senha">SENHA</label>
         <input type="password" placeholder="Informe sua Senha">
       </div>
       <div class="div_botao_login">

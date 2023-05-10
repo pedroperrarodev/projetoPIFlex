@@ -52,7 +52,12 @@
                     else{
                         //enviar msg de erro
                     }
-            }
+                }
+                else if($acao == "logar"){
+                    $login = $post["cpf"];
+                    $senha = $post["senha"];
+
+                }
         
     }
 
