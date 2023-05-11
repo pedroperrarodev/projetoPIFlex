@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <HEAD:view/usuario/index.html></HEAD:view>
-    <link rel="stylesheet" type="text/css" href="../../css/tela_profile.css">
-    <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
+    <link rel="stylesheet" type="text/css" href="../css/tela_profile.css">
+    <link rel="stylesheet" type="text/css" href="../css/corpo.css">
 
-    
+    <!-- TELA DE USUARIO -->
     <title>Cadastro de Vacinas</title>
 </head>
 <body>  
@@ -68,7 +68,7 @@
                     <th>Nome da vacina</th>
                     <th>Local</th>
                     <th>Fabricante</th>
-                    <th>Lote</th>
+                    <th>Função Vacina</th>
                 </tr>
                 
                 <?php
@@ -78,7 +78,7 @@
                     echo "<td>".$dados[$i]["nomevacina"]."</td>";
                     echo "<td>".$dados[$i]["local"]."</td>";
                     echo "<td>".$dados[$i]["fabricante"]."</td>";
-                    echo "<td>".$dados[$i]["lote"]."</td>";
+                    echo "<td>".$dados[$i]["funcao_vacina"]."</td>";
                     /* echo "<td align='center'><a href=\"../../../controller/usuario_controller.php?acao=deletar&id=".$dados[$i]["id"]."\">x</a></td>"; */
                     echo "</tr>";
                 }

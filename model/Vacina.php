@@ -6,7 +6,7 @@ class Vacina
     private $nomevacina;
     private $local;
     private $fabricante;
-    private $lote;
+    private $funcao_vacina;
 
 
     public function __set($atributo, $valor)
@@ -63,28 +63,13 @@ class Vacina
     }
 
 
-    public function deletar($id)
-    {
-        $db = new Database();
-        $con = $db->connect();
-
-        $sql = "DELETE FROM usuario WHERE id = :id";
-        $st = $con->prepare($sql);
-        $st->bindParam(':id', $id);
-
-        $status = $st->execute();
-
-        $db->close();
-        return  true;
-    }
-
     /* TESTANDO */
     public function listarVacinas($pagina = null, $contador = 100)
     {
         $db = new Database();
         $con = $db->connect();
 
-        $sql = "SELECT id, nomevacina, local, fabricante, lote FROM vacinas limit $contador";
+        $sql = "SELECT id, nomevacina, local, fabricante, funcao_vacina FROM vacinas limit $contador";
         $rs = $con->query($sql);
 
         $status = $rs->execute();

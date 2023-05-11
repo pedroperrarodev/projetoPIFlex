@@ -5,6 +5,7 @@
         
         public function execute($post, $get){
             $acao = $get["acao"];
+
             if ($acao == "cadastrar"){
                 $vacina = new Vacina();
 
@@ -25,7 +26,8 @@
                 $vacina = new Vacina();
                 $dados = $vacina->listarVacinas();
 
-                require_once("../view/usuario/tela_profile.php");
+                
+                require_once("../view/usuario/tela_profile_usuario.php");
             }
 
             else if($acao == "editar"){
