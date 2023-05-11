@@ -12,7 +12,7 @@
         private $num_telefone;
         private $email;
         private $senha;
-        private $perfi;
+        private $perfil;
 
         public function __set($atributo, $valor)
         {
@@ -53,6 +53,10 @@
              if ($status == true){
                  return true;
             }
+        }
+
+        public function autenciar(){
+            
         }
 
         

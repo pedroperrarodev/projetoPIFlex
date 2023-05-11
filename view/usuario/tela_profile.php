@@ -7,17 +7,6 @@
     <HEAD:view/usuario/index.html></HEAD:view>
     <link rel="stylesheet" type="text/css" href="../../css/tela_profile.css">
     <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
-<<<<<<< HEAD
-
-=======
-    
-<!--     <?php
-
-    echo "<link rel='stylesheet' type='text/css' href='../../css/corpo.css' />";
-    ?> -->
-
-    
->>>>>>> dff30e9dacaeee8ddfb8dccb9662eeed23589713
 
     
     <title>Cadastro de Vacinas</title>
@@ -42,14 +31,10 @@
         <div class="menu">
             <div class="sidebar">
                 <div>
-<<<<<<< HEAD
-                    <a href="tela_profile.html"><button id="activemenu"><strong>Perfil</strong></button></a>
-=======
                     <a href="tela_profile.php"><button id="activemenu"><strong>Perfil</strong></button></a>
->>>>>>> dff30e9dacaeee8ddfb8dccb9662eeed23589713
                 </div>
                 <div>
-                    <a href="cadastro_vacina.html"><button><strong>Cadastro de Vacinas </strong></button></a>
+                    <a href="cadastro_vacina.php"><button><strong>Cadastro de Vacinas </strong></button></a>
                 </div>
                 <div>
                     <a><button><strong>Menu 3</strong></button></a>
@@ -89,20 +74,12 @@
                 <?php
                 for ($i=0; $i<sizeof($dados);$i++){
                     echo "<tr>";	
-<<<<<<< HEAD
                     /* echo "<td><a href=\"../../../controller/usuario_controller.php?acao=editar&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>"; */
-=======
-                    echo "<td><a href=\"../../../controller/usuario_controller.php?acao=editar&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>"; 
->>>>>>> dff30e9dacaeee8ddfb8dccb9662eeed23589713
                     echo "<td>".$dados[$i]["nomevacina"]."</td>";
                     echo "<td>".$dados[$i]["local"]."</td>";
                     echo "<td>".$dados[$i]["fabricante"]."</td>";
                     echo "<td>".$dados[$i]["lote"]."</td>";
-<<<<<<< HEAD
                     /* echo "<td align='center'><a href=\"../../../controller/usuario_controller.php?acao=deletar&id=".$dados[$i]["id"]."\">x</a></td>"; */
-=======
-                   /*  echo "<td align='center'><a href=\"../../../controller/usuario_controller.php?acao=deletar&id=".$dados[$i]["id"]."\">x</a></td>"; */
->>>>>>> dff30e9dacaeee8ddfb8dccb9662eeed23589713
                     echo "</tr>";
                 }
                 ?>

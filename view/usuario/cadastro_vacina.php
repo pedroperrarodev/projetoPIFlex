@@ -39,10 +39,10 @@
         <div class="menu">
             <div class="sidebar">
                 <div>
-                    <a href="tela_profile.html"><button ><strong>Perfil</strong></button></a>
+                    <a href="tela_profile.php"><button ><strong>Perfil</strong></button></a>
                 </div>
                 <div>
-                    <a href="cadastro_vacina.html"><button id="activemenu"><strong>Cadastro de Vacinas </strong></button></a>
+                    <a href="cadastro_vacina.php"><button id="activemenu"><strong>Cadastro de Vacinas </strong></button></a>
                 </div>
                 <div>
                     <a><button><strong>Menu 3</strong></button></a>

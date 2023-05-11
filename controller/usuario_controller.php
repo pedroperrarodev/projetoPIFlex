@@ -43,8 +43,6 @@
                         $senha_hash = hash("sha3-256", $senha);
                         $usuario->__set("senha", $senha_hash);
 
-                        
-                       
                         if($usuario->cadastrar() == true){
                             echo "Usuario Cadastrado com Sucesso!";
                         }
@@ -57,6 +55,14 @@
                     $login = $post["cpf"];
                     $senha = $post["senha"];
 
+                    if($perfil ==  1){
+                        $usuario = new usuario();
+                        $valida = $usuario->autenticar($login, $senha);
+                    }
+                    else if($perfil == 2){
+                        $usuario = new usuario();
+                        $valida = $usuario->autenticar($login, $senha);
+                    }
                 }
         
     }
