@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <HEAD:view/usuario/index.html></HEAD:view>
-<!--     <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/cadastro_vacina.css"> -->
 
 
     <link rel="stylesheet" type="text/css" href="../../css/cadastro_vacina_usuario.css"><!-- ESTILIZAÇÃO DE FORMULARIO DA PAGINA ESPECIFICA -->
@@ -16,7 +13,7 @@
             <!-- TROCAR OS LINKS DE ORDEM ALTERA A COR DAS PAGINAS PARA TESTE -->
 
 
-    <title>Cadastro de Vacinas</title>
+    <title>Home page</title>
 </head>
 <body>  
     <header>
@@ -59,24 +56,8 @@
 
         </div>
 
-       <div class="containercadastro">
-            <form name="cadastro_vacinas" action="grava_cadastrovacina.php" method="POST" enctype="multipart/form-data">
-                <h1>Preencha seu cartão de vacinas.</h1><br>
-                <div class="div_form">
-                    <h4>Nome da vacina:</h4> <input type="text" name="nome"> <!-- APARECER O NOME DO USUARIO -->
-                    <br>
-                    <h4>Local ou Unidade de Vacinação:</h4> <input type="text" name="local">
-                    <br>
-                    <h4>Fabricante: </h4> <input type="text" name="fabricante_vacina">
-                    <br>
-                    <h4>Lote: </h4> <input type="text" name="lote_vacina">
-
-                    <button type="submit" class="botao_registrar">Cadastrar Vacina</button>
-                    <a href="../tela_principal.html"><button type="button" class="botao_voltar">Voltar</button></a>
-
-                </div>
-            
-            </form>
+       <div class="containerhome">
+            <h1> HOME PAGE</h1>
 
        </div>
 
