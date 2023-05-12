@@ -59,36 +59,36 @@ header img{
 }
 
 .sidebar div{
-    display: flex;
-    flex-direction: column;
-    padding-left: 25px;
-    height: 9vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  height: 9vh;
 }
 
 /* MENU ATIVO */
 
 
 .sidebar #activemenu{
-    border: none;
-    background-color: white;
-    cursor: pointer;
-    width: 200px;
-    height: 80px;
-    border-end-start-radius: 22px;
-    border-top-left-radius: 22px;
+  border: none;
+  background-color: whitesmoke;
+  cursor: pointer;
+  width: 15vw;
+  height: 8vh;
+  border-end-start-radius: 22px;
+  border-top-left-radius: 22px;
 }
 
 
 /* MENUS NAO ATIVOS */
 
 .sidebar button{
-    border: none;
-    background-color: whitesmoke;
-    cursor: pointer;
-    width: 150px;
-    height: 80px;
-    border-end-start-radius: 22px;
-    border-top-left-radius: 22px;
+  border: none;
+  background-color: #04aaa5;
+  cursor: pointer;
+  width: 12vw;
+  height: 8vh;
+  border-end-start-radius: 22px;
+  border-top-left-radius: 22px;
 }
 
 /* BOTAO SAIR  */
@@ -175,7 +175,7 @@ header img{
 
 
 
-/*     w3 codigo         */
+    w3 codigo         
 
 
 .formulariocadastro {

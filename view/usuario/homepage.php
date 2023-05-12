@@ -39,13 +39,13 @@
                     <a href="homepage.php"><button id="activemenu"><strong>Home</strong></button></a>
                 </div>
                 <div>
-                <a href="tela_profile_usuario.php"><button><strong>Perfil</strong></button></a>
+                    <a href="../../controller/vacina_controller.php?acao=listar"><button><strong>Perfil</strong></button></a>
                 </div>
                 <div>
                     <a href="cadastro_vacina.php"><button><strong>Cadastro de Vacinas </strong></button></a>
                 </div>
                 <div>
-                    <a><button><strong>Configurações</strong></button></a>
+                    <a href="tela_config_usuario.php"><button><strong>Configurações</strong></button></a>
                 </div>
             </div>
 
@@ -63,7 +63,7 @@
         </div>
 
         <!-- <a href="tela_configusuario.html"><img id="iconeconfig" src="../../img/iconconfig.png"></a> -->
-        <a href="tela_configusuario.html"><button id="buttonconfig"><img id="iconeconfig" src="../../img/iconconfig.png"></button></a>
+        <a href="tela_config_usuario.php"><button id="buttonconfig"><img id="iconeconfig" src="../../img/iconconfig.png"></button></a>
 
 
 

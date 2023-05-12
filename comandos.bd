@@ -72,4 +72,5 @@ create table vacinas(id int auto_increment, nomevacina VARCHAR(250), local VARCH
  insert into vacinas (nomevacina, local, fabricante, funcao_vacina) values ("Vacina ficticia 2", "novo hamburgo", "fabricante 2", "Dengue");
 
 
+ insert into vacinas (nomevacina, local, fabricante, funcao_vacina) values ("Vacina ficticia 3", "Porto Alegre", "fabricante 4", "Xicungunha");
 

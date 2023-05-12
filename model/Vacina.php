@@ -27,18 +27,17 @@ class Vacina
         $db = new Database();
         $con = $db->connect();
 
-        $sql = "INSERT INTO usuario(nome, sobrenome, email, login, senha) 
-                VALUES (:nome, :sobrenome, :email, :login, :senha)";
+        $sql = "INSERT INTO vacinas(nomevacina, local, fabricante, funcao_vacina) 
+                VALUES (:nomevacina, :local, :fabricante, :funcao_vacina)";
         
         $st = $con->prepare($sql);
-        $st->bindParam(':nome', $this->nome);
-        $st->bindParam(':sobrenome', $this->sobrenome);
-        $st->bindParam(':email', $this->email);
-        $st->bindParam(':login', $this->login);
-        $st->bindParam(':senha', $this->senha);
+        $st->bindParam(':nomevacina', $this->nomevacina);
+        $st->bindParam(':local', $this->local);
+        $st->bindParam(':fabricante', $this->fabricante);
+        $st->bindParam(':funcao_vacina', $this->funcao_vacina);
 	    $status = $st->execute();
 
-        $idUsuario = $con->lastInsertId();
+        $idVacinas = $con->lastInsertId();
 
         if ($status == true){
             return true;

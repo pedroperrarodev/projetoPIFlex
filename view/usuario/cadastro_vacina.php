@@ -5,17 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <HEAD:view/usuario/index.html></HEAD:view>
-
-    <link rel="stylesheet" type="text/css" href="../../css/cadastro_vacina_usuario.css">
+    
     <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/cadastro_vacina_usuario.css">
 
 
     <title>Cadastro de Vacinas</title>
+    <script src="../../static/js/jquery-3.6.4.min.js"></script>
+		<script type="text/javascript">
+			$( document ).ready(function() {
+			});
+
+			function processa_cadastro(){
+				var formDados = {
+					nomevacina: $("#nomevacina").val(),
+					local: $("#local").val(),
+					fabricante: $("#fabricante").val(),
+					funcao: $("#funcao").val(),
+    			};
+
+				$.ajax({
+					type: "POST",
+					url: "../../controller/vacina_controller.php?acao=cadastrar",
+					data: formDados,
+					dataType: "json",
+					}).done(function (dataRetorno) {
+						if(dataRetorno.erro == 0){
+							alert(dataRetorno.msg)
+							window.location.href = dataRetorno.url;
+						}
+						else{
+							alert(dataRetorno.msg)
+						}
+						
+				});
+				
+			}
+		</script>
+
+
 </head>
 <body>  
     <header>
         <div id="logo">
-            <!-- <a><img src="../../img/Horizontal Logo Projeto PI fundo transp.png"></a> -->
+            <!--<a><img src="../../img/logoteste2.png"></a> -->
             <h1>Logo</h1>
         </div>
         <!-- <button>Sair</button> -->
@@ -36,32 +69,34 @@
                     <a href="homepage.php"><button><strong>Home</strong></button></a>
                 </div>
                 <div>
-                    <a href="tela_profile_usuario.php"><button><strong>Perfil</strong></button></a>
+                    <a href="../../controller/vacina_controller.php?acao=listar"><button><strong>Perfil</strong></button></a>
                 </div>
                 <div>
                     <a href="cadastro_vacina.php"><button id="activemenu"><strong>Cadastro de Vacinas </strong></button></a>
                 </div>
                 <div>
-                    <a><button><strong>Configurações</strong></button></a>
+                    <a href="tela_config_usuario.php"><button><strong>Configurações</strong></button></a>
                 </div>
             </div>
 
         </div>
 
        <div class="containercadastro">
-            <form name="cadastro_vacinas" action="grava_cadastrovacina.php" method="POST" enctype="multipart/form-data">
+            <form name="cadastro_vacinas" action="#" method="POST">
                 <h1>Preencha seu cartão de vacinas.</h1><br>
                 <div class="div_form">
-                    <h4>Nome da vacina:</h4> <input type="text" name="nome"> <!-- APARECER O NOME DO USUARIO -->
+                    <h4>Nome da vacina:</h4> <input type="text" name="nomevacina">
                     <br>
                     <h4>Local ou Unidade de Vacinação:</h4> <input type="text" name="local">
                     <br>
                     <h4>Fabricante: </h4> <input type="text" name="fabricante_vacina">
                     <br>
-                    <h4>Lote: </h4> <input type="text" name="lote_vacina">
+                    <h4>Função da Vacina: </h4> <input type="text" name="funcao_vacina">
 
-                    <button type="submit" class="botao_registrar">Cadastrar Vacina</button>
-                    <a href="../tela_principal.html"><button type="button" class="botao_voltar">Voltar</button></a>
+
+                    <input type="button" value="Cadastrar" class="botao_registrar" onclick="processa_cadastro()"/> <br>
+
+                    <a href="homepage.php"><button type="button" class="botao_voltar">Voltar</button></a>
 
                 </div>
             

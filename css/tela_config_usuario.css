@@ -8,6 +8,8 @@
 
 /*____________________  HOME PAGE ____________________*/
 
+
+
 .homepage{
   background-color: whitesmoke;
   width: 100vw;
@@ -20,14 +22,7 @@
 
 /*____________________  PÁGINA DE PERFIL             ____________________*/
 
-.homepage img{
-  width: 128px;
-  display: flex;
-}
-.homepage h3{
-  display: flex;
-  
-}
+
 
 #iconeconfig{
 display: flex;

@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../css/corpo.css">
 
     <!-- TELA DE USUARIO -->
-    <title>Cadastro de Vacinas</title>
+    <title>Tela Profile Usuario</title>
 </head>
 <body>  
     <header>
@@ -36,17 +36,17 @@
         <div class="menu">
             <div class="sidebar">
                 <div>
-                    <a href="homepage.php"><button><strong>Home</strong></button></a>
+                    <a href="../view/usuario/homepage.php"><button><strong>Home</strong></button></a>
                 </div>
                 <div>
-                    <a href="tela_profile_usuario.php"><button id="activemenu"><strong>Perfil</strong></button></a>
+                    <a href="vacina_controller.php?acao=listar"><button id="activemenu"><strong>Perfil</strong></button></a>
                 </div>
                 <div>
-                    <a href="cadastro_vacina.php"><button><strong>Cadastro de Vacinas </strong></button></a>
+                    <a href="../view/usuario/cadastro_vacina.php"><button><strong>Cadastro de Vacinas </strong></button></a>
                 </div>
                 <div>
-                    <a><button><strong>Configurações</strong></button></a>
-                </div>
+                <a href="../view/usuario/tela_config_usuario.php"><button><strong>Configurações</strong></button></a>
+                </div>  
             </div>
 
         </div>
@@ -72,16 +72,16 @@
                 </tr>
                 
                 <?php
-                // for ($i=0; $i<sizeof($dados);$i++){
-                //     echo "<tr>";	
-                //     /* echo "<td><a href=\"../../../controller/usuario_controller.php?acao=editar&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>"; */
-                //     echo "<td>".$dados[$i]["nomevacina"]."</td>";
-                //     echo "<td>".$dados[$i]["local"]."</td>";
-                //     echo "<td>".$dados[$i]["fabricante"]."</td>";
-                //     echo "<td>".$dados[$i]["funcao_vacina"]."</td>";
-                //     /* echo "<td align='center'><a href=\"../../../controller/usuario_controller.php?acao=deletar&id=".$dados[$i]["id"]."\">x</a></td>"; */
-                //     echo "</tr>";
-                // }
+                 for ($i=0; $i<sizeof($dados);$i++){
+                    echo "<tr>";	
+                   /* echo "<td><a href=\"../../../controller/usuario_controller.php?acao=editar&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>"; */
+                    echo "<td>".$dados[$i]["nomevacina"]."</td>";
+                    echo "<td>".$dados[$i]["local"]."</td>";
+                    echo "<td>".$dados[$i]["fabricante"]."</td>";
+                    echo "<td>".$dados[$i]["funcao_vacina"]."</td>";
+                     /* echo "<td align='center'><a href=\"../../../controller/usuario_controller.php?acao=deletar&id=".$dados[$i]["id"]."\">x</a></td>"; */
+                    echo "</tr>";
+                 }
                 ?>
                 
 
@@ -98,8 +98,7 @@
             
         </div>
 
-        <!-- <a href="tela_configusuario.html"><img id="iconeconfig" src="../../img/iconconfig.png"></a> -->
-        <a href="tela_configusuario.html"><button id="buttonconfig"><img id="iconeconfig" src="../img/iconconfig.png"></button></a>
+        <a href="../view/usuario/tela_config_usuario.php"><button id="buttonconfig"><img id="iconeconfig" src="../img/iconconfig.png"></button></a>
 
 
 
