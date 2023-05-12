@@ -18,9 +18,17 @@
                 $fabricante = $post["fabricante"];
                 $vacina->__set("fabricante", $fabricante);
 
-                $funcao = $post["funcao"];
-                $vacina->__set("funcao", $funcao);
+                $funcao_vacina = $post["funcao_vacina"];
+                $vacina->__set("funcao_vacina", $funcao_vacina);
 
+                if($vacina->salvar() == true){
+                    $retorno = ["msg" =>"Vacina cadastrada com sucesso!", "erro"=>"0", "url" => "../usuario/cadastro_vacina.php"];
+                    echo json_encode($retorno);
+                }
+                else{
+                    $retorno = ["msg" =>"Erro ao cadastrar a vacina!", "erro"=>"1"];
+                    echo json_encode($retorno);
+                }
             }
             else if ($acao == "listar"){
                 $vacina = new Vacina();

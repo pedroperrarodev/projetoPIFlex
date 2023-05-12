@@ -8,6 +8,8 @@
     
     <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
     <link rel="stylesheet" type="text/css" href="../../css/cadastro_vacina_usuario.css">
+    <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/cadastro_vacina_usuario.css">
 
 
     <title>Cadastro de Vacinas</title>
@@ -21,7 +23,7 @@
 					nomevacina: $("#nomevacina").val(),
 					local: $("#local").val(),
 					fabricante: $("#fabricante").val(),
-					funcao: $("#funcao").val(),
+					funcao_vacina: $("#funcao_vacina").val(),
     			};
 
 				$.ajax({
@@ -85,13 +87,13 @@
             <form name="cadastro_vacinas" action="#" method="POST">
                 <h1>Preencha seu cartão de vacinas.</h1><br>
                 <div class="div_form">
-                    <h4>Nome da vacina:</h4> <input type="text" name="nomevacina">
+                    <h4>Nome da vacina:</h4> <input type="text" id="nomevacina" name="nomevacina">
                     <br>
-                    <h4>Local ou Unidade de Vacinação:</h4> <input type="text" name="local">
+                    <h4>Local ou Unidade de Vacinação:</h4> <input type="text" id="local" name="local">
                     <br>
-                    <h4>Fabricante: </h4> <input type="text" name="fabricante_vacina">
+                    <h4>Fabricante: </h4> <input type="text" id="fabricante" name="fabricante">
                     <br>
-                    <h4>Função da Vacina: </h4> <input type="text" name="funcao_vacina">
+                    <h4>Função da Vacina: </h4> <input type="text" id="funcao_vacina" name="funcao_vacina">
 
 
                     <input type="button" value="Cadastrar" class="botao_registrar" onclick="processa_cadastro()"/> <br>
