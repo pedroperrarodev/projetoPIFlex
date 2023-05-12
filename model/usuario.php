@@ -55,7 +55,8 @@
             }
         }
 
-        public function autenciar(){
+        public function autenciar($cpf, $senha){
+            
             
         }
 

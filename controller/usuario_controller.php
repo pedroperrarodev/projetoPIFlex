@@ -7,8 +7,8 @@
         public function execute($post, $get){
             $acao = $get['acao'];
                 if ($acao == "cadastrar"){
-                    $usuario = new Usuario();
-    
+                    $usuario = new usuario();
+
                     $nome_completo = $post["nome_completo"];
                     $usuario->__set("nome_completo", $nome_completo);
     
@@ -44,24 +44,26 @@
                         $usuario->__set("senha", $senha_hash);
 
                         if($usuario->cadastrar() == true){
-                            echo "Usuario Cadastrado com Sucesso!";
+                            $retorno = ["msg"=> "Usuário cadastrado com sucesso", "erro"=>"0", "url"=>"tela_login.php"];
+                            echo json_encode($retorno);
                         }
-                    }
-                    else{
-                        //enviar msg de erro
+                        else{
+                            $retorno = ["msg"=> "Erro ao cadastrar o usuário!", "erro"=>"1"];
+                            echo json_encode($retorno);
+                        }
                     }
                 }
                 else if($acao == "logar"){
-                    $login = $post["cpf"];
+                    $cpf = $post["cpf"];
                     $senha = $post["senha"];
 
                     if($perfil ==  1){
                         $usuario = new usuario();
-                        $valida = $usuario->autenticar($login, $senha);
+                        $valida = $usuario->autenticar($cpf, $senha);
                     }
                     else if($perfil == 2){
                         $usuario = new usuario();
-                        $valida = $usuario->autenticar($login, $senha);
+                        $valida = $usuario->autenticar($cpf, $senha);
                     }
                 }
         

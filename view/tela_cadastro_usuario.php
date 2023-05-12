@@ -5,6 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/cadastro.css">
+    <script src="../static/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript">
+        $( document ).ready(function() {
+			});
+
+			function processa_cadastro(){
+				var formDados = {
+					nome_completo: $("#nome_completo").val(),
+					cpf: $("#cpf").val(),
+					rua: $("#rua").val(),
+                    bairro: $("#bairro").val(),
+                    cidade: $("#cidade").val(),
+					numero: $("#numero").val(),
+					num_telefone: $("#num_telefone").val(),
+					email: $("#email").val(),
+                    perfil: $("#perfil").val(),
+                    senha: $("#senha").val(),
+                    confirmar_senha: $("#confirmar_senha").val(),
+    			};
+
+				$.ajax({
+					type: "POST",
+					url: "../controller/usuario_controller.php?acao=cadastrar",
+					data: formDados,
+					dataType: "json",
+					}).done(function (dataRetorno) {
+                        console.log("aqui");
+						if(dataRetorno.erro == 0){
+							alert(dataRetorno.msg);
+							window.location.href = dataRetorno.url;
+						}
+						else{
+							alert(dataRetorno.msg)
+						}
+						
+				});
+				
+			}
+		</script>
     
     <title>Tela de cadastro</title>
 </head>
@@ -20,7 +59,7 @@
                       <hr>
 
                       <label for="nome_completo"><b>Nome Completo</b></label>
-                      <input type="text" placeholder="Insira o Nome Completo" name="nome_completo" id="nome">
+                      <input type="text" placeholder="Insira o Nome Completo" name="nome_completo" id="nome_completo">
                       
                       <label for="cpf"><b>CPF</b></label>
                       <input type="text" placeholder="Insira seu CPF" name="cpf" id="cpf">
@@ -47,9 +86,9 @@
                       <input type="password" placeholder="Digita sua Senha" name="senha" id="senha">
                   
                       <label for="conf_senha"><b>Confirmar Senha</b></label>
-                      <input type="password" placeholder="Repita sua Senha" name="conf_senha" id="conf_senha">
+                      <input type="password" placeholder="Repita sua Senha" name="confirmar_senha" id="confirmar_senha">
                       <hr>
-                      <button type="submit" class="botao_registrar">Cadastrar</button>
+                      <button type="button" class="botao_registrar" onclick="processa_cadastro()">Cadastrar</button>
                     </div>
                     <div class="container signin">
                     <p>Já possui uma conta? <a href="tela_login.php">Entrar</a>.</p>

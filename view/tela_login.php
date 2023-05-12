@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <form>
+  <form">
     <div class="container">
       <div class="img_container">
         <img src="../img/vaccine.png">
