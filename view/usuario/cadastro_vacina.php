@@ -1,4 +1,3 @@
-<!-- alterar para ser uma tela de consulta -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,14 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <HEAD:view/usuario/index.html></HEAD:view>
-<!--     <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/cadastro_vacina.css"> -->
 
-
-    <link rel="stylesheet" type="text/css" href="../../css/cadastro_vacina_usuario.css"><!-- ESTILIZAÇÃO DE FORMULARIO DA PAGINA ESPECIFICA -->
-    <link rel="stylesheet" type="text/css" href="../../css/corpo.css"><!-- ESTILIZAÇÃO DO HEADER MENU E BOTAO DE SAIR -->
-
-            <!-- TROCAR OS LINKS DE ORDEM ALTERA A COR DAS PAGINAS PARA TESTE -->
+    <link rel="stylesheet" type="text/css" href="../../css/cadastro_vacina_usuario.css">
+    <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
 
 
     <title>Cadastro de Vacinas</title>
@@ -36,25 +30,20 @@
     </header>
 
     <div id="main">
-        <div class="menu">
+    <div class="menu">
             <div class="sidebar">
                 <div>
-                    <a href="tela_profile_usuario.php"><button ><strong>Perfil</strong></button></a>
+                    <a href="homepage.php"><button><strong>Home</strong></button></a>
+                </div>
+                <div>
+                    <a href="tela_profile_usuario.php"><button><strong>Perfil</strong></button></a>
                 </div>
                 <div>
                     <a href="cadastro_vacina.php"><button id="activemenu"><strong>Cadastro de Vacinas </strong></button></a>
                 </div>
                 <div>
-                    <a><button><strong>Menu 3</strong></button></a>
+                    <a><button><strong>Configurações</strong></button></a>
                 </div>
-                <div>
-                    <a><button><strong>Menu 3</strong></button></a>
-                </div>
-            </div>
-            <div class="sobre">
-                <h3>Sobre</h3>
-                
-
             </div>
 
         </div>

@@ -13,8 +13,8 @@
     <link rel="stylesheet" type="text/css" href="../css/tela_profile.css">
     <link rel="stylesheet" type="text/css" href="../css/corpo.css">
 
-    <!-- TELA DE USUARIO -->
-    <title>Cadastro de Vacinas</title>
+    <!-- TELA DE ADMIN -->
+    <title>Tela Admin</title>
 </head>
 <body>  
     <header>
@@ -77,16 +77,16 @@
                 </tr>
                 
                 <?php
-                for ($i=0; $i<sizeof($dados);$i++){
-                    echo "<tr>";	
-                    /* echo "<td><a href=\"../../../controller/usuario_controller.php?acao=editar&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>"; */
-                    echo "<td>".$dados[$i]["nomevacina"]."</td>";
-                    echo "<td>".$dados[$i]["local"]."</td>";
-                    echo "<td>".$dados[$i]["fabricante"]."</td>";
-                    echo "<td>".$dados[$i]["funcao_vacina"]."</td>";
-                    /* echo "<td align='center'><a href=\"../../../controller/usuario_controller.php?acao=deletar&id=".$dados[$i]["id"]."\">x</a></td>"; */
-                    echo "</tr>";
-                }
+                // for ($i=0; $i<sizeof($dados);$i++){
+                //     echo "<tr>";	
+                //     /* echo "<td><a href=\"../../../controller/usuario_controller.php?acao=editar&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>"; */
+                //     echo "<td>".$dados[$i]["nomevacina"]."</td>";
+                //     echo "<td>".$dados[$i]["local"]."</td>";
+                //     echo "<td>".$dados[$i]["fabricante"]."</td>";
+                //     echo "<td>".$dados[$i]["funcao_vacina"]."</td>";
+                //     /* echo "<td align='center'><a href=\"../../../controller/usuario_controller.php?acao=deletar&id=".$dados[$i]["id"]."\">x</a></td>"; */
+                //     echo "</tr>";
+                // }
                 ?>
                 
 

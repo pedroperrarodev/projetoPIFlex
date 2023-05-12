@@ -36,22 +36,17 @@
         <div class="menu">
             <div class="sidebar">
                 <div>
+                    <a href="homepage.php"><button><strong>Home</strong></button></a>
+                </div>
+                <div>
                     <a href="tela_profile_usuario.php"><button id="activemenu"><strong>Perfil</strong></button></a>
                 </div>
                 <div>
                     <a href="cadastro_vacina.php"><button><strong>Cadastro de Vacinas </strong></button></a>
                 </div>
                 <div>
-                    <a><button><strong>Menu 3</strong></button></a>
+                    <a><button><strong>Configurações</strong></button></a>
                 </div>
-                <div>
-                    <a><button><strong>Menu 3</strong></button></a>
-                </div>
-            </div>
-            <div class="sobre">
-                <h3>Sobre</h3>
-                
-
             </div>
 
         </div>

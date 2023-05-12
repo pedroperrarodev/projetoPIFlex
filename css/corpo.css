@@ -38,7 +38,7 @@ header img{
 
 /* SIDE BAR OU MENU DE NAVEGAÇÃO                                  */
 .menu{
-    width: 10vw;
+    width: 12vw;
     height: 100vh;
     background-color: #04aaa5;
 }
@@ -57,11 +57,11 @@ header img{
     padding-left: 10px;
     font-size: 16px;
 }
-
+    
 .sidebar div{
     display: flex;
     flex-direction: column;
-    padding-left: 25px;
+    padding-left: 10%;
     height: 9vh;
 }
 
@@ -72,8 +72,8 @@ header img{
     border: none;
     background-color: whitesmoke;
     cursor: pointer;
-    width: 200px;
-    height: 80px;
+    width: 15vw;
+    height: 8vh;
     border-end-start-radius: 22px;
     border-top-left-radius: 22px;
 }
@@ -83,11 +83,10 @@ header img{
 
 .sidebar button{
     border: none;
-    background-color: whitesmoke;
     background-color: #04aaa5;
     cursor: pointer;
-    width: 150px;
-    height: 80px;
+    width: 15vw;
+    height: 8vh;
     border-end-start-radius: 22px;
     border-top-left-radius: 22px;
 }
