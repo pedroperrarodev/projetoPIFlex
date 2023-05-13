@@ -52,7 +52,7 @@
                 $vacina = new Vacina();
                 $dados = $vacina->deletar($id);
                 
-                $this->listarVacinas();
+                header("location:../controller/vacina_controller.php?acao=listar");
             }  
         }
 
