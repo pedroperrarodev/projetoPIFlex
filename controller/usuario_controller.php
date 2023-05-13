@@ -36,7 +36,7 @@
                     $usuario->__set("perfil", 2);
     
                     $senha = $post["senha"];
-                    $confirmar_senha = $post["conf_senha"];
+                    $confirmar_senha = $post["confirmar_senha"];
 
                     
                     if ($senha == $confirmar_senha){
@@ -60,6 +60,7 @@
                     if($perfil ==  1){
                         $usuario = new usuario();
                         $valida = $usuario->autenticar($cpf, $senha);
+                        
                     }
                     else if($perfil == 2){
                         $usuario = new usuario();

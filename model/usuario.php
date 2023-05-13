@@ -56,7 +56,12 @@
         }
 
         public function autenciar($cpf, $senha){
-            
+
+            $senha_cripto = hash("sha3-256",$senha)
+            $database = new database();
+            $con = $database->connect();
+
+            $sql = ""
             
         }
 
