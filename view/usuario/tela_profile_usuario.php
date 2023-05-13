@@ -20,7 +20,7 @@
 				retorno = confirm("Tem certeza que deseja excluir o ID="+id+" ?")
 				if(retorno){
 					alert("Excluindoo!!");
-					document.location.href = "../../../controller/vacina_controller.php?acao=deletar&id="+id;
+					document.location.href = "../controller/vacina_controller.php?acao=deletar&id="+id;
 				}
 			}
 		</script>
@@ -90,9 +90,7 @@
                     echo "<td>".$dados[$i]["local"]."</td>";
                     echo "<td>".$dados[$i]["fabricante"]."</td>";
                     echo "<td>".$dados[$i]["funcao_vacina"]."</td>";
-                    echo "<td align='center'><a href=\"../../../controller/usuario_controller.php?acao=deletar&id=".$dados[$i]["id"]."\">Excluir</a></td>"; 
-/*                     echo "<td align='center'><a href='#' onclick='excluir(".$dados[$i]["id"].")'>Excluir</a></td>";
- */
+                    echo "<td align='center'><a href='#' onclick='excluir(".$dados[$i]["id"].")'>Excluir</a></td>";
                     echo "</tr>";
                  }
                 ?>

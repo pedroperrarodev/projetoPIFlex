@@ -61,6 +61,20 @@ class Vacina
         return $dados;
     }
 
+    public function deletar($id)
+    {
+        $db = new Database();
+        $con = $db->connect();
+
+        $sql = "DELETE FROM vacinas WHERE id = :id";
+        $st = $con->prepare($sql);
+        $st->bindParam(':id', $id);
+
+        $status = $st->execute();
+
+        $db->close();
+        return  true;
+    }
 
     /* TESTANDO */
     public function listarVacinas($pagina = null, $contador = 100)

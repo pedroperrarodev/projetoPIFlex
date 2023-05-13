@@ -49,7 +49,7 @@
 
             else if($acao == "deletar"){
                 $id = $get["id"];
-                $Vacina = new Vacina();
+                $vacina = new Vacina();
                 $dados = $vacina->deletar($id);
                 
                 $this->listarVacinas();
