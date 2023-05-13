@@ -15,6 +15,15 @@
 
     <!-- TELA DE USUARIO -->
     <title>Tela Profile Usuario</title>
+    <script type="text/javascript">
+			function excluir(id){
+				retorno = confirm("Tem certeza que deseja excluir o ID="+id+" ?")
+				if(retorno){
+					alert("Excluindoo!!");
+					document.location.href = "../../../controller/vacina_controller.php?acao=deletar&id="+id;
+				}
+			}
+		</script>
 </head>
 <body>  
     <header>
@@ -65,27 +74,29 @@
             <table id= "tabelavacinas">
                 <tr>
                     <!-- <th>Id</th> -->
+                    <th>ID</th>
                     <th>Nome da vacina</th>
                     <th>Local</th>
                     <th>Fabricante</th>
                     <th>Função Vacina</th>
+                    <th></th>
                 </tr>
                 
                 <?php
                  for ($i=0; $i<sizeof($dados);$i++){
                     echo "<tr>";	
-                   /* echo "<td><a href=\"../../../controller/usuario_controller.php?acao=editar&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>"; */
+                    echo "<td><a href=\"../../../controller/usuario_controller.php?acao=editar&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>";
                     echo "<td>".$dados[$i]["nomevacina"]."</td>";
                     echo "<td>".$dados[$i]["local"]."</td>";
                     echo "<td>".$dados[$i]["fabricante"]."</td>";
                     echo "<td>".$dados[$i]["funcao_vacina"]."</td>";
-                     /* echo "<td align='center'><a href=\"../../../controller/usuario_controller.php?acao=deletar&id=".$dados[$i]["id"]."\">x</a></td>"; */
+                    echo "<td align='center'><a href=\"../../../controller/usuario_controller.php?acao=deletar&id=".$dados[$i]["id"]."\">Excluir</a></td>"; 
+/*                     echo "<td align='center'><a href='#' onclick='excluir(".$dados[$i]["id"].")'>Excluir</a></td>";
+ */
                     echo "</tr>";
                  }
                 ?>
-                
-
-
+            
             </table>
             
        </div>
