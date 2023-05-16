@@ -57,17 +57,26 @@
                     $cpf = $post["cpf"];
                     $senha = $post["senha"];
 
-                    if($perfil ==  1){
-                        $usuario = new usuario();
-                        $valida = $usuario->autenticar($cpf, $senha);
-                        
+                    $usuario = new usuario();
+                    $dados = $usuario->autenticar($cpf, $senha);
+                    if($dados != null){
+                        session_start();
+                        $_SESSION[] = 
+
+                        if($dados[0]["perfil"] == 1){
+                            $retorno = ["msg"=> "Usuário logado com sucesso", "erro"=>"0", "url"=>"tela_login.php"];
+                            echo "ADMIN";
+                        }
+                        else if($dados[0]["perfil"] == 2){
+                            echo "OUTRO PERFIL";
+                        }
+                        //$retorno = ["msg"=> "Usuário logado com sucesso", "erro"=>"0", "url"=>"tela_login.php"];
+                        echo json_encode($retorno);
                     }
-                    else if($perfil == 2){
-                        $usuario = new usuario();
-                        $valida = $usuario->autenticar($cpf, $senha);
-                    }
+
+                                      
+                    
                 }
-        
     }
 
 }

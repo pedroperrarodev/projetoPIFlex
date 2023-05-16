@@ -25,7 +25,6 @@
                     confirmar_senha: $("#confirmar_senha").val(),
     			};
                 
-                alert("TESTE");
 				$.ajax({
 					type: "POST",
 					url: "../controller/usuario_controller.php?acao=cadastrar",

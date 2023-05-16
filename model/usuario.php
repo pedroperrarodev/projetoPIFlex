@@ -55,15 +55,29 @@
             }
         }
 
-        public function autenciar($cpf, $senha){
+        public function autenticar($cpf, $senha){
 
-            $senha_cripto = hash("sha3-256",$senha)
+            $senha_cripto = hash("sha3-256",$senha);
             $database = new database();
             $con = $database->connect();
 
-            $sql = ""
+            $sql = "SELECT perfil, cpf From adm_e_usuario WHERE cpf = :cpf AND senha = :senha";
+
+            $st = $con->prepare($sql);
+            $st->bindParam(':cpf', $cpf);
+            $st->bindParam(':senha', $senha_cripto);
+            $retorno = $st->execute();
+            $dados = $st->fetchAll();
+    
+            if (sizeof($dados) == 1){
+                return $dados;
+            }
+            else{
+                return null;
+            }
             
         }
+        
 
         
     }
