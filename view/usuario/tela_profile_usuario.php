@@ -23,6 +23,29 @@
 					document.location.href = "../controller/vacina_controller.php?acao=deletar&id="+id;
 				}
 			}
+            function processa_atualizar(){
+				var formDados = {
+                    nomevacina: $("#nomevacina").val(),
+					local: $("#local").val(),
+					fabricante: $("#fabricante").val(),
+					funcao_vacina: $("#funcao_vacina").val(),
+    			};
+				
+				$.ajax({
+					type: "POST",
+					url: "../../controller/vacina_controller.php?acao=atualizar",
+					data: formDados,
+					dataType: "json",
+					}).done(function (dataRetorno) {
+						if(dataRetorno.erro == 0){
+							alert(dataRetorno.msg)
+							window.location.href = dataRetorno.url;
+						}
+						else{
+							alert(dataRetorno.msg)
+						}
+				});
+			}
 		</script>
 </head>
 <body>  
@@ -85,7 +108,8 @@
                 <?php
                  for ($i=0; $i<sizeof($dados);$i++){
                     echo "<tr>";	
-                    echo "<td><a href=\"../../../controller/usuario_controller.php?acao=editar&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>";
+                    echo "<td><a href=\"../controller/vacina_controller.php?acao=editar&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>";
+
                     echo "<td>".$dados[$i]["nomevacina"]."</td>";
                     echo "<td>".$dados[$i]["local"]."</td>";
                     echo "<td>".$dados[$i]["fabricante"]."</td>";

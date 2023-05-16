@@ -43,7 +43,7 @@
                 $vacina = new Vacina();
                 $dados = $vacina->buscarPorId($id);
                 
-                /* require_once("../view/usuario/editar_usuario.php"); */
+                require_once("../view/usuario/editar_vacina.php");
             }  
             
 

@@ -51,15 +51,19 @@ class Vacina
         $db = new Database();
         $con = $db->connect();
 
-        $sql = "SELECT id, nome, sobrenome, email, login FROM usuario WHERE id = :id";
+        $sql = "SELECT nomevacina, local, fabricante, funcao_vacina FROM vacinas WHERE id = :id";
         $st = $con->prepare($sql);
         $st->bindParam(':id', $id);
 
-        $dados = $st->execute();
+        $resultado = $st->execute();
 
+        $dados = $st->fetchAll();
         $db->close();
         return $dados;
     }
+
+
+    
 
     public function deletar($id)
     {

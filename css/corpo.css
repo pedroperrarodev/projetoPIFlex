@@ -47,7 +47,7 @@ header img{
 .sidebar div{
     display: flex;
     flex-direction: column;
-    padding-left: 10%;
+    padding-left: 5%;
     height: 9vh;
 }
 
