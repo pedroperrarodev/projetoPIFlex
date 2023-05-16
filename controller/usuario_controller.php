@@ -56,12 +56,13 @@
                 else if($acao == "logar"){
                     $cpf = $post["cpf"];
                     $senha = $post["senha"];
+                    $nome_completo = $post["nome__completo"];
 
                     $usuario = new usuario();
                     $dados = $usuario->autenticar($cpf, $senha);
                     if($dados != null){
                         session_start();
-                        $_SESSION[] = 
+                        $_SESSION[] = ;
 
                         if($dados[0]["perfil"] == 1){
                             $retorno = ["msg"=> "Usuário logado com sucesso", "erro"=>"0", "url"=>"tela_login.php"];

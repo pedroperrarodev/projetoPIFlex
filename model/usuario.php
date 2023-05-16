@@ -61,7 +61,7 @@
             $database = new database();
             $con = $database->connect();
 
-            $sql = "SELECT perfil, cpf From adm_e_usuario WHERE cpf = :cpf AND senha = :senha";
+            $sql = "SELECT perfil, cpf, nome_completo From adm_e_usuario WHERE cpf = :cpf AND senha = :senha";
 
             $st = $con->prepare($sql);
             $st->bindParam(':cpf', $cpf);
