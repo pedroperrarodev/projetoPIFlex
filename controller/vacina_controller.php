@@ -52,7 +52,7 @@
                 if($vacina->atualizar() == true){
                     $retorno["msg"] = "Vacina atualizada com sucesso!";
                     $retorno["erro"] = "0";
-                    $retorno["url"] = "../controller/vacina_controller.php?acao=listar";
+                    $retorno["url"] = "vacina_controller.php?acao=listar";
                     
                     echo json_encode($retorno);
                 }

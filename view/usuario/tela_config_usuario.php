@@ -1,5 +1,5 @@
 <?php
-    require_once("../../infra/valida_sessao.php");
+    require_once("../infra/valida_sessao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,8 +14,8 @@
 
 
     <!-- CSS PARA O PHP CONTROLLER -->
-<!--     <link rel="stylesheet" type="text/css" href="../css/homepage.css">
-    <link rel="stylesheet" type="text/css" href="../css/corpo.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/corpo.css">
+    <link rel="stylesheet" type="text/css" href="../css/tela_config_usuario.css">
 
     <!-- TELA DE USUARIO -->
     <title>Configurações de usuario</title>
@@ -23,22 +23,29 @@
     <!-- MUDAR TODOS OS DADOS -->
 
     <script src="/static/js/jquery-3.6.4.min.js"></script>
-		<script type="text/javascript">
+    <script type="text/javascript">
 			$( document ).ready(function() {
 			});
 
             function processa_atualizar(){
 				var formDados = {
                     id: $("#id").val(),
-					nomevacina: $("#nomevacina").val(),
-					local: $("#local").val(),
-					fabricante: $("#fabricante").val(),
-					funcao_vacina: $("#funcao_vacina").val(),
+					nome_completo: $("#nome_completo").val(),
+					cpf: $("#cpf").val(),
+					rua: $("#rua").val(),
+					bairro: $("#bairro").val(),
+					cidade: $("#cidade").val(),
+					numero: $("#numero").val(),
+					num_telefone: $("#num_telefone").val(),
+					email: $("#email").val(),
+					perfil: $("#perfil").val(),
+                    senha: $("#senha").val(),
+                    confirmar_senha: $("#confirmar_senha").val(),
     			};
-				
+
 				$.ajax({
 					type: "POST",
-					url: "../controller/vacina_controller.php?acao=atualizar",
+					url: "../controller/usuario_controller.php?acao=atualizar",
 					data: formDados,
 					dataType: "json",
 					}).done(function (dataRetorno) {
@@ -82,8 +89,9 @@
                 <div>
                     <a href="cadastro_vacina.php"><button><strong>Cadastro de Vacinas </strong></button></a>
                 </div>
-                <div>
-                    <a><button  id="activemenu"><strong>Configurações</strong></button></a>
+                <div>  
+                    <a href="../controller/usuario_controller.php?acao=editar&id="><button  id="activemenu"><strong>Configurações</strong></button></a>
+
                 </div>
             </div>
         </div>
@@ -95,6 +103,9 @@
                         <h1>Editar dados do usuário</h1>
                         <p>Reescreva seus dados para editar.</p>
                         <hr>
+                        <input type="hidden" placeholder="id" name="id" id="id" value="<?php echo $dados[0]["id"]?>">
+
+
                         <label for="nome_completo"><b>Nome Completo</b></label>
                         <input type="text" placeholder="Insira o Nome Completo" name="nome_completo" id="nome_completo" value="<?php echo $dados[0]["nome_completo"]?>">
                         
@@ -126,7 +137,7 @@
                         <label for="conf_senha"><b>Confirmar Senha</b></label>
                         <input type="password" placeholder="Repita sua Senha" name="confirmar_senha" id="confirmar_senha" >
                         <hr>
-                        <button type="button" class="botao_registrar" onclick="processa_cadastro()">Cadastrar</button>
+                        <button type="button" class="botao_registrar" onclick="processa_atualizar()">Cadastrar</button>
                         </div>
                         <div class="container signin">
                         <p>Já possui uma conta? <a href="tela_login.php">Entrar</a>.</p>

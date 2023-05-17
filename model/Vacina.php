@@ -81,7 +81,7 @@ class Vacina
         return  true;
     }
 
-    /* TESTANDO */
+
     public function listarVacinas($pagina = null, $contador = 100)
     {
         $db = new Database();

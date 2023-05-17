@@ -69,7 +69,7 @@
     <div class="menu">
             <div class="sidebar">
                 <div>
-                    <a href="homepage.php"><button><strong>Home</strong></button></a>
+                    <a href="../usuario/homepage.php"><button><strong>Home</strong></button></a>
                 </div>
                 <div>
                     <a href="../../controller/vacina_controller.php?acao=listar"><button><strong>Perfil</strong></button></a>
@@ -78,7 +78,7 @@
                     <a href="cadastro_vacina.php"><button id="activemenu"><strong>Cadastro de Vacinas </strong></button></a>
                 </div>
                 <div>
-                    <a href="tela_config_usuario.php"><button><strong>Configurações</strong></button></a>
+                    <a href="../usuario/tela_config_usuario.php"><button><strong>Configurações</strong></button></a>
                 </div>
             </div>
 
