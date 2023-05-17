@@ -106,18 +106,6 @@
                     }
                 }
 
-
-
-
-
-
-
-
-
-
-
-
-
                 else if($acao == "logar"){
                     $cpf = $post["cpf"];
                     $senha = $post["senha"];
