@@ -9,16 +9,15 @@
     <link rel="stylesheet" type="text/css" href="../css/corpo.css">
     <link rel="stylesheet" type="text/css" href="../css/cadastro_vacina_usuario.css">
 
-
-
     <title>Editar Vacinas</title>
-    <script src="../../static/js/jquery-3.6.4.min.js"></script>
+    <script src="/static/js/jquery-3.6.4.min.js"></script>
 		<script type="text/javascript">
 			$( document ).ready(function() {
 			});
 
             function processa_atualizar(){
 				var formDados = {
+                    id: $("#id").val(),
 					nomevacina: $("#nomevacina").val(),
 					local: $("#local").val(),
 					fabricante: $("#fabricante").val(),
@@ -27,7 +26,7 @@
 				
 				$.ajax({
 					type: "POST",
-					url: "../../controller/vacina_controller.php?acao=atualizar",
+					url: "../controller/vacina_controller.php?acao=atualizar",
 					data: formDados,
 					dataType: "json",
 					}).done(function (dataRetorno) {
@@ -83,6 +82,7 @@
             <form name="cadastro_vacinas" action="#" method="POST">
                 <h1>Editar a vacina.</h1><br>
                 <div class="div_form">
+                    <input type="text" id="id" name="id" value="<?php echo $dados[0]['id']?>"> <br>
                     <h4>Nome da vacina:</h4> <input type="text" id="nomevacina" name="nomevacina" value="<?php echo $dados[0]["nomevacina"]?>">
                     <br>
                     <h4>Local ou Unidade de Vacinação:</h4> <input type="text" id="local" name="local" value="<?php echo $dados[0]["local"]?>">

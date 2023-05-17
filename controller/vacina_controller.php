@@ -30,6 +30,41 @@
                     echo json_encode($retorno);
                 }
             }
+            else if ($acao == "atualizar"){
+                
+                $vacina = new Vacina();
+
+                $id = $post["id"];
+                $vacina->__set("id", $id);
+
+                $nomevacina = $post["nomevacina"];
+                $vacina->__set("nomevacina", $nomevacina);
+
+                $local = $post["local"];
+                $vacina->__set("local", $local);
+
+                $fabricante = $post["fabricante"];
+                $vacina->__set("fabricante", $fabricante);
+
+                $funcao_vacina = $post["funcao_vacina"];
+                $vacina->__set("funcao_vacina", $funcao_vacina);
+
+                if($vacina->atualizar() == true){
+                    /* $retorno["msg"] = "Usuário atualizado com sucesso!"; */
+                    $retorno["msg"] = "AQUI";
+                    $retorno["erro"] = "0";
+                    $retorno["url"] = "../controller/vacina_controller.php?acao=listar";
+                    
+                    echo json_encode($retorno);
+                }
+                else{
+                    $retorno = ["msg" =>"Erro ao atualizar o usuário!!", "erro"=>"1"];
+                    echo json_encode($retorno);
+                }
+
+            }
+
+            
             else if ($acao == "listar"){
                 $vacina = new Vacina();
                 $dados = $vacina->listarVacinas();
@@ -42,6 +77,7 @@
                 $id = $get["id"];
                 $vacina = new Vacina();
                 $dados = $vacina->buscarPorId($id);
+
                 
                 require_once("../view/usuario/editar_vacina.php");
             }  

@@ -3,6 +3,7 @@ require_once ("../infra/Database.php");
 
 class Vacina
 {
+    private $id;
     private $nomevacina;
     private $local;
     private $fabricante;
@@ -51,7 +52,7 @@ class Vacina
         $db = new Database();
         $con = $db->connect();
 
-        $sql = "SELECT nomevacina, local, fabricante, funcao_vacina FROM vacinas WHERE id = :id";
+        $sql = "SELECT id, nomevacina, local, fabricante, funcao_vacina FROM vacinas WHERE id = :id";
         $st = $con->prepare($sql);
         $st->bindParam(':id', $id);
 
@@ -94,6 +95,32 @@ class Vacina
 
         $db->close();
         return $dados;
+    }
+
+    public function atualizar(){
+        $db = new Database();
+        $con = $db->connect();
+
+        $sql = "UPDATE vacinas set nomevacina = :nomevacina, local = :local, fabricante = :fabricante, 
+                    funcao_vacina = :funcao_vacina WHERE id = :id";
+        
+        $st = $con->prepare($sql);
+        $st->bindParam(':nomevacina', $this->nomevacina);
+        $st->bindParam(':local', $this->local);
+        $st->bindParam(':fabricante', $this->fabricante);
+        $st->bindParam(':funcao_vacina', $this->funcao_vacina);
+        $st->bindParam(':id', $this->id);
+	    
+        $status = $st->execute();
+        
+
+        if ($status == true){
+            return true;
+        }
+        else{
+            return false;
+        }
+
     }
 
 
