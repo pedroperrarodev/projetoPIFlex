@@ -38,7 +38,6 @@
                     $senha = $post["senha"];
                     $confirmar_senha = $post["confirmar_senha"];
 
-                    
                     if ($senha == $confirmar_senha){
                         $senha_hash = hash("sha3-256", $senha);
                         $usuario->__set("senha", $senha_hash);
@@ -56,32 +55,38 @@
                 else if($acao == "logar"){
                     $cpf = $post["cpf"];
                     $senha = $post["senha"];
-                    $nome_completo = $post["nome__completo"];
 
                     $usuario = new usuario();
                     $dados = $usuario->autenticar($cpf, $senha);
+
                     if($dados != null){
                         session_start();
-                        $_SESSION[] = ;
+                        $_SESSION["logado"] = true;
+                        $_SESSION["cpf"] = $cpf ;
 
-                        if($dados[0]["perfil"] == 1){
-                            $retorno = ["msg"=> "Usuário logado com sucesso", "erro"=>"0", "url"=>"tela_login.php"];
-                            echo "ADMIN";
+                        if($dados[0]["perfil"] == 2){
+                            $retorno = ["msg"=> "Usuário logado com sucesso", "erro"=>"0", "url"=>"usuario/tela_profile_usuario.php"];
+                            echo json_encode($retorno);
                         }
-                        else if($dados[0]["perfil"] == 2){
-                            echo "OUTRO PERFIL";
+                        else if($dados[0]["perfil"] == 1){
+                            $retorno = ["msg"=> "Administrador logado com sucesso", "erro"=>"0", "url"=>"admin/tela_profile_admin.php"];
+                            echo json_encode($retorno);
                         }
-                        //$retorno = ["msg"=> "Usuário logado com sucesso", "erro"=>"0", "url"=>"tela_login.php"];
-                        echo json_encode($retorno);
                     }
+                    else{
+                        $retorno = ["msg"=> "Usuario invalido", "erro"=>"1", "url"=>""];
+                        echo json_encode($retorno);
 
-                                      
-                    
+                    }
+                }
+                else if($acao == "logout"){
+                    session_start();
+                    unset($_SESSION);
+                    session_destroy();
+                    header("location:../view/tela_login.php");
                 }
     }
-
 }
-
     $controller = new usuario_controller();
     $controller->execute($_POST, $_GET);
 

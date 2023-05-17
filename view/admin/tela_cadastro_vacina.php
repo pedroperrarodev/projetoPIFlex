@@ -1,3 +1,6 @@
+<?php
+    require_once("../../infra/valida_sessao.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
