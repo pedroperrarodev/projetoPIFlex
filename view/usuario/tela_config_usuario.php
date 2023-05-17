@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <HEAD:view/usuario/index.html></HEAD:view>
     <!-- CSS PARA O HTML -->
-    <link rel="stylesheet" type="text/css" href="../../css/homepage.css">
     <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/tela_config_usuario.css">
+
 
     <!-- CSS PARA O PHP CONTROLLER -->
 <!--     <link rel="stylesheet" type="text/css" href="../css/homepage.css">
@@ -18,6 +19,40 @@
 
     <!-- TELA DE USUARIO -->
     <title>Configurações de usuario</title>
+
+    <!-- MUDAR TODOS OS DADOS -->
+
+    <script src="/static/js/jquery-3.6.4.min.js"></script>
+		<script type="text/javascript">
+			$( document ).ready(function() {
+			});
+
+            function processa_atualizar(){
+				var formDados = {
+                    id: $("#id").val(),
+					nomevacina: $("#nomevacina").val(),
+					local: $("#local").val(),
+					fabricante: $("#fabricante").val(),
+					funcao_vacina: $("#funcao_vacina").val(),
+    			};
+				
+				$.ajax({
+					type: "POST",
+					url: "../controller/vacina_controller.php?acao=atualizar",
+					data: formDados,
+					dataType: "json",
+					}).done(function (dataRetorno) {
+						if(dataRetorno.erro == 0){
+							alert(dataRetorno.msg)
+							window.location.href = dataRetorno.url;
+						}
+						else{
+							alert(dataRetorno.msg)
+						}
+				});
+			}
+		</script>
+        <!-- MUDAR TODOS OS DADOS -->
 </head>
 <body>  
     <header>
@@ -51,14 +86,62 @@
                     <a><button  id="activemenu"><strong>Configurações</strong></button></a>
                 </div>
             </div>
-
         </div>
 
+        <div class="containercadastro">
+            <div class="form_editar_usuario">
+                <form action="#" method="POST">
+                        <div class="formulariocadastro">
+                        <h1>Editar dados do usuário</h1>
+                        <p>Reescreva seus dados para editar.</p>
+                        <hr>
+                        <label for="nome_completo"><b>Nome Completo</b></label>
+                        <input type="text" placeholder="Insira o Nome Completo" name="nome_completo" id="nome_completo" value="<?php echo $dados[0]["nome_completo"]?>">
+                        
+                        <label for="cpf"><b>CPF</b></label>
+                        <input type="text" placeholder="Insira seu CPF" name="cpf" id="cpf" value="<?php echo $dados[0]["cpf"]?>">
+                        
+                        <label for="rua"><b>Rua</b></label>
+                        <input type="text" placeholder="Insira a Rua" name="rua" id="rua" value="<?php echo $dados[0]["rua"]?>">
 
-  
-        <div class="homepage">
+                        <label for="bairro"><b>Bairro</b></label>
+                        <input type="text" placeholder="Insira o Bairro" name="bairro" id="bairro" value="<?php echo $dados[0]["bairro"]?>">
+
+                        <label for="cidade"><b>Cidade</b></label>
+                        <input type="text" placeholder="Insira a cidade " name="cidade" id="cidade" value="<?php echo $dados[0]["cidade"]?>">
+
+                        <label for="numero"><b>Número</b></label>
+                        <input type="text" placeholder="Insira o Número da Casa" name="numero" id="numero" value="<?php echo $dados[0]["numero"]?>">
+                        
+                        
+                        <label for="num_telefone"><b>Número de Telefone</b></label>
+                        <input type="text" placeholder="Insira o Número de Telefone" name="num_telefone" id="num_telefone" value="<?php echo $dados[0]["num_telefone"]?>">
+
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Insira o Email" name="email" id="email" value="<?php echo $dados[0]["email"]?>">
+                    
+                        <label for="senha"><b>Senha</b></label>
+                        <input type="password" placeholder="Digita sua Senha" name="senha" id="senha">
+                    
+                        <label for="conf_senha"><b>Confirmar Senha</b></label>
+                        <input type="password" placeholder="Repita sua Senha" name="confirmar_senha" id="confirmar_senha" >
+                        <hr>
+                        <button type="button" class="botao_registrar" onclick="processa_cadastro()">Cadastrar</button>
+                        </div>
+                        <div class="container signin">
+                        <p>Já possui uma conta? <a href="tela_login.php">Entrar</a>.</p>
+                    </div>
+                    </form>
+
+
+
+
             
-        </div>
+                </div>
+        
+
+       </div>
+
 
     </div>
     

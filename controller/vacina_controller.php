@@ -50,15 +50,14 @@
                 $vacina->__set("funcao_vacina", $funcao_vacina);
 
                 if($vacina->atualizar() == true){
-                    /* $retorno["msg"] = "Usuário atualizado com sucesso!"; */
-                    $retorno["msg"] = "AQUI";
+                    $retorno["msg"] = "Vacina atualizada com sucesso!";
                     $retorno["erro"] = "0";
                     $retorno["url"] = "../controller/vacina_controller.php?acao=listar";
                     
                     echo json_encode($retorno);
                 }
                 else{
-                    $retorno = ["msg" =>"Erro ao atualizar o usuário!!", "erro"=>"1"];
+                    $retorno = ["msg" =>"Erro ao atualizar o vacina!!", "erro"=>"1"];
                     echo json_encode($retorno);
                 }
 

@@ -11,8 +11,7 @@
     
     <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
     <link rel="stylesheet" type="text/css" href="../../css/cadastro_vacina_usuario.css">
-    <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
-    <link rel="stylesheet" type="text/css" href="../../css/cadastro_vacina_usuario.css">
+
 
 
     <title>Cadastro de Vacinas</title>

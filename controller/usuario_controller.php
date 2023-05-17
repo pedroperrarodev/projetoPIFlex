@@ -65,7 +65,7 @@
                         $_SESSION["cpf"] = $cpf ;
 
                         if($dados[0]["perfil"] == 2){
-                            $retorno = ["msg"=> "Usuário logado com sucesso", "erro"=>"0", "url"=>"usuario/tela_profile_usuario.php"];
+                            $retorno = ["msg"=> "Usuário logado com sucesso", "erro"=>"0", "url"=>"usuario/homepage.php"];
                             echo json_encode($retorno);
                         }
                         else if($dados[0]["perfil"] == 1){
@@ -85,6 +85,22 @@
                     session_destroy();
                     header("location:../view/tela_login.php");
                 }
+                else if ($acao == "listar"){
+                    $usuario = new Usuario();
+                    $dados = $usuario->listarVacinas();
+    
+                    
+                   /*  require_once("../view/usuario/tela_profile_usuario.php"); */
+                }
+    
+                else if($acao == "editar"){
+                    $id = $get["id"];
+                    $usuario = new Usuario();
+                    $dados = $usuario->buscarPorId($id);
+    
+                    
+                    /* require_once("../view/usuario/editar_vacina.php"); */
+                } 
     }
 }
     $controller = new usuario_controller();

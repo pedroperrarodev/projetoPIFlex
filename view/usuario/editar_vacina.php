@@ -1,5 +1,5 @@
 <?php
-    require_once("../../infra/valida_sessao.php");
+    require_once("../infra/valida_sessao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -85,7 +85,7 @@
             <form name="cadastro_vacinas" action="#" method="POST">
                 <h1>Editar a vacina.</h1><br>
                 <div class="div_form">
-                    <input type="text" id="id" name="id" value="<?php echo $dados[0]['id']?>"> <br>
+                    <input type="hidden" id="id" name="id" value="<?php echo $dados[0]['id']?>"> <br>
                     <h4>Nome da vacina:</h4> <input type="text" id="nomevacina" name="nomevacina" value="<?php echo $dados[0]["nomevacina"]?>">
                     <br>
                     <h4>Local ou Unidade de Vacinação:</h4> <input type="text" id="local" name="local" value="<?php echo $dados[0]["local"]?>">
