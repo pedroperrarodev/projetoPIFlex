@@ -123,7 +123,7 @@
                             echo json_encode($retorno);
                         }
                         else if($dados[0]["perfil"] == 1){
-                            $retorno = ["msg"=> "Administrador logado com sucesso", "erro"=>"0", "url"=>"admin/tela_profile_admin.php"];
+                            $retorno = ["msg"=> "Administrador logado com sucesso", "erro"=>"0", "url"=>"admin/homepage_admin.php"];
                             echo json_encode($retorno);
                         }
                     }

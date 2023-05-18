@@ -47,9 +47,6 @@
                 <div>
                     <a href="tela_cadastro_posto_saude.php"><button><strong>Cadastro de Posto de Sáude</strong></button></a>
                 </div>
-                <div>
-                    <a><button><strong>Menu 3</strong></button></a>
-                </div>
             </div>
 
         </div>

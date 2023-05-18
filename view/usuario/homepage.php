@@ -39,7 +39,7 @@
         <div class="menu">
             <div class="sidebar">
                 <div>
-                    <a href="homepage.php"><button id="activemenu"><strong>Home</strong></button></a>
+                    <a href="#"><button id="activemenu"><strong>Home</strong></button></a>
                 </div>
                 <div>
                     <a href="../../controller/vacina_controller.php?acao=listar"><button><strong>Perfil</strong></button></a>

@@ -29,7 +29,7 @@
         <div class="menu">
             <div class="sidebar">
                 <div>
-                    <a href="tela_profile_admin.php"><button><strong>Perfil</strong></button></a>
+                    <a href="homepage_admin.php"><button><strong>Perfil</strong></button></a>
                 </div>
                 <div>
                     <a href="tela_cadastro_vacina.php"><button><strong>Cadastro de Vacinas</strong></button></a>
@@ -39,9 +39,6 @@
                 </div>
                 <div>
                     <a href="#"><button id="activemenu"><strong>Cadastro de Posto de Sáude</strong></button></a>
-                </div>
-                <div>
-                    <a><button><strong>Menu 3</strong></button></a>
                 </div>
             </div>
         </div>
