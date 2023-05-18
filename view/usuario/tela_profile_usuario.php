@@ -1,5 +1,6 @@
 <?php
-    require_once("../infra/valida_sessao.php");      /* DEPENDENDO DA AÇÃO OU PÁGINA ATUALIZADA TEM QUE SER OUTRO DIRETÓRIO */
+    require_once("../../infra/valida_sessao.php");      
+    /* DEPENDENDO DA AÇÃO OU PÁGINA ATUALIZADA TEM QUE SER OUTRO DIRETÓRIO */
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

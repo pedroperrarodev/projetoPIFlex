@@ -1,5 +1,5 @@
 <?php
-    require_once("../infra/valida_sessao.php");
+    require_once("../../infra/valida_sessao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -104,7 +104,6 @@
                         <p>Reescreva seus dados para editar.</p>
                         <hr>
                         <input type="hidden" placeholder="id" name="id" id="id" value="<?php echo $dados[0]["id"]?>">
-
 
                         <label for="nome_completo"><b>Nome Completo</b></label>
                         <input type="text" placeholder="Insira o Nome Completo" name="nome_completo" id="nome_completo" value="<?php echo $dados[0]["nome_completo"]?>">

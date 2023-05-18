@@ -1,5 +1,5 @@
 <?php
-    require_once("../infra/valida_sessao.php");
+    require_once("../../infra/valida_sessao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
