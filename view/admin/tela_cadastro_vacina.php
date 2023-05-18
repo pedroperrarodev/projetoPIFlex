@@ -8,10 +8,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/cadastro_nova_vacina.css">
+    <link rel="stylesheet" type="text/css" href="../../css/tela_profile.css">
+    <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
     
     <title>Tela de cadastro Vacina</title>
 </head>
 <body>
+<header>
+        <div id="logo">
+            <h1>Logo</h1>
+        </div>
+        <div class="botaosair">
+            <a href="../../controller/usuario_controller.php?acao=logout"><button class="noselect"><span class='text'>Sair</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/>
+            </svg></span></button></a>
+
+        </div>
+
+    </header>
+<div id="main">
+        <div class="menu">
+            <div class="sidebar">
+                <div>
+                    <a href="tela_profile_admin.php"><button><strong>Perfil</strong></button></a>
+                </div>
+                <div>
+                    <a href="#"><button id="activemenu"><strong>Cadastro de Vacinas</strong></button></a>
+                </div>
+                <div>
+                    <a href="tela_cadastro_admin.php"><button><strong>Cadastro de adminstradores</strong></button></a>
+                </div>
+                <div>
+                    <a href="tela_cadastro_posto_saude.php"><button><strong>Cadastro de Posto de Sáude</strong></button></a>
+                </div>
+                <div>
+                    <a><button><strong>Menu 3</strong></button></a>
+                </div>
+            </div>
+        </div>
     <div class="bodycadastro">
         <div class="maincadastro">
             <div class="telacadastro">
@@ -39,7 +73,7 @@
             </div>
         </div>
     </div>
-
+</div>
     
 </body>
 </html>

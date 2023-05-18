@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../css/tela_profile.css">
     <link rel="stylesheet" type="text/css" href="../css/corpo.css">
 
-    <title>Tela Admin</title>
+    <title>Tela administrador</title>
 </head>
 <body>  
     <header>
@@ -50,11 +50,6 @@
                 <div>
                     <a><button><strong>Menu 3</strong></button></a>
                 </div>
-            </div>
-            <div class="sobre">
-                <h3>Sobre</h3>
-                
-
             </div>
 
         </div>
