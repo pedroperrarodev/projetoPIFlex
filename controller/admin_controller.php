@@ -44,7 +44,7 @@
                         $admin->__set("senha", $senha_hash);
 
                         if($admin->cadastrar_admin() == true){
-                            $retorno = ["msg" =>"Adminstrador cadastrado com sucesso!", "erro"=>"0", "url" => "homepage_admin.php"];
+                            $retorno = ["msg" =>"Adminstrador cadastrado com sucesso!", "erro"=>"0", "url" => "../../controller/admin_controller.php?acao=listarAdminstradores"];
                             echo json_encode($retorno);
                         }
                     }
@@ -52,6 +52,11 @@
                         $retorno = ["msg" =>"Erro ao cadastrar o adminstrador!", "erro"=>"1"];
                         echo json_encode($retorno);                    }
             }
+
+            else if($acao == "listarAdminstradores"){
+                $this->listarAdminstradores();
+            }
+
             else if($acao == "cadastrar_posto"){
 
                 $admin = new admin();
@@ -81,7 +86,7 @@
                 $admin->__set("email", $email);
 
                 if($admin->cadastrar_posto() == true){
-                    $retorno = ["msg" =>"Posto cadastrado com sucesso!", "erro"=>"0", "url" => "homepage_admin.php"];
+                    $retorno = ["msg" =>"Posto cadastrado com sucesso!", "erro"=>"0", "url" => "../../controller/admin_controller.php?acao=listarPostos"];
                     echo json_encode($retorno);
                 }
                 else{
@@ -90,10 +95,58 @@
                 }
 
             }
-            
-        }
-    
+            else if($acao == "listarPostos"){
+                $this->listarPostos();
+            }
 
+            else if($acao == "cadastrar_vacina"){
+
+                $admin = new admin();
+
+                $nome_vacina = $post["nome_vacina"];
+                $admin->__set("nome_vacina",$nome_vacina);
+
+                $fabricante = $post["fabricante"];
+                $admin->__set("fabricante",$fabricante);
+
+                $doenca_alvo = $post["doenca_alvo"];
+                $admin->__set("doenca_alvo", $doenca_alvo);
+
+                if($admin->cadastrar_vacina() == true){
+                    $retorno = ["msg" =>"Vacina cadastrada com sucesso!", "erro"=>"0", "url" => "../../controller/admin_controller.php?acao=listarVacina"];
+                    echo json_encode($retorno);
+                }
+                else{
+                    $retorno = ["msg" =>"Erro ao cadastrar a !Vacina", "erro"=>"1"];
+                    echo json_encode($retorno);                    
+                }
+
+            }
+            else if($acao == "listarVacina"){
+                $this->listarVacinas();
+            }
+        }
+
+        private function listarPostos(){
+            $admin = new admin();
+            $dados = $admin->listarTodosPostos();
+
+            require_once("../view/admin/tela_consulta_postos_saude.php");
+        }
+
+        private function listarAdminstradores(){
+            $admin = new admin();
+            $dados = $admin->listarTodosAdministradores();
+
+            require_once("../view/admin/tela_consulta_adminstradores.php");
+        }
+
+        private function listarVacinas(){
+            $admin = new admin();
+            $dados = $admin->listarTodasVacinas();
+
+            require_once("../view/admin/tela_consulta_vacina.php");
+        }
 }
 
     $controller = new admin_controller();

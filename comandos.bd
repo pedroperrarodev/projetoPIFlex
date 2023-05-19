@@ -22,7 +22,7 @@ CREATE TABLE vacina(
     id int auto_increment primary key,
     nome_vacina varchar(250),
     fabricante varchar(250),
-    funcao_vacina(300)
+    doenca_alvo varchar(300)
 );
 
 CREATE TABLE posto_vacinacao(

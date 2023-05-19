@@ -15,6 +15,10 @@
         private $num_telefone;
         private $email;
         private $senha;
+        private $nome_vacina;
+        private $fabricante;
+        private $doenca_alvo;
+
 
         public function __set($atributo, $valor)
         {
@@ -57,6 +61,21 @@
             }
         }
 
+        public function listarTodosAdministradores($pagina = null, $contador = 100)
+        {
+            $db = new database();
+            $con = $db->connect();
+    
+            $sql = "SELECT id, nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email FROM adm_e_usuario WHERE perfil=1 limit $contador";
+            $rs = $con->query($sql);
+    
+            $status = $rs->execute();
+            $dados = $rs->fetchAll();
+    
+            $db->close();
+            return $dados;
+        }
+
         public function cadastrar_posto(){
             $db = new database();
             $con = $db->connect();
@@ -75,14 +94,62 @@
             $st->bindParam(':email', $this->email);
             $status = $st->execute();
 
-            $idUsuario = $con->lastInsertId();
+            $idPosto = $con->lastInsertId();
 
              if ($status == true){
                  return true;
             }
         }
 
+        public function listarTodosPostos($pagina = null, $contador = 100)
+        {
+            $db = new database();
+            $con = $db->connect();
+    
+            $sql = "SELECT id, razao_social, cnpj, rua, bairro, cidade, numero, num_telefone, email FROM posto_vacinacao limit $contador";
+            $rs = $con->query($sql);
+    
+            $status = $rs->execute();
+            $dados = $rs->fetchAll();
+    
+            $db->close();
+            return $dados;
+        }
 
+        public function cadastrar_vacina(){
+            $db = new database();
+            $con = $db->connect();
+
+            $sql = "INSERT INTO vacina(nome_vacina, fabricante, doenca_alvo) 
+            VALUES(:nome_vacina, :fabricante, :doenca_alvo)";
+
+            $st = $con->prepare($sql);
+            $st->bindParam(':nome_vacina', $this->nome_vacina);
+            $st->bindParam(':fabricante', $this->fabricante);
+            $st->bindParam(':doenca_alvo', $this->doenca_alvo);
+            $status = $st->execute();
+
+            $idPosto = $con->lastInsertId();
+
+             if ($status == true){
+                 return true;
+            }
+        }
+
+        public function listarTodasVacinas($pagina = null, $contador = 100)
+        {
+            $db = new database();
+            $con = $db->connect();
+    
+            $sql = "SELECT id, nome_vacina, fabricante, doenca_alvo FROM vacina limit $contador";
+            $rs = $con->query($sql);
+    
+            $status = $rs->execute();
+            $dados = $rs->fetchAll();
+    
+            $db->close();
+            return $dados;
+        }
         
     }
 ?>

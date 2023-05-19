@@ -71,10 +71,19 @@
                     <a href="tela_cadastro_vacina.php"><button><strong>Cadastro de Vacinas</strong></button></a>
                 </div>
                 <div>
+                    <a href="../../controller/admin_controller.php?acao=listarVacina"><button><strong>Consulta vacinas cadastrados</strong></button></a>
+                </div>
+                <div>
                     <a href="tela_cadastro_admin.php"><button><strong>Cadastro de adminstradores</strong></button></a>
                 </div>
                 <div>
+                    <a href="../../controller/admin_controller.php?acao=listarAdminstradores"><button><strong>Consulta adminstradores cadastrados</strong></button></a>
+                </div>
+                <div>
                     <a href="#"><button id="activemenu"><strong>Cadastro de Posto de Sáude</strong></button></a>
+                </div>
+                <div>
+                    <a href="../../controller/admin_controller.php?acao=listarPostos"><button><strong>Consulta postos cadastrados</strong></button></a>
                 </div>
             </div>
         </div>
