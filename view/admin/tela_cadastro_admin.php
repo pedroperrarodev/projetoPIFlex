@@ -10,6 +10,45 @@
     <link rel="stylesheet" type="text/css" href="../../css/cadastro.css">
     <link rel="stylesheet" type="text/css" href="../../css/tela_profile.css">
     <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
+    <script src="../../static/js/jquery-3.6.4.min.js"></script> 
+    <script type="text/javascript">
+        $( document ).ready(function() {
+			});
+
+			function processa_cadastro(){
+				var formDados = {
+					nome_completo: $("#nome_completo").val(),
+					cpf: $("#cpf").val(),
+					rua: $("#rua").val(),
+                    bairro: $("#bairro").val(),
+                    cidade: $("#cidade").val(),
+					numero: $("#numero").val(),
+					num_telefone: $("#num_telefone").val(),
+					email: $("#email").val(),
+                    perfil: $("#perfil").val(),
+                    senha: $("#senha").val(),
+                    confirmar_senha: $("#confirmar_senha").val(),
+    			};
+                
+				$.ajax({
+					type: "POST",
+					url: "../../controller/admin_controller.php?acao=cadastrar_admin",
+					data: formDados,
+					dataType: "json",
+					}).done(function (dataRetorno) {
+                        console.log("aqui");
+						if(dataRetorno.erro == 0){
+							alert(dataRetorno.msg);
+							window.location.href = dataRetorno.url;
+						}
+						else{
+							alert(dataRetorno.msg)
+						}
+						
+				});
+				
+			}
+		</script>
     
     <title>Tela de admin</title>
 </head>
@@ -43,7 +82,8 @@
                 </div>
             </div>
 </div>
-    <div class="bodycadastro">
+        <div class="containerprofile1">
+        <div class="bodycadastro">
         <div class="maincadastro">
             <div class="telacadastro">
                 <a><img src=""></img></a>
@@ -83,14 +123,15 @@
                       <label for="confirmar_senha"><b>Confirmar Senha</b></label>
                       <input type="password" placeholder="Repita sua Senha" name="confirmar_senha" id="confirmar_senha">
                       <hr>
-                      <button type="submit" class="botao_registrar">Cadastrar</button>
+                      <button type="button" class="botao_registrar" onclick="processa_cadastro()">Cadastrar</button>
                     </div>
-                    <a href=""><button type="button" class="botao_voltar">Voltar</button></a>
                   </form>
             </div>
         </div>
     </div>
-
-    
+        </div>
+        <div class="containerprofile2">
+        </div>
+</div>
 </body>
 </html>

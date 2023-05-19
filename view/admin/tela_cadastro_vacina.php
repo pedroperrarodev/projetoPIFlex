@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="../../css/cadastro_nova_vacina.css">
     <link rel="stylesheet" type="text/css" href="../../css/tela_profile.css">
     <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
-    
     <title>Tela de cadastro Vacina</title>
 </head>
 <body>
@@ -43,7 +42,8 @@
                 </div>
             </div>
         </div>
-    <div class="bodycadastro">
+        <div class="containerprofile1">
+        <div class="bodycadastro">
         <div class="maincadastro">
             <div class="telacadastro">
                 <a><img src=""></img></a>
@@ -70,6 +70,9 @@
             </div>
         </div>
     </div>
+       </div>
+       <div class="containerprofile2">
+       </div>
 </div>
     
 </body>

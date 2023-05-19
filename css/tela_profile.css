@@ -253,6 +253,7 @@ input[type=text], input[type=password] {
     padding: 4% 5% 4% 5%;
     justify-content: start;
     /* justify-content: space-between; */
+    height: 100vh;
 }
 .containerprofile2{
     background-color: whitesmoke;

@@ -138,31 +138,10 @@
                     unset($_SESSION);
                     session_destroy();
                     header("location:../view/tela_login.php");
-                }
-                else if ($acao == "listar"){
-                    $usuario = new Usuario();
-                    $dados = $usuario->listarUsuarios();
-    
-                    
-                   /*  require_once("../view/usuario/tela_profile_usuario.php"); */
-                }
-    
-                else if($acao == "editar"){
-                    $id = $get["id"];
-                    $usuario = new Usuario();
-                    $dados = $usuario->buscarPorId($id);
-    
-                    
-                    require_once("../view/usuario/tela_config_usuario.php");
                 } 
     }
 
-    private function listarUsuarios(){
-        $usuario = new Usuario();
-        $dados = $usuario->listarTodos();
-
-        require_once("../view/usuario/listar_usuario.php");
-    }
+ 
 
 }
     $controller = new usuario_controller();

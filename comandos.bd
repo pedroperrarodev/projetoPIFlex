@@ -17,10 +17,6 @@ CREATE TABLE adm_e_usuario (
     perfil int not null 
 );
 
-    //botar em uma funcao, buscar se é admin ou user....
-    //1 vai ser admin e 2 usuario normal...
-    usar em um if
-
 
 CREATE TABLE vacina(
     id int auto_increment primary key,
@@ -51,10 +47,6 @@ CREATE TABLE vacina_usuario(
 
 
 code whisperer
-
-
-
-
 
 
 

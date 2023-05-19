@@ -52,28 +52,6 @@
         </div>
 
        <div class="containerprofile1">
-        <div>
-            <form name="cadastro_vacinas" action="grava_cadastrovacina.php" method="POST" enctype="multipart/form-data">
-                <h2>Seu cartão de vacinas.</h2><!-- <br> -->
-                <div class="div_form">
-                    <p>Informações do banco de dados do usuario</p>
-                    <input id="campopesquisa" type="text" placeholder="Pesquise">
-                </div>
-            </form>
-        </div>
-           
-            <table id= "tabelavacinas">
-                <tr>
-                    <!-- <th>Id</th> -->
-                    <th>Nome da vacina</th>
-                    <th>Local</th>
-                    <th>Fabricante</th>
-                    <th>Função Vacina</th>
-                </tr> 
-
-
-            </table>
-            
        </div>
        <div class="containerprofile2">
         <div>
@@ -83,7 +61,7 @@
             <p>Informações de profile</p>
             
         </div>
-            <a href="tela_configusuario.html"><button id="buttonconfig"><img id="iconeconfig" src="../img/iconconfig.png"></button></a>
+            <a href="#"><button id="buttonconfig"><img id="iconeconfig" src="../img/iconconfig.png"></button></a>
        </div>
 
     </div>

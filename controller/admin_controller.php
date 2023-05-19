@@ -44,12 +44,13 @@
                         $admin->__set("senha", $senha_hash);
 
                         if($admin->cadastrar_admin() == true){
-                            echo "Administrador cadastrado com sucesso!";
+                            $retorno = ["msg" =>"Adminstrador cadastrado com sucesso!", "erro"=>"0", "url" => "homepage_admin.php"];
+                            echo json_encode($retorno);
                         }
                     }
                     else{
-                        //enviar msg de erro
-                    }
+                        $retorno = ["msg" =>"Erro ao cadastrar o adminstrador!", "erro"=>"1"];
+                        echo json_encode($retorno);                    }
             }
             else if($acao == "cadastrar_posto"){
 

@@ -42,7 +42,8 @@
                 </div>
             </div>
         </div>
-    <div class="bodycadastro">
+        <div class="containerprofile1">
+        <div class="bodycadastro">
         <div class="maincadastro">
             <div class="telacadastro">
                 <a><img src=""></img></a>
@@ -83,7 +84,9 @@
             </div>
         </div>
     </div>
-
-    
+       </div>
+       <div class="containerprofile2">
+       </div>
+</div>
 </body>
 </html>
