@@ -81,7 +81,12 @@
                 $admin->__set("email", $email);
 
                 if($admin->cadastrar_posto() == true){
-                    echo "Posto de saúde cadastrado com sucesso!";
+                    $retorno = ["msg" =>"Posto cadastrado com sucesso!", "erro"=>"0", "url" => "homepage_admin.php"];
+                    echo json_encode($retorno);
+                }
+                else{
+                    $retorno = ["msg" =>"Erro ao cadastrar o posto!", "erro"=>"1"];
+                    echo json_encode($retorno);                    
                 }
 
             }

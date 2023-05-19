@@ -10,6 +10,42 @@
     <link rel="stylesheet" type="text/css" href="../../css/cadastro_posto_saude.css">
     <link rel="stylesheet" type="text/css" href="../../css/tela_profile.css">
     <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
+    <script src="../../static/js/jquery-3.6.4.min.js"></script> 
+    <script type="text/javascript">
+        $( document ).ready(function() {
+			});
+
+			function processa_cadastro_posto(){
+				var formDados = {
+					razao_social: $("#razao_social").val(),
+					cnpj: $("#cnpj").val(),
+					rua: $("#rua").val(),
+                    bairro: $("#bairro").val(),
+                    cidade: $("#cidade").val(),
+					numero: $("#numero").val(),
+					num_telefone: $("#num_telefone").val(),
+					email: $("#email").val(),
+    			};
+                
+				$.ajax({
+					type: "POST",
+					url: "../../controller/admin_controller.php?acao=cadastrar_posto",
+					data: formDados,
+					dataType: "json",
+					}).done(function (dataRetorno) {
+                        console.log("aqui");
+						if(dataRetorno.erro == 0){
+							alert(dataRetorno.msg);
+							window.location.href = dataRetorno.url;
+						}
+						else{
+							alert(dataRetorno.msg)
+						}
+						
+				});
+				
+			}
+		</script>
     <title>Tela de cadastro Posto de Saude</title>
 </head>
 <body>
@@ -76,9 +112,7 @@
                       <label for="email"><b>Email</b></label>
                       <input type="text" placeholder="Insira o Email" name="email" id="email">
 
-                      <button type="submit" class="botao_registrar">Cadastrar</button>
-                      <a href="../tela_principal.html"><button type="button" class="botao_voltar">Voltar</button></a>
-
+                      <button type="button" class="botao_registrar" onclick="processa_cadastro_posto()">Cadastrar</button>
                     </div>
                   </form>
             </div>
