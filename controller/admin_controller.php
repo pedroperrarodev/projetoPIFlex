@@ -6,7 +6,7 @@
 
         public function execute($post, $get){
             $acao = $get['acao'];
-                if ($acao == "cadastrar_admin"){
+            if ($acao == "cadastrar_admin"){
                     $admin = new admin();
     
                     $nome_completo = $post["nome_completo"];
@@ -50,11 +50,20 @@
                     }
                     else{
                         $retorno = ["msg" =>"Erro ao cadastrar o adminstrador!", "erro"=>"1"];
-                        echo json_encode($retorno);                    }
+                        echo json_encode($retorno);                    
+                    }
             }
 
             else if($acao == "listarAdminstradores"){
                 $this->listarAdminstradores();
+            }
+
+            else if($acao == "deletar_adm_e_usuario"){
+                $id = $get["id"];
+                $admin = new admin();
+                $dados = $admin->deletar_adm_e_usuario($id);
+                
+                header("location: ../controller/admin_controller.php?acao=listarAdminstradores");
             }
 
             else if($acao == "cadastrar_posto"){
@@ -99,6 +108,14 @@
                 $this->listarPostos();
             }
 
+            else if($acao == "deletar_posto_vacinacao"){
+                $id = $get["id"];
+                $admin = new admin();
+                $dados = $admin->deletar_posto_vacinacao($id);
+                
+                header("location: ../controller/admin_controller.php?acao=listarPostos");
+            }
+
             else if($acao == "cadastrar_vacina"){
 
                 $admin = new admin();
@@ -130,7 +147,42 @@
                 $admin = new admin();
                 $dados = $admin->deletar_vacina($id);
                 
-                $this->listarVacinas();
+                header("location: ../controller/admin_controller.php?acao=listarVacina");
+            }
+            else if($acao == "editar_vacina"){
+                $id = $get["id"];
+                $admin = new admin();
+                $dados = $admin->buscarVacinaPorId($id);
+                
+                require_once("../view/admin/editar_vacina.php");  
+            }
+
+            if ($acao == "atualizar_vacina"){
+                $admin = new admin();
+
+                $id = $post["id"];
+                $admin->__set("id", $id);
+
+                $nome_vacina = $post["nome_vacina"];
+                $admin->__set("nome_vacina", $nome_vacina);
+
+                $fabricante = $post["fabricante"];
+                $admin->__set("fabricante", $fabricante);
+
+                $doenca_alvo = $post["doenca_alvo"];
+                $admin->__set("doenca_alvo", $doenca_alvo);
+                
+                if($admin->atualizar_vacina() == true){
+                    $retorno["msg"] = "Vacina atualizada com sucesso!";
+                    $retorno["erro"] = "0";
+                    header("location: ../controller/admin_controller.php?acao=listarVacina");
+                        
+                    echo json_encode($retorno);
+                }
+                else{
+                    $retorno = ["msg" =>"Erro ao atualizar a vacina!", "erro"=>"1"];
+                    echo json_encode($retorno);
+                }
             }
         }
 

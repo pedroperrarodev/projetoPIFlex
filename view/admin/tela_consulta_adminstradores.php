@@ -10,6 +10,16 @@
     <link rel="stylesheet" type="text/css" href="../css/tela_profile.css">
     <link rel="stylesheet" type="text/css" href="../css/corpo.css">
     <link rel="stylesheet" type="text/css" href="../css/table_posto.css">
+    <script src="../../static/js/jquery-3.6.4.min.js"></script> 
+    <script type="text/javascript">
+			function excluir(id){
+				retorno = confirm("Tem certeza que deseja excluir o ID="+id+" ?")
+				if(retorno){
+					alert("Excluindo!");
+					document.location.href = "../controller/admin_controller.php?acao=deletar_adm_e_usuario&id="+id;
+				}
+			}
+        </script>
     <title>Tela de consulta de adminstradores</title>
 </head>
 <body>
@@ -65,6 +75,7 @@
                         <td>Número</td>
                         <td>Número de Telefone</td>
 			            <td>Email</td>
+                        <td>Excluir</td>
 		            </tr>
                     <?php
                         for ($i=0; $i<sizeof($dados);$i++){
@@ -78,8 +89,9 @@
                             echo "<td>".$dados[$i]["numero"]."</td>";
                             echo "<td>".$dados[$i]["num_telefone"]."</td>";
                             echo "<td>".$dados[$i]["email"]."</td>";
+                            echo "<td align='center'><a href='#' onclick='excluir(".$dados[$i]["id"].")'>x</a></td>";
                             echo "</tr>";
-                            }
+                        }
                     ?>
 		        </table>
             </div>

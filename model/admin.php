@@ -77,6 +77,21 @@
             return $dados;
         }
 
+        public function deletar_adm_e_usuario($id)
+        {
+            $db = new database();
+            $con = $db->connect();
+    
+            $sql = "DELETE FROM adm_e_usuario  WHERE id = :id";
+            $st = $con->prepare($sql);
+            $st->bindParam(':id', $id);
+    
+            $status = $st->execute();
+    
+            $db->close();
+            return  true;
+        }
+
         public function cadastrar_posto(){
             $db = new database();
             $con = $db->connect();
@@ -115,6 +130,21 @@
     
             $db->close();
             return $dados;
+        }
+
+        public function deletar_posto_vacinacao($id)
+        {
+            $db = new database();
+            $con = $db->connect();
+    
+            $sql = "DELETE FROM posto_vacinacao  WHERE id = :id";
+            $st = $con->prepare($sql);
+            $st->bindParam(':id', $id);
+    
+            $status = $st->execute();
+    
+            $db->close();
+            return  true;
         }
 
         public function cadastrar_vacina(){
@@ -165,6 +195,46 @@
     
             $db->close();
             return  true;
+        }
+
+        public function atualizar_vacina(){
+            $db = new database();
+            $con = $db->connect();
+    
+            $sql = "UPDATE vacina set nome_vacina = :nome_vacina, fabricante = :,fabricante, doenca_alvo = :doenca_alvo WHERE id = :id";
+            
+            $st = $con->prepare($sql);
+            $st->bindParam(':nome_vacina', $this->nome_vacina);
+            $st->bindParam(':fabricante', $this->fabricante);
+            $st->bindParam(':doenca_alvo', $this->doenca_alvo);
+            $st->bindParam(':id', $this->id);
+            
+            $status = $st->execute();
+            
+            if ($status == true){
+                return true;
+            }
+            else{
+                return false;
+            }
+    
+        }
+
+        public function buscarVacinaPorId($id){
+
+            $db = new database();
+            $con = $db->connect(); 
+            
+            $sql = "SELECT id, nome_vacina, fabricante, doenca_alvo FROM vacina WHERE id = :id";
+            
+            $st = $con->prepare($sql);
+            $st->bindParam(':id', $id);
+    
+            $status = $st->execute();
+    
+            $dados = $st->fetchAll();
+            $db->close();
+            return $dados;
         }
         
     }
