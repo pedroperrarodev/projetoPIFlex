@@ -125,6 +125,13 @@
             else if($acao == "listarVacina"){
                 $this->listarVacinas();
             }
+            else if($acao == "deletar_vacina"){
+                $id = $get["id"];
+                $admin = new admin();
+                $dados = $admin->deletar_vacina($id);
+                
+                $this->listarVacinas();
+            }
         }
 
         private function listarPostos(){

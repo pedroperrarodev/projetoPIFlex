@@ -150,6 +150,21 @@
             $db->close();
             return $dados;
         }
+
+        public function deletar_vacina($id)
+        {
+            $db = new Database();
+            $con = $db->connect();
+    
+            $sql = "DELETE FROM vacina WHERE id = :id";
+            $st = $con->prepare($sql);
+            $st->bindParam(':id', $id);
+    
+            $status = $st->execute();
+    
+            $db->close();
+            return  true;
+        }
         
     }
 ?>

@@ -11,6 +11,15 @@
     <link rel="stylesheet" type="text/css" href="../css/tela_profile.css">
     <link rel="stylesheet" type="text/css" href="../css/corpo.css">
     <link rel="stylesheet" type="text/css" href="../css/table_posto.css">
+    <script type="text/javascript">
+			function excluir(id){
+				retorno = confirm("Tem certeza que deseja excluir o ID="+id+" ?")
+				if(retorno){
+					alert("Excluindoo!");
+					document.location.href = "../controller/admin_controller.php?acao=deletar_vacina&id="+id;
+				}
+			}
+		</script>
     <title>Tela de consulta vacinas</title>
 </head>
 <body>
@@ -61,6 +70,7 @@
 			            <td>Nome da Vacina</td>
 			            <td>Fabricante</td>
 			            <td>Doença alvo</td>
+                        <td>Excluir</td>
 		            </tr>
                     <?php
                         for ($i=0; $i<sizeof($dados);$i++){
@@ -69,8 +79,9 @@
                             echo "<td>".$dados[$i]["nome_vacina"]."</td>";
                             echo "<td>".$dados[$i]["fabricante"]."</td>";
                             echo "<td>".$dados[$i]["doenca_alvo"]."</td>";
+                            echo "<td align='center'><a href='#' onclick='excluir(".$dados[$i]["id"].")'>x</a></td>";
                             echo "</tr>";
-                            }
+                        }
                     ?>
 		        </table>
             </div>
