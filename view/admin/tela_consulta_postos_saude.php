@@ -85,8 +85,6 @@
 		        </table>
             </div>
        </div>
-       <div class="containerprofile2">
-       </div>
 </div>
 </body>
 </html>

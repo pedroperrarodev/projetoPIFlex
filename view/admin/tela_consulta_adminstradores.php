@@ -7,11 +7,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/cadastro_posto_saude.css">
     <link rel="stylesheet" type="text/css" href="../css/tela_profile.css">
     <link rel="stylesheet" type="text/css" href="../css/corpo.css">
     <link rel="stylesheet" type="text/css" href="../css/table_posto.css">
-    <title>Tela de consulta Posto de Saude</title>
+    <title>Tela de consulta de adminstradores</title>
 </head>
 <body>
 <header>
@@ -55,7 +54,7 @@
         <div class="containerprofile1">
         <h1>Consulte os adminstradores cadastrados aqui</h1>
         <div>
-                <table id="posto" border="1">
+                <table id="posto">
 		            <tr>
                         <td>ID</td>
 			            <td>Nome completo</td>
@@ -84,8 +83,6 @@
                     ?>
 		        </table>
             </div>
-       </div>
-       <div class="containerprofile2">
        </div>
 </div>
 </body>

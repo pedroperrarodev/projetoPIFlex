@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="containerprofile1">
-        <h1>Consulte as vacinas cadastrados aqui</h1>
+        <h1>Consulte as vacinas cadastradas aqui</h1>
         <div>
                 <table id="posto" border="1">
 		            <tr>
@@ -74,8 +74,6 @@
                     ?>
 		        </table>
             </div>
-       </div>
-       <div class="containerprofile2">
        </div>
 </div>
 </body>

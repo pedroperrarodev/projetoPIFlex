@@ -50,7 +50,7 @@
 			}
 		</script>
     
-    <title>Tela de admin</title>
+    <title>Tela cadastro de  administradores</title>
 </head>
 <body>
 <header>
@@ -138,8 +138,6 @@
             </div>
         </div>
     </div>
-        </div>
-        <div class="containerprofile2">
         </div>
 </div>
 </body>
