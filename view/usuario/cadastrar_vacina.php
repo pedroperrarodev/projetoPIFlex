@@ -63,7 +63,7 @@
                     <a href="homepage.php"><button><strong>Home</strong></button></a>
                 </div>
                 <div>
-                    <a href="../../controller/usuario_controller.php?acao=editar_usuario&id=<?php echo $_SESSION['id']?>"><button><strong>Perfil</strong></button></a>
+                    <a href="../../controller/usuario_controller.php?acao=listarUsuario&id=<?php echo $_SESSION['id']?>"><button><strong>Perfil</strong></button></a>
                 </div>
                 <div>
                     <a href="#"><button id="activemenu"><strong>Cadastrar uma nova vacina</strong></button></a>
