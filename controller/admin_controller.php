@@ -66,6 +66,60 @@
                 header("location: ../controller/admin_controller.php?acao=listarAdminstradores");
             }
 
+            else if($acao == "editar_perfil"){
+                $id = $get["id"];
+                $admin = new admin();
+                $dados = $admin->buscarPerfilPorId($id);
+                
+                require_once("../view/admin/editar_perfis.php");  
+            }
+
+            if ($acao == "atualizar_perfil"){
+                $admin = new admin();
+
+                $id = $post["id"];
+                $admin->__set("id", $id);
+
+                $nome_completo = $post["nome_completo"];
+                $admin->__set("nome_completo", $nome_completo);
+
+                $cpf = $post["cpf"];
+                $admin->__set("cpf", $cpf);
+
+                $rua = $post["rua"];
+                $admin->__set("rua", $rua);
+
+                $bairro = $post["bairro"];
+                $admin->__set("bairro", $bairro);
+
+                $cidade = $post["cidade"];
+                $admin->__set("cidade", $cidade);
+
+                $numero = $post["numero"];
+                $admin->__set("numero", $numero);
+
+                $num_telefone = $post["num_telefone"];
+                $admin->__set("num_telefone", $num_telefone);
+
+                $email = $post["email"];
+                $admin->__set("email", $email);
+
+                $perfil = $post["perfil"];
+                $admin->__set("perfil", $perfil);
+
+                if($admin->atualizar_perfis() == true){
+                    $retorno["msg"] = "Perfil atualizado com sucesso!";
+                    $retorno["erro"] = "0";
+                    $retorno["url"] = "../controller/admin_controller.php?acao=listarAdminstradores";
+                        
+                    echo json_encode($retorno);
+                }
+                else{
+                    $retorno = ["msg" =>"Erro ao atualizar o perfil!", "erro"=>"1"];
+                    echo json_encode($retorno);
+                }
+            }
+
             else if($acao == "cadastrar_posto"){
 
                 $admin = new admin();
@@ -114,6 +168,57 @@
                 $dados = $admin->deletar_posto_vacinacao($id);
                 
                 header("location: ../controller/admin_controller.php?acao=listarPostos");
+            }
+
+            else if($acao == "editar_posto_vacinacao"){
+                $id = $get["id"];
+                $admin = new admin();
+                $dados = $admin->buscarPostoPorId($id);
+                
+                require_once("../view/admin/editar_posto_vacinacao.php");  
+            }
+
+            if ($acao == "atualizar_posto_vacinacao"){
+                $admin = new admin();
+
+                $id = $post["id"];
+                $admin->__set("id", $id);
+
+                $razao_social = $post["razao_social"];
+                $admin->__set("razao_social",$razao_social);
+
+                $cnpj = $post["cnpj"];
+                $admin->__set("cnpj",$cnpj);
+
+                $rua = $post["rua"];
+                $admin->__set("rua", $rua);
+
+                $bairro = $post["bairro"];
+                $admin->__set("bairro", $bairro);
+    
+                $cidade = $post["cidade"];
+                $admin->__set("cidade", $cidade);
+
+                $numero = $post["numero"];
+                $admin->__set("numero", $numero);
+
+                $num_telefone = $post["num_telefone"];
+                $admin->__set("num_telefone", $num_telefone);
+
+                $email = $post["email"];
+                $admin->__set("email", $email);
+                
+                if($admin->atualizar_posto() == true){
+                    $retorno["msg"] = "Posto atualizado com sucesso!";
+                    $retorno["erro"] = "0";
+                    $retorno["url"] = "../controller/admin_controller.php?acao=listarPostos";
+                        
+                    echo json_encode($retorno);
+                }
+                else{
+                    $retorno = ["msg" =>"Erro ao atualizar o posto de vacinação!", "erro"=>"1"];
+                    echo json_encode($retorno);
+                }
             }
 
             else if($acao == "cadastrar_vacina"){
@@ -175,7 +280,7 @@
                 if($admin->atualizar_vacina() == true){
                     $retorno["msg"] = "Vacina atualizada com sucesso!";
                     $retorno["erro"] = "0";
-                    header("location: ../controller/admin_controller.php?acao=listarVacina");
+                    $retorno["url"] = "../controller/admin_controller.php?acao=listarVacina";
                         
                     echo json_encode($retorno);
                 }

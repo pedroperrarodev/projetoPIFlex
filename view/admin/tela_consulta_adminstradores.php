@@ -80,7 +80,7 @@
                     <?php
                         for ($i=0; $i<sizeof($dados);$i++){
                             echo "<tr>";
-                            echo "<td>".$dados[$i]["id"]."</td>";	
+                            echo "<td><a href=\"admin_controller.php?acao=editar_perfil&id=".$dados[$i]["id"]."\">".$dados[$i]["id"]."</a></td>";
                             echo "<td>".$dados[$i]["nome_completo"]."</td>";
                             echo "<td>".$dados[$i]["cpf"]."</td>";
                             echo "<td>".$dados[$i]["rua"]."</td>";

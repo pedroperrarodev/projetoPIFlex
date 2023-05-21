@@ -92,6 +92,52 @@
             return  true;
         }
 
+        public function atualizar_perfis(){
+            $db = new database();
+            $con = $db->connect();
+    
+            $sql = "UPDATE adm_e_usuario set nome_completo = :nome_completo, cpf = :cpf, rua = :rua, bairro = :bairro, cidade = :cidade, numero = :numero, num_telefone = :num_telefone,
+             email = :email, perfil = :perfil WHERE id = :id";
+            
+            $st = $con->prepare($sql);
+            $st->bindParam(':id', $this->id);
+            $st->bindParam(':nome_completo', $this->nome_completo);
+            $st->bindParam(':cpf', $this->cpf);
+            $st->bindParam(':rua', $this->rua);
+            $st->bindParam(':bairro', $this->bairro);
+            $st->bindParam(':cidade', $this->cidade);
+            $st->bindParam(':numero', $this->numero);
+            $st->bindParam(':num_telefone', $this->num_telefone);
+            $st->bindParam(':email', $this->email);
+            $st->bindValue(':perfil', 1);
+            $status = $st->execute();
+            
+            if ($status == true){
+                return true;
+            }
+            else{
+                return false;
+            }
+    
+        }
+
+        public function buscarPerfilPorId($id){
+
+            $db = new database();
+            $con = $db->connect(); 
+            
+            $sql = "SELECT id, nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email, perfil FROM adm_e_usuario WHERE id = :id";
+            
+            $st = $con->prepare($sql);
+            $st->bindParam(':id', $id);
+    
+            $status = $st->execute();
+    
+            $dados = $st->fetchAll();
+            $db->close();
+            return $dados;
+        }
+
         public function cadastrar_posto(){
             $db = new database();
             $con = $db->connect();
@@ -145,6 +191,51 @@
     
             $db->close();
             return  true;
+        }
+
+        public function atualizar_posto(){
+            $db = new database();
+            $con = $db->connect();
+    
+            $sql = "UPDATE posto_vacinacao set razao_social = :razao_social, cnpj = :cnpj, rua = :rua, cidade = :cidade, bairro = :bairro, numero = :numero, num_telefone = :num_telefone,
+             email = :email WHERE id = :id";
+            
+            $st = $con->prepare($sql);
+            $st->bindParam(':id', $this->id);
+            $st->bindParam(':razao_social', $this->razao_social);
+            $st->bindParam(':cnpj', $this->cnpj);
+            $st->bindParam(':rua', $this->rua);
+            $st->bindParam(':cidade', $this->cidade);
+            $st->bindParam(':bairro', $this->bairro);
+            $st->bindParam(':numero', $this->numero);
+            $st->bindParam(':num_telefone', $this->num_telefone);
+            $st->bindParam(':email', $this->email);
+            $status = $st->execute();
+            
+            if ($status == true){
+                return true;
+            }
+            else{
+                return false;
+            }
+    
+        }
+
+        public function buscarPostoPorId($id){
+
+            $db = new database();
+            $con = $db->connect(); 
+            
+            $sql = "SELECT id, razao_social, cnpj, rua, cidade, bairro, numero, num_telefone, email FROM posto_vacinacao WHERE id = :id";
+            
+            $st = $con->prepare($sql);
+            $st->bindParam(':id', $id);
+    
+            $status = $st->execute();
+    
+            $dados = $st->fetchAll();
+            $db->close();
+            return $dados;
         }
 
         public function cadastrar_vacina(){
@@ -201,14 +292,14 @@
             $db = new database();
             $con = $db->connect();
     
-            $sql = "UPDATE vacina set nome_vacina = :nome_vacina, fabricante = :,fabricante, doenca_alvo = :doenca_alvo WHERE id = :id";
+            $sql = "UPDATE vacina set nome_vacina = :nome_vacina, fabricante = :fabricante, doenca_alvo = :doenca_alvo WHERE id = :id";
             
             $st = $con->prepare($sql);
+            $st->bindParam(':id', $this->id);
             $st->bindParam(':nome_vacina', $this->nome_vacina);
             $st->bindParam(':fabricante', $this->fabricante);
             $st->bindParam(':doenca_alvo', $this->doenca_alvo);
-            $st->bindParam(':id', $this->id);
-            
+
             $status = $st->execute();
             
             if ($status == true){
