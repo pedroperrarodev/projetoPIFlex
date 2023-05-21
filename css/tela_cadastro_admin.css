@@ -1,0 +1,337 @@
+/*                  CONFIGURAÇÕES GERAIS                 */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+#main{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* HEADER CABEÇALHO E LOGO                 */
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    justify-content: space-evenly;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 14vh;
+    background-color: #04aaa5;
+}
+
+header img{
+    width: 384px;
+    height: 184px;
+}
+
+
+/* SIDE BAR OU MENU DE NAVEGAÇÃO                                  */
+.menu{
+    width: 10vw;
+    height: 100vh;
+    background-color: #04aaa5;
+}
+
+.sobre{
+    padding-top: 20px;
+    padding-left: 8px;
+}
+
+.sobre h1{
+    font-size: 22px;
+}
+
+.sobre p{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.sidebar div{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  height: 9vh;
+}
+
+/* MENU ATIVO */
+
+
+.sidebar #activemenu{
+  border: none;
+  background-color: whitesmoke;
+  cursor: pointer;
+  width: 15vw;
+  height: 8vh;
+  border-end-start-radius: 22px;
+  border-top-left-radius: 22px;
+}
+
+
+/* MENUS NAO ATIVOS */
+
+.sidebar button{
+  border: none;
+  background-color: #04aaa5;
+  cursor: pointer;
+  width: 12vw;
+  height: 8vh;
+  border-end-start-radius: 22px;
+  border-top-left-radius: 22px;
+}
+
+/* BOTAO SAIR  */
+
+
+.botaosair{
+  padding: 1%;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
+
+
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+}
+
+.botaosair button, button span {
+	transition: 200ms;
+}
+
+.botaosair button .text {
+	transform: translateX(35px);
+	color: white;
+	font-weight: bold;
+}
+
+.botaosair button .icon {
+	position: absolute;
+	border-left: 1px solid #c54c4c;
+	transform: translateX(110px);
+	height: 40px;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.botaosair button svg {
+	width: 15px;
+	fill: #eee;
+}
+
+.botaosair button:hover {
+	background: #ff3636;
+}
+
+.botaosair button:hover .text {
+	color: transparent;
+}
+
+.botaosair button:hover .icon {
+	width: 150px;
+	border-left: none;
+	transform: translateX(0);
+}
+
+.botaosair button:focus {
+	outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    w3 codigo         
+
+
+.formulariocadastro {
+    padding: 10px;
+    background-color: white;
+  }
+.formulariocadastro h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+
+/* ALTERAR PARA ESTÉTICA DE PAGINAÇÃO ESPECIFICA*/
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    box-sizing: border-box;
+  }
+
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  /* ALTERAR PARA ESTÉTICA DE PAGINAÇÃO ESPECIFICA*/
+
+  
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit button */
+  .registerbtn {
+    background-color: #04aaa5;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  .registerbtn:hover {
+    opacity: 1;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+
+
+/*____________________  CADASTRO PESSOAL ____________________*/
+
+
+.containerprofile1{
+  background-color: whitesmoke;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 2%; */
+    padding: 4% 5% 4% 5%;
+    justify-content: start;
+    /* justify-content: space-between; */
+    height: 100vh;
+}
+
+
+
+/*____________________  PÁGINA DE PERFIL             ____________________*/
+
+.containerprofile2 img{
+    width: 128px;
+    display: flex;
+}
+.containerprofile2 h3{
+    display: flex;
+    
+}
+
+#campopesquisa{
+    width: 80%;
+    height: 25px;
+}
+
+#tabelavacinas{
+    display: flex;
+    /* width: 75%; */
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+  #tabelavacinas td, #tabelavacinas th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+#tabelavacinas tr:nth-child(even){background-color: #f2f2f2;}
+
+#tabelavacinas tr:hover {background-color: #ddd;}
+
+#tabelavacinas th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04aaa5;
+    color: white;
+  }
+
+
+#iconeconfig{
+  display: flex;
+  width: 48px;
+}
+#buttonconfig:hover {
+  background-color: red;
+  transition: 200ms;
+}
+
+#buttonconfig {
+  width: 48px;
+  height: 48px;
+  background-color: whitesmoke;  
+  border: none;
+}
+
+#buttonconfig:hover {
+  background-color: rgb(224, 224, 224);
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
