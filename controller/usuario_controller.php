@@ -147,7 +147,7 @@
 
     private function listarUsuario(){
         $usuario = new usuario();
-        $dados = $usuario->listarUsuario($_SESSION);
+        $dados = $usuario->listarUsuario();
 
         require_once("../view/usuario/tela_consulta_info_usuario.php");
     }
