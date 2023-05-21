@@ -42,7 +42,7 @@
                         $senha_hash = hash("sha3-256", $senha);
                         $usuario->__set("senha", $senha_hash);
 
-                        if($usuario->cadastrar() == true){
+                        if($usuario->cadastrar_usuario() == true){
                             $retorno = ["msg"=> "Usuário cadastrado com sucesso", "erro"=>"0", "url"=>"tela_login.php"];
                             echo json_encode($retorno);
                         }
@@ -52,7 +52,17 @@
                         }
                     }
                 }
-                if ($acao == "atualizar"){
+                else if($acao == "listarUsuario"){
+                    $this->listarUsuario();
+                }
+                else if($acao == "editar_usuario"){
+                    $id = $get["id"];
+                    $usuario = new usuario();
+                    $dados = $usuario->buscarUsuarioPorId($id);
+                    
+                    require_once("../view/usuario/edita_usuario.php");  
+                }
+                else if ($acao == "atualizar_usuario"){
 
                     $usuario = new usuario();
 
@@ -83,19 +93,13 @@
                     $email = $post["email"];
                     $usuario->__set("email", $email);
 
-                    $usuario->__set("perfil", 2);
-    
-                    $senha = $post["senha"];
-                    $confirmar_senha = $post["confirmar_senha"];
+                    $perfil = $post["perfil"];
+                    $usuario->__set("perfil", $perfil);
 
-                    if ($senha == $confirmar_senha){
-                        $senha_hash = hash("sha3-256", $senha);
-                        $usuario->__set("senha", $senha_hash);
-
-                        if($usuario->atualizar() == true){
+                        if($usuario->atualizar_perfil_usuario() == true){
                             $retorno["msg"] = "Dados de usuário atualizado com sucesso!";
                             $retorno["erro"] = "0";
-                            $retorno["url"] = "../view/usuario/homepage.php";
+                            $retorno["url"] = "../controller/usuario_controller.php?acao=listarUsuario";
                             
                             echo json_encode($retorno);
                         }
@@ -103,7 +107,7 @@
                             $retorno = ["msg" =>"Erro ao atualizar dados do usuário!!", "erro"=>"1"];
                             echo json_encode($retorno);
                         }
-                    }
+                    
                 }
 
                 else if($acao == "logar"){
@@ -141,11 +145,14 @@
                 } 
     }
 
- 
+    private function listarUsuario(){
+        $usuario = new usuario();
+        $dados = $usuario->listarUsuario($_SESSION);
+
+        require_once("../view/usuario/tela_consulta_info_usuario.php");
+    }
 
 }
     $controller = new usuario_controller();
-    $controller->execute($_POST, $_GET);
-
-    
+    $controller->execute($_POST, $_GET);   
 ?>

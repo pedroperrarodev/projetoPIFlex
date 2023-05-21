@@ -29,7 +29,7 @@
            } 
         }
 
-        public function cadastrar(){
+        public function cadastrar_usuario(){
             $db = new database();
             $con = $db->connect();
 
@@ -56,6 +56,67 @@
             }
         }
 
+        public function atualizar_perfil_usuario(){
+            $db = new database();
+            $con = $db->connect();
+
+            $sql = "UPDATE adm_e_usuario set nome_completo = :nome_completo, cpf = :cpf, rua = :rua, bairro = :bairro, cidade = :cidade, numero = :numero, 
+            num_telefone = :num_telefone, email = :email, perfil = :perfil WHERE id = :id";   
+
+            $st = $con->prepare($sql);
+            $st->bindParam(':id', $this->id);
+            $st->bindParam(':nome_completo', $this->nome_completo);
+            $st->bindParam(':cpf', $this->cpf);
+            $st->bindParam(':rua', $this->rua);
+            $st->bindParam(':bairro', $this->bairro);
+            $st->bindParam(':cidade', $this->cidade);
+            $st->bindParam(':numero', $this->numero);
+            $st->bindParam(':num_telefone', $this->num_telefone);
+            $st->bindParam(':email', $this->email);
+            $st->bindValue(':perfil', 2);
+            $status = $st->execute();
+            
+            if ($status == true){
+                return true;
+            }
+            else{
+                return false;
+            }
+    
+        }
+
+        public function buscarUsuarioPorId($id){
+
+            $db = new database();
+            $con = $db->connect(); 
+            
+            $sql = "SELECT id, nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email, perfil FROM adm_e_usuario WHERE id = :id";
+            
+            $st = $con->prepare($sql);
+            $st->bindParam(':id', $id);
+    
+            $status = $st->execute();
+    
+            $dados = $st->fetchAll();
+            $db->close();
+            return $dados;
+        }
+
+        public function listarUsuario($_SESSION,$pagina = null, $contador = 100)
+        {
+            $db = new database();
+            $con = $db->connect();
+    
+            $sql = "SELECT DISTINCT id, nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email FROM adm_e_usuario where perfil = 2 and id = $_SESSION limit $contador";
+            $rs = $con->query($sql);
+    
+            $status = $rs->execute();
+            $dados = $rs->fetchAll();
+    
+            $db->close();
+            return $dados;
+        }
+
         public function autenticar($cpf, $senha){
 
             $senha_cripto = hash("sha3-256",$senha);
@@ -78,75 +139,6 @@
             }
             
         }
-
-        public function listarTodos($pagina = null, $contador = 100)
-        {
-            $db = new Database();
-            $con = $db->connect();
-    
-            $sql = "SELECT id, nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email, perfil login FROM adm_e_usuario limit $contador";
-            $rs = $con->query($sql);
-    
-            $status = $rs->execute();
-            $dados = $rs->fetchAll();
-    
-            $db->close();
-            return $dados;
-        }
-
-        /*                               */
-        public function atualizar(){
-            $db = new Database();
-            $con = $db->connect();
-
-            $sql = "UPDATE adm_e_usuario set nome_completo = :nome_completo, cpf = :cpf, rua = :rua, bairro = :bairro, cidade = :cidade, numero = :numero, 
-            num_telefone = :num_telefone, email = :email, senha = :senha, perfil = :perfil WHERE id = :id";   
-
-
-            $st = $con->prepare($sql);
-            $st->bindParam(':id', $this->id);
-            $st->bindParam(':nome_completo', $this->nome_completo);
-            $st->bindParam(':cpf', $this->cpf);
-            $st->bindParam(':rua', $this->rua);
-            $st->bindParam(':bairro', $this->bairro);
-            $st->bindParam(':cidade', $this->cidade);
-            $st->bindParam(':numero', $this->numero);
-            $st->bindParam(':num_telefone', $this->num_telefone);
-            $st->bindParam(':email', $this->email);
-            $st->bindParam(':senha', $this->senha);
-            $st->bindValue(':perfil', 2);
-            $status = $st->execute();
-            
-    
-            if ($status == true){
-                return true;
-            }
-            else{
-                return false;
-            }
-    
-        }
-
-
-
-
-        public function buscarPorId($id)
-        {
-            $db = new Database();
-            $con = $db->connect();
-    
-            $sql = "SELECT id, nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email, perfil login FROM adm_e_usuario WHERE id = :id";
-            $st = $con->prepare($sql);
-            $st->bindParam(':id', $id);
-    
-            $resultado = $st->execute();
-    
-            $dados = $st->fetchAll();
-            $db->close();
-            return $dados;
-        }
-        
-
         
     }
 

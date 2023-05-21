@@ -46,23 +46,3 @@ CREATE TABLE vacina_usuario(
 );
 
 
-code whisperer
-
-
-
-CRIAR TABELA VACINAS 
-
-create table vacinas(id int auto_increment, nomevacina VARCHAR(250), local VARCHAR(250), fabricante VARCHAR(250),
- funcao_vacina VARCHAR(250), PRIMARY KEY (id));
-
-
- EXEMPLO DE VACINA FICTICIA 
-
-
- insert into vacinas (nomevacina, local, fabricante, funcao_vacina) values ("Vacina influenza trivalente", "sao leopoldo", "fabricante 1", "Covid");
-
- insert into vacinas (nomevacina, local, fabricante, funcao_vacina) values ("Vacina ficticia 2", "novo hamburgo", "fabricante 2", "Dengue");
-
-
- insert into vacinas (nomevacina, local, fabricante, funcao_vacina) values ("Vacina ficticia 3", "Porto Alegre", "fabricante 4", "Xicungunha");
-
