@@ -53,7 +53,11 @@
                     }
                 }
                 else if($acao == "listarUsuario"){
-                    $this->listarUsuario();
+                    $id = $get["id"];
+                    $usuario = new usuario();
+                    $dados = $usuario->listarUsuario($id);
+
+                    require_once("../view/usuario/tela_consulta_info_usuario.php");  
                 }
                 else if($acao == "editar_usuario"){
                     $id = $get["id"];
@@ -99,7 +103,7 @@
                         if($usuario->atualizar_perfil_usuario() == true){
                             $retorno["msg"] = "Dados de usuário atualizado com sucesso!";
                             $retorno["erro"] = "0";
-                            $retorno["url"] = "../controller/usuario_controller.php?acao=listarUsuario";
+                            $retorno["url"] = "../view/usuario/homepage.php";
                             
                             echo json_encode($retorno);
                         }
@@ -119,8 +123,10 @@
 
                     if($dados != null){
                         session_start();
+
                         $_SESSION["logado"] = true;
-                        $_SESSION["cpf"] = $cpf ;
+                        $_SESSION["cpf"] = $dados[0]["cpf"];
+                        $_SESSION["id"] = $dados[0]["id"];
 
                         if($dados[0]["perfil"] == 2){
                             $retorno = ["msg"=> "Usuário logado com sucesso", "erro"=>"0", "url"=>"usuario/homepage.php"];
@@ -147,7 +153,7 @@
 
     private function listarUsuario(){
         $usuario = new usuario();
-        $dados = $usuario->listarUsuario();
+        $dados = $usuario->listarUsuario($_SESSION["id"]);
 
         require_once("../view/usuario/tela_consulta_info_usuario.php");
     }

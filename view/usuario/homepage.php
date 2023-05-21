@@ -34,7 +34,7 @@
                     <a href="#"><button id="activemenu"><strong>Home</strong></button></a>
                 </div>
                 <div>
-                    <a href="../../controller/usuario_controller.php?acao=listarUsuario"><button><strong>Perfil</strong></button></a>
+                    <a href="../../controller/usuario_controller.php?acao=listarUsuario&id=<?php echo $_SESSION['id']?>"><button><strong>Ver perfil</strong></button></a>
                 </div>
                 <div>
                     <a href="cadastrar_vacina.php"><button><strong>Cadastrar uma nova vacina</strong></button></a>

@@ -85,29 +85,27 @@
     
         }
 
-        public function buscarUsuarioPorId($id){
+        public function buscarUsuarioPorId($session){
 
             $db = new database();
             $con = $db->connect(); 
             
-            $sql = "SELECT id, nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email, perfil FROM adm_e_usuario WHERE id = :id";
-            
-            $st = $con->prepare($sql);
-            $st->bindParam(':id', $id);
+            $sql = "SELECT id, nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email, perfil FROM adm_e_usuario WHERE perfil = 2 AND id = $session";       
+            $rs = $con->query($sql);
     
-            $status = $st->execute();
+            $status = $rs->execute();
+            $dados = $rs->fetchAll();
     
-            $dados = $st->fetchAll();
             $db->close();
             return $dados;
         }
 
-        public function listarUsuario($pagina = null, $contador = 100)
+        public function listarUsuario($session,$pagina = null, $contador = 100)
         {
             $db = new database();
             $con = $db->connect();
     
-            $sql = "SELECT DISTINCT id, nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email FROM adm_e_usuario where perfil = 2 limit $contador";
+            $sql = "SELECT DISTINCT id, nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email FROM adm_e_usuario WHERE perfil = 2 AND id = $session limit $contador";
             $rs = $con->query($sql);
     
             $status = $rs->execute();
@@ -123,7 +121,7 @@
             $database = new database();
             $con = $database->connect();
 
-            $sql = "SELECT perfil, cpf, nome_completo From adm_e_usuario WHERE cpf = :cpf AND senha = :senha";
+            $sql = "SELECT id, perfil, cpf, nome_completo From adm_e_usuario WHERE cpf = :cpf AND senha = :senha";
 
             $st = $con->prepare($sql);
             $st->bindParam(':cpf', $cpf);
