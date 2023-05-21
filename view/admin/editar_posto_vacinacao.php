@@ -56,8 +56,8 @@
                 <a><img src=""></img></a>
                 <form action="/action_page.php" method="post">
                     <div class="formulariocadastro">
-                      <h1>Atualize a vacina aqui</h1>
-                      <p>Altere os dados abaixo para atualizar os dados da vacina</p>
+                      <h1>Atualize o posto aqui</h1>
+                      <p>Altere os dados abaixo para atualizar os dados do posto</p>
                       <hr>
                       <p>Cadastre um novo posto de saúde abaixo:</p>
                       <hr>
