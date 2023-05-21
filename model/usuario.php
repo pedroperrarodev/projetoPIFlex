@@ -102,12 +102,12 @@
             return $dados;
         }
 
-        public function listarUsuario($_SESSION,$pagina = null, $contador = 100)
+        public function listarUsuario($pagina = null, $contador = 100)
         {
             $db = new database();
             $con = $db->connect();
     
-            $sql = "SELECT DISTINCT id, nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email FROM adm_e_usuario where perfil = 2 and id = $_SESSION limit $contador";
+            $sql = "SELECT DISTINCT id, nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email FROM adm_e_usuario where perfil = 2 limit $contador";
             $rs = $con->query($sql);
     
             $status = $rs->execute();
