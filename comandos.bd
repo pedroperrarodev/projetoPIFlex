@@ -38,11 +38,10 @@ CREATE TABLE posto_vacinacao(
     numero int(100) not null
 );
 
-CREATE TABLE vacina_usuario(
+create table registro_vacina(
 
-    id user
-    id vacina
-    id posto
-);
-
-
+    id_registro_vacina int auto_increment primary key,
+    id_vacina int(100),
+    id_posto int(100), 
+    data date 
+); 

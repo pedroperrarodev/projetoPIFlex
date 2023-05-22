@@ -15,16 +15,17 @@
         $( document ).ready(function() {
 			});
 
-			function processa_cadastro_vacina(){
+			function cadastrar_registro(){
 				var formDados = {
-					nome_vacina: $("#nome_vacina").val(),
-					fabricante: $("#fabricante").val(),
-                    doenca_alvo: $("#doenca_alvo").val(),
+					id_vacina: $("#id_vacina").val(),
+					id_posto: $("#id_posto").val(),
+                    data: $("#data").val(),
+                    id_pessoa: $("#id_pessoa").val(),
     			};
                 
 				$.ajax({
 					type: "POST",
-					url: "../../controller/admin_controller.php?acao=cadastrar_vacina",
+					url: "../../controller/registro_controller.php?acao=cadastrar_registro",
 					data: formDados,
 					dataType: "json",
 					}).done(function (dataRetorno) {
@@ -81,17 +82,29 @@
                       <h1>Cadastre uma nova vacina</h1>
                       <p>Cadastre uma nova vacina abaixo:</p>
                       <hr>
+                      <input type="hidden" name="id_pessoa" id="id_pessoa" value="<?php echo $_SESSION['id']?>">
 
-                      <label for="email"><b>Nome da vacina</b></label>
-                      <input type="text" placeholder="Insira o Nome da Vacina" name="nome_vacina" id="nome_vacina">
+                      <label for="vacina"><b>Nome da vacina</b></label>
+                        <select name="id_vacina" id="id_vacina">
+                            <option value="1">astrazenica</option>
+                            <option value="3">teste2</option>
+                        </select><br>
 
                       <label for="email"><b>Fabricante</b></label>
-                      <input type="text" placeholder="Insira o Fabricante" name="fabricante" id="fabricante">
+                      <select name="id_vacina" id="id_vacina">
+                            <option value="1">pfizer</option>
+                            <option value="3">teste2</option>
+                        </select><br>
 
-                      <label for="email"><b>Doença alvo</b></label>
-                      <input type="text" placeholder="Insira a Doença Alvo" name="doenca_alvo" id="doenca_alvo">
+                        <label for="email"><b>Local</b></label>
+                        <select name="id_posto" id="id_posto">
+                            <option value="1">primeiro posto testado</option>
+                        </select><br>
 
-                      <button type="button" class="botao_registrar" onclick="processa_cadastro_vacina()">Cadastrar</button>
+                      <label for="email"><b>Data</b></label>
+                      <input type="date" name="data" id="data">
+
+                      <button type="button" class="botao_registrar" onclick="cadastrar_registro()">Cadastrar</button>
                     </div>
                   
                   </form>

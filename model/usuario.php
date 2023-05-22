@@ -14,7 +14,7 @@
         private $email;
         private $senha;
         private $perfil;
-
+        
         public function __set($atributo, $valor)
         {
            if(property_exists($this,$atributo)){
