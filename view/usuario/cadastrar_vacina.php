@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/cadastro_nova_vacina.css">
     <link rel="stylesheet" type="text/css" href="../../css/tela_profile.css">
     <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
+
     <script src="../../static/js/jquery-3.6.4.min.js"></script> 
     <script type="text/javascript">
         $( document ).ready(function() {
@@ -42,7 +43,7 @@
 				
 			}
 		</script>
-    <title>Tela de cadastro Vacina</title>
+    <title>Cadastrar uma nova vacina</title>
 </head>
 <body>
 <header>
@@ -68,6 +69,9 @@
                 </div>
                 <div>
                     <a href="#"><button id="activemenu"><strong>Cadastrar uma nova vacina</strong></button></a>
+                </div>
+                <div>
+                    <a href="../../controller/registro_controller.php?acao=listarVacina&id=<?php echo $_SESSION['id']?>"><button><strong>Consultar vacinas</strong></button></a>
                 </div>
             </div>
         </div>

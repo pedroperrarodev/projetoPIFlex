@@ -74,9 +74,7 @@
         </div>
 
         <!-- <a href="tela_configusuario.html"><img id="iconeconfig" src="../../img/iconconfig.png"></a> -->
-        <a href="tela_config_usuario.php"><button id="buttonconfig"><img id="iconeconfig" src="../../img/iconconfig.png"></button></a>
-
-
+        <a href="../../controller/admin_controller.php?acao=listarAdminstradores"><button id="buttonconfig"><img id="iconeconfig" src="../../img/iconconfig.png"></button></a>
 
        </div>
 

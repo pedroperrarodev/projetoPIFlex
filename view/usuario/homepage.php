@@ -40,7 +40,7 @@
                     <a href="cadastrar_vacina.php"><button><strong>Cadastrar uma nova vacina</strong></button></a>
                 </div>
                 <div>
-                    <a href="../../controller/registro_controller.php?acao=listarVacina&id=<?php echo $_SESSION['id']?>"><button><strong>Cadastrar uma nova vacina</strong></button></a>
+                    <a href="../../controller/registro_controller.php?acao=listarVacina&id=<?php echo $_SESSION['id']?>"><button><strong>Consultar vacinas</strong></button></a>
                 </div>
             </div>
         </div>

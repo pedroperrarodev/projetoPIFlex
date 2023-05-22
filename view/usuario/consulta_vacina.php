@@ -1,5 +1,5 @@
 <?php
-    //require_once("../../infra/valida_sessao.php");
+    require_once("../infra/valida_sessao.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/corpo.css">
     <link rel="stylesheet" type="text/css" href="../css/table_posto.css">
 		</script>
-    <title>Tela de consulta vacinas</title>
+    <title>Consultar vacinas</title>
 </head>
 <body>
 <header>
@@ -33,18 +33,18 @@
                     <a href="../view/usuario/homepage.php"><button><strong>Home</strong></button></a>
                 </div>
                 <div>
-                    <a href="../../controller/usuario_controller.php?acao=listarUsuario&id=<?php echo $_SESSION['id']?>"><button id="activemenu"><strong>Perfil</strong></button></a>
+                    <a href="../../controller/usuario_controller.php?acao=listarUsuario&id=<?php echo $_SESSION['id']?>"><button><strong>Perfil</strong></button></a>
                 </div>
                 <div>
                     <a href="../view/usuario/cadastrar_vacina.php"><button><strong>Cadastrar uma nova vacina</strong></button></a>
                 </div>
                 <div>
-                    <a href="../../controller/registro_controller.php?acao=listarVacina&id=<?php echo $_SESSION['id']?>"><button><strong>Cadastrar uma nova vacina</strong></button></a>
+                    <a href="../../controller/registro_controller.php?acao=listarVacina&id=<?php echo $_SESSION['id']?>"><button id="activemenu"><strong>Consultar vacinas</strong></button></a>
                 </div>
             </div>
         </div>
         <div class="containerprofile1">
-        <h1>Consulte os dados do seu perfil aqui</h1>
+        <h1>Consulte as suas vacinas aqui</h1>
         <div>
                 <table id="posto">
 		            <tr>
@@ -67,7 +67,7 @@
                         }
                     ?>
 		        </table>
-                <h4>Para editar os dados do seu perfil, clique em cima do Id.</h4>
+                <h4>Para editar os dados da vacina, clique em cima do Id.</h4>
             </div>
        </div>
 </div>

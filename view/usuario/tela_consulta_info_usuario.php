@@ -1,5 +1,5 @@
 <?php
-    //require_once("../../infra/valida_sessao.php");
+    require_once("../infra/valida_sessao.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/corpo.css">
     <link rel="stylesheet" type="text/css" href="../css/table_posto.css">
 		</script>
-    <title>Tela de consulta vacinas</title>
+    <title>Perfil</title>
 </head>
 <body>
 <header>
@@ -37,6 +37,9 @@
                 </div>
                 <div>
                     <a href="../view/usuario/cadastrar_vacina.php"><button><strong>Cadastrar uma nova vacina</strong></button></a>
+                </div>
+                <div>
+                    <a href="../../controller/registro_controller.php?acao=listarVacina&id=<?php echo $_SESSION['id']?>"><button><strong>Consultar vacinas</strong></button></a>
                 </div>
             </div>
         </div>
