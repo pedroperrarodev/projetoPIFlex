@@ -67,3 +67,19 @@ display: flex;
 flex-direction: row;
 
 }
+
+#id_vacina, #id_posto, #data{
+background-color: #04aaa5;
+width: auto;
+height: 4vh;
+margin: 1%;
+padding: 2%;
+border-end-end-radius: 15px;
+border-top-left-radius: 15px;
+border-start-end-radius: 5px;
+border-bottom-left-radius: 5px;
+color: white;
+opacity: 0.9;
+
+}
+

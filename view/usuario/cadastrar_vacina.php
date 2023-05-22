@@ -86,6 +86,7 @@
                       <h1>Cadastre uma nova vacina</h1>
                       <p>Cadastre uma nova vacina abaixo:</p>
                       <hr>
+                      
                       <input type="hidden" name="id_pessoa" id="id_pessoa" value="<?php echo $_SESSION['id']?>">
 
                       <label for="vacina"><b>Nome da vacina</b></label>
