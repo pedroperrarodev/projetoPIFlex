@@ -33,13 +33,13 @@
                     <a href="../view/usuario/homepage.php"><button><strong>Home</strong></button></a>
                 </div>
                 <div>
-                    <a href="../../controller/usuario_controller.php?acao=listarUsuario&id=<?php echo $_SESSION['id']?>"><button id="activemenu"><strong>Perfil</strong></button></a>
+                    <a href="../controller/usuario_controller.php?acao=listarUsuario&id=<?php echo $_SESSION['id']?>"><button id="activemenu"><strong>Perfil</strong></button></a>
                 </div>
                 <div>
                     <a href="../view/usuario/cadastrar_vacina.php"><button><strong>Cadastrar uma nova vacina</strong></button></a>
                 </div>
                 <div>
-                    <a href="../../controller/registro_controller.php?acao=listarVacina&id=<?php echo $_SESSION['id']?>"><button><strong>Consultar vacinas</strong></button></a>
+                    <a href="../controller/registro_controller.php?acao=listarVacina&id=<?php echo $_SESSION['id']?>"><button><strong>Consultar vacinas</strong></button></a>
                 </div>
             </div>
         </div>
