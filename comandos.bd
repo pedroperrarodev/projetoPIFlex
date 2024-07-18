@@ -45,3 +45,27 @@ create table registro_vacina(
     id_posto int(100), 
     data date 
 ); 
+
+
+COMANDOS DO BD
+
+
+INSERT INTO adm_e_usuario (nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email, senha, perfil)
+VALUES
+('admin', 'admin123', 'admin', 'admin', 'admin', 123, '11987654321', 'admin@gmail.com', 'admin123', 1);
+
+
+
+DELETE FROM adm_e_usuario WHERE nome_completo = 'admin';
+
+
+UPDATE usuarios
+SET rua = 'Nova Rua', bairro = 'Novo Bairro', cidade = 'Nova Cidade', numero = 456, num_telefone = '11987654333'
+WHERE id = 1;
+
+
+UPDATE adm_e_usuario SET nome_completo = 'admin', cpf = 'admin123', rua = 'admin123', bairro = 'admin123', cidade = 'admin123', numero = 'admin123', num_telefone = 'admin123', email = 'admin123@gmail.com', senha = 'admin123', perfil = 1 WHERE id = 18;
+
+UPDATE adm_e_usuario SET senha = 'c8a2d029074842a6ef31d8d8b6e10714ee16d679f029986fce0bf2ac6a5ceac2' WHERE id = 18;
+
+
