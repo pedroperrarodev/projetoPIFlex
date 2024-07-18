@@ -52,7 +52,7 @@ COMANDOS DO BD
 
 INSERT INTO adm_e_usuario (nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email, senha, perfil)
 VALUES
-('admin', 'admin123', 'admin', 'admin', 'admin', 123, '11987654321', 'admin@gmail.com', 'admin123', 1);
+('admin3', 'admin3', 'admin3', 'admin3', 'admin3', 123, '11987654321', 'admin@gmail.com', 'admin123', 1);
 
 
 

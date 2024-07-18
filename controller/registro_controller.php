@@ -22,7 +22,7 @@
                     $registro->__set("id_pessoa", $id_pessoa);
 
                     if($registro->cadastrar_registro() == true){
-                        $retorno = ["msg" =>"Vacina cadastrada com sucesso!", "erro"=>"0", "url" => ""];
+                        $retorno = ["msg" =>"Vacina cadastrada com sucesso!", "erro"=>"0", "url" => "../../controller/vacina_controller.php?acao=listar"];
                         echo json_encode($retorno);
                     }
                     else{
