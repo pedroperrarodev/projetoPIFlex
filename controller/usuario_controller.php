@@ -43,7 +43,7 @@
                         $usuario->__set("senha", $senha_hash);
 
                         if($usuario->cadastrar_usuario() == true){
-                            $retorno = ["msg"=> "Usuário cadastrado com sucesso", "erro"=>"0", "url"=>"tela_login.php"];
+                            $retorno = ["msg"=> "Usuário cadastrado com sucesso", "erro"=>"0", "url"=>"tela_login2.php"];
                             echo json_encode($retorno);
                         }
                         else{

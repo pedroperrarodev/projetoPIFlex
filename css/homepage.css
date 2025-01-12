@@ -9,12 +9,11 @@
 /*____________________  HOME PAGE ____________________*/
 
 .homepage{
-  background-color: whitesmoke;
+  background-color: #8fc3f442;
   width: 100vw;
   display: flex;
   padding: 4% 5% 4% 5%;
-  justify-content: center;
-  justify-content: space-evenly;
+  justify-content: right;
 }
 
 

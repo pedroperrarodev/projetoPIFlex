@@ -39,7 +39,8 @@
         <img src="../img/vaccine.png">
       </div>
       <div class="div_cpf">
-        <label for="cpf">CPF</label>
+        
+        <!-- <label for="cpf">CPF</label> -->
         <input type="text" placeholder="Informe seu CPF" name="cpf" id="cpf">
       </div>
       <div class="div_senha">

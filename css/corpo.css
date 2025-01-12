@@ -27,7 +27,7 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 14vh;
-    background-color: #04aaa5;
+    background-color: #09bd90;
 }
 
 header img{
@@ -38,9 +38,9 @@ header img{
 
 /* SIDE BAR OU MENU DE NAVEGAÇÃO                                  */
 .menu{
-    width: 12vw;
+    width: 17vw;
     height: 100vh;
-    background-color: #04aaa5;
+    background-color: #2C3E50;
 }
 
     
@@ -48,6 +48,7 @@ header img{
     display: flex;
     flex-direction: column;
     padding-left: 5%;
+    width: 13vw;
     height: 9vh;
 }
 
@@ -56,12 +57,15 @@ header img{
 
 .sidebar #activemenu{
     border: none;
-    background-color: whitesmoke;
+    background-color: #8fc3f442;
     cursor: pointer;
     width: 12vw;
     height: 8vh;
-    border-end-start-radius: 22px;
-    border-top-left-radius: 22px;
+    /* border-end-start-radius: 22px;
+    border-top-left-radius: 22px; */
+    border-radius: 8px;
+
+
 }
 
 
@@ -69,7 +73,7 @@ header img{
 
 .sidebar button{
     border: none;
-    background-color: #04aaa5;
+    background-color: #2C3E50;
     cursor: pointer;
     width: 12vw;
     height: 8vh;
