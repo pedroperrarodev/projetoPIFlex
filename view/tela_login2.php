@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
 
+
+
+
+
+
+
+
+<!-- DIFERENCIAR $CPF E $SENHA DE CRIANÇÃO DE CONTA E LOGIN POR QUE DA ERRO NA MESMA PAGINA -->
+
+
+
+
+
+
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/login2.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-
-
   <script src="../static/js/jquery-3.6.4.min.js"></script>
-	<script type="text/javascript">
+  <script type="text/javascript">
       $( document ).ready(function() {
 			  });
 
 			  function processa_login(){
 				  var formDados = {
      			 	    cpf: $("#cpf").val(),
-      			 	  senha: $("#senha").val(),
+      			 	    senha: $("#senha").val(),
     			  };
 				
 				    $.ajax({
@@ -36,7 +49,7 @@
 				}
 
 
-/*                 function processa_cadastro(){
+                 function processa_cadastro(){
 				var formDados = {
 					nome_completo: $("#nome_completo").val(),
 					cpf: $("#cpf").val(),
@@ -68,7 +81,7 @@
 						
 				});
 				
-			} */
+			}
 
     </script>
 </head>
@@ -81,17 +94,16 @@
                     <p>Insira seus dados para criar uma conta</p>
 
 
-                                       
                     <input type="text" placeholder="Insira o Nome Completo" name="nome_completo" id="nome_completo">
-                      <input type="text" placeholder="Insira seu CPF" name="cpf" id="cpf">
-                      <input type="text" placeholder="Insira a Rua" name="rua" id="rua">
-                      <input type="text" placeholder="Insira o Bairro" name="bairro" id="bairro">
-                      <input type="text" placeholder="Insira a cidade " name="cidade" id="cidade">
-                      <input type="text" placeholder="Insira o Número da Casa" name="numero" id="numero">
-                      <input type="text" placeholder="Insira o Número de Telefone" name="num_telefone" id="num_telefone">
-                      <input type="text" placeholder="Insira o Email" name="email" id="email">
-                      <input type="password" placeholder="Digita sua Senha" name="senha" id="senha">
-                      <input type="password" placeholder="Repita sua Senha" name="confirmar_senha" id="confirmar_senha">
+                    <input type="text" placeholder="Insira seu CPF" name="cpf" id="cpf">
+                    <input type="text" placeholder="Insira a Rua" name="rua" id="rua">
+                    <input type="text" placeholder="Insira o Bairro" name="bairro" id="bairro">
+                    <input type="text" placeholder="Insira a cidade " name="cidade" id="cidade">
+                    <input type="text" placeholder="Insira o Número da Casa" name="numero" id="numero">
+                    <input type="text" placeholder="Insira o Número de Telefone" name="num_telefone" id="num_telefone">
+                    <input type="text" placeholder="Insira o Email" name="email" id="email">
+                    <input type="password" placeholder="Digita sua Senha" name="senha" id="senha">
+                    <input type="password" placeholder="Repita sua Senha" name="confirmar_senha" id="confirmar_senha">
 
 
                     <button type="button" class="botao_registrar" onclick="processa_cadastro()">Cadastrar</button>

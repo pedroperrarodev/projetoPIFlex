@@ -52,8 +52,9 @@ COMANDOS DO BD
 
 INSERT INTO adm_e_usuario (nome_completo, cpf, rua, bairro, cidade, numero, num_telefone, email, senha, perfil)
 VALUES
-('admin3', 'admin3', 'admin3', 'admin3', 'admin3', 123, '11987654321', 'admin@gmail.com', 'admin123', 1);
+('admin', 'admin123', 'admin', 'admin', 'admin', 123, '11987654321', 'admin123@gmail.com', 'b227bff0d28823d4599a39a5b55725b0811c9c13184087e9a122eb572e6ff139 ', 1);
 
+senha admin123
 
 
 DELETE FROM adm_e_usuario WHERE nome_completo = 'admin';
