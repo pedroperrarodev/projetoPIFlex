@@ -1,5 +1,4 @@
 <?php
-
     require_once ("../model/usuario.php");
 
     class usuario_controller{

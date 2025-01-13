@@ -8,26 +8,6 @@
   <script type="text/javascript">
     $(document).ready(function () {});
 
-    function processa_login() {
-      var formDados = {
-        cpf: $("#cpf").val(),
-        senha: $("#senha").val(),
-      };
-
-      $.ajax({
-        type: "POST",
-        url: "../controller/usuario_controller.php?acao=logar",
-        data: formDados,
-        dataType: "json",
-      }).done(function (dataRetorno) {
-        if (dataRetorno.erro == 0) {
-          window.location.href = dataRetorno.url;
-        } else {
-          alert(dataRetorno.msg);
-        }
-      });
-    }
-
     function processa_cadastro() {
       // Pegando os valores atualizados dos inputs
       var cpfcadastro = $("#cpfcadastro").val();
@@ -74,16 +54,15 @@
       <form>
         <h1>Criar Conta</h1>
         <p>Insira seus dados para criar uma conta</p>
-
         <input type="text" placeholder="Insira o Nome Completo" name="nome_completo" id="nome_completo">
-        <input type="text" placeholder="Insira seu CPF" name="cpfcadastro" id="cpfcadastro">
+        <input type="text" placeholder="Insira seu CPF" name="cpfcadastro" id="cpfcadastro"> <!-- Alterado -->
         <input type="text" placeholder="Insira a Rua" name="rua" id="rua">
         <input type="text" placeholder="Insira o Bairro" name="bairro" id="bairro">
         <input type="text" placeholder="Insira a cidade " name="cidade" id="cidade">
         <input type="text" placeholder="Insira o Número da Casa" name="numero" id="numero">
         <input type="text" placeholder="Insira o Número de Telefone" name="num_telefone" id="num_telefone">
         <input type="text" placeholder="Insira o Email" name="email" id="email">
-        <input type="password" placeholder="Digita sua Senha" name="senhacadastro" id="senhacadastro">
+        <input type="password" placeholder="Digite sua Senha" name="senhacadastro" id="senhacadastro"> <!-- Alterado -->
         <input type="password" placeholder="Repita sua Senha" name="confirmar_senha" id="confirmar_senha">
         <button type="button" class="botao_registrar" onclick="processa_cadastro()">Cadastrar</button>
       </form>
@@ -91,9 +70,8 @@
     <div class="form-container sign-in">
       <form>
         <h1>Fazer Login</h1>
-        <input type="text" placeholder="Informe seu CPF" name="cpf" id="cpf">
-        <input type="password" placeholder="Informe sua Senha" name="senha" id="senha">
-        <input id="containerbutton" type="button" value="Logar" id="botao_login" onclick="processa_login()">
+        <a href="#">Esqueceu a senha?</a>
+        <input id="containerbutton" type="button" value="Logar" id="botao_login" onclick="processa_login()" />
       </form>
     </div>
     <div class="toggle-container">
