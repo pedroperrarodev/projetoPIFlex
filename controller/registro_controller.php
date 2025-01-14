@@ -1,9 +1,6 @@
 <?php
-
     require_once ("../model/registra_vacina.php");
-
     class registro_controller{
-
         public function execute($post, $get){
             $acao = $get['acao'];
             if ($acao == "cadastrar_registro"){

@@ -20,7 +20,6 @@
         private $fabricante;
         private $doenca_alvo;
 
-
         public function __set($atributo, $valor)
         {
            if(property_exists($this,$atributo)){

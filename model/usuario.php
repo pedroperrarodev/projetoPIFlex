@@ -1,6 +1,5 @@
 <?php
     require_once ("../infra/database.php");
-
     class usuario{
        
         private $id;

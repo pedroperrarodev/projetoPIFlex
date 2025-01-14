@@ -1,5 +1,4 @@
 <?php
-
     function valida_sessao(){
         if(session_id() == ''){
             session_start();

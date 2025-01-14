@@ -1,8 +1,6 @@
 <?php
     require_once "../model/Vacina.php";
-
     class VacinaController{
-        
         public function execute($post, $get){
             $acao = $get["acao"];
 

@@ -1,9 +1,6 @@
 <?php
-
     require_once ("../model/admin.php");
-
     class admin_controller{
-
         public function execute($post, $get){
             $acao = $get['acao'];
             if ($acao == "cadastrar_admin"){

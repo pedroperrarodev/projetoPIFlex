@@ -1,8 +1,6 @@
 <?php
     require_once ("../model/usuario.php");
-
     class usuario_controller{
-
         public function execute($post, $get){
             $acao = $get['acao'];
                 if ($acao == "cadastrar"){
