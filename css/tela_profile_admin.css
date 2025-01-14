@@ -64,39 +64,6 @@ header img{
   height: 9vh;
 }
 
-/* MENU ATIVO */
-
-
-.sidebar #activemenu{
-  border: none;
-  background-color: whitesmoke;
-  cursor: pointer;
-  width: 15vw;
-  height: 8vh;
-  border-end-start-radius: 22px;
-  border-top-left-radius: 22px;
-}
-
-
-/* MENUS NAO ATIVOS */
-
-.sidebar button{
-  border: none;
-  background-color: #04aaa5;
-  cursor: pointer;
-  width: 12vw;
-  height: 8vh;
-  border-end-start-radius: 22px;
-  border-top-left-radius: 22px;
-}
-
-/* BOTAO SAIR  */
-
-
-.botaosair{
-  padding: 1%;
-}
-
 .noselect {
   -webkit-touch-callout: none;
     -webkit-user-select: none;
