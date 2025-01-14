@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/cadastro_nova_vacina.css">
     <link rel="stylesheet" type="text/css" href="../../css/tela_profile_admin.css">
-    <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/corpo2.css">
     
     <script src="../../static/js/jquery-3.6.4.min.js"></script> 
     <script type="text/javascript">
@@ -92,7 +92,6 @@
                     <div class="formulariocadastro">
                       <h1>Cadastre uma nova vacina</h1>
                       <p>Cadastre uma nova vacina abaixo:</p>
-                      <hr>
 
                       <label for="email"><b>Nome da vacina</b></label>
                       <input type="text" placeholder="Insira o Nome da Vacina" name="nome_vacina" id="nome_vacina">

@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <HEAD:view/usuario/index.html></HEAD:view>
     <!-- CSS PARA O HTML -->
-    <link rel="stylesheet" type="text/css" href="../../css/homepage.css">
-    <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/homepage2.css">
+    <link rel="stylesheet" type="text/css" href="../../css/corpo2.css">
 
     <!-- CSS PARA O PHP CONTROLLER -->
-    <link rel="stylesheet" type="text/css" href="../css/homepage.css">
-    <link rel="stylesheet" type="text/css" href="../css/corpo.css">
+    <link rel="stylesheet" type="text/css" href="../css/homepage2.css">
+    <link rel="stylesheet" type="text/css" href="../css/corpo2.css">
 
     <!-- TELA DE USUARIO -->
     <title>Home</title>
@@ -32,35 +32,34 @@
             </svg></span></button></a>
 
         </div>
-
     </header>
 
     <div id="main">
-    <div class="menu">
-            <div class="sidebar">
-                <div>
-                    <a href="#"><button id="activemenu"><strong>Perfil</strong></button></a>
-                </div>
-                <div>
-                    <a href="../../view/admin/tela_cadastro_vacina.php"><button><strong>Cadastro de Vacinas</strong></button></a>
-                </div>
-                <div>
-                    <a href="../../controller/admin_controller.php?acao=listarVacina"><button><strong>Consulta vacinas cadastrados</strong></button></a>
-                </div>
-                <div>
-                    <a href="tela_cadastro_admin.php"><button><strong>Cadastro de adminstradores</strong></button></a>
-                </div>
-                <div>
-                    <a href="../../controller/admin_controller.php?acao=listarAdminstradores"><button><strong>Consulta adminstradores cadastrados</strong></button></a>
-                </div>
-                <div>
-                    <a href="tela_cadastro_posto_saude.php"><button><strong>Cadastro de Posto de Sáude</strong></button></a>
-                </div>
-                <div>
-                    <a href="../../controller/admin_controller.php?acao=listarPostos"><button><strong>Consulta postos cadastrados</strong></button></a>
+        <div class="menu">
+                <div class="sidebar">
+                    <div>
+                        <a href="#"><button id="activemenu"><strong>Perfil</strong></button></a>
+                    </div>
+                    <div>
+                        <a href="../../view/admin/tela_cadastro_vacina.php"><button><strong>Cadastro de Vacinas</strong></button></a>
+                    </div>
+                    <div>
+                        <a href="../../controller/admin_controller.php?acao=listarVacina"><button><strong>Consulta vacinas cadastrados</strong></button></a>
+                    </div>
+                    <div>
+                        <a href="tela_cadastro_admin.php"><button><strong>Cadastro de adminstradores</strong></button></a>
+                    </div>
+                    <div>
+                        <a href="../../controller/admin_controller.php?acao=listarAdminstradores"><button><strong>Consulta adminstradores cadastrados</strong></button></a>
+                    </div>
+                    <div>
+                        <a href="tela_cadastro_posto_saude.php"><button><strong>Cadastro de Posto de Sáude</strong></button></a>
+                    </div>
+                    <div>
+                        <a href="../../controller/admin_controller.php?acao=listarPostos"><button><strong>Consulta postos cadastrados</strong></button></a>
+                    </div>
                 </div>
             </div>
-        </div>
 
 
   

@@ -1,0 +1,48 @@
+/*                  CONFIGURAÇÕES GERAIS                 */
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+/*____________________  HOME PAGE ____________________*/
+
+.homepage{
+  /* background-color: #8fc3f442; */
+  width: 80vw;
+  display: flex;
+  padding: 4% 5% 4% 5%;
+  justify-content: right;
+}
+
+
+/*____________________  PÁGINA DE PERFIL             ____________________*/
+
+.homepage img{
+  width: 128px;
+  display: flex;
+}
+.homepage h3{
+  display: flex;
+  
+}
+
+#iconeconfig{
+display: flex;
+width: 48px;
+}
+
+#buttonconfig {
+width: 48px;
+height: 48px;
+background-color: whitesmoke;  
+border: none;
+}
+
+#buttonconfig:hover {
+background-color: rgb(224, 224, 224);
+border-radius: 20px;
+color: white;
+cursor: pointer;
+}
