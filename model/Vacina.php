@@ -9,7 +9,6 @@ class Vacina
     private $fabricante;
     private $funcao_vacina;
 
-
     public function __set($atributo, $valor)
     {
         if (property_exists($this, $atributo)) {
@@ -46,7 +45,6 @@ class Vacina
 
     }
 
-
     public function buscarPorId($id)
     {
         $db = new Database();
@@ -63,9 +61,6 @@ class Vacina
         return $dados;
     }
 
-
-    
-
     public function deletar($id)
     {
         $db = new Database();
@@ -80,7 +75,6 @@ class Vacina
         $db->close();
         return  true;
     }
-
 
     public function listarVacinas($pagina = null, $contador = 100)
     {
