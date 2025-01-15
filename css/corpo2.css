@@ -13,6 +13,11 @@
     min-height: 100vh;
 }
 
+body{
+    /* background-color: #8fc3f442; */
+    background: linear-gradient(to right, #fbdfdf, #9da3b5);
+}
+
 /* HEADER CABEÇALHO E LOGO                 */
 
 #logo{
@@ -37,9 +42,6 @@ header img{
     height: 128px;
 }
 
-body{
-    background-color: #8fc3f442;
-}
 
 /* SIDE BAR OU MENU DE NAVEGAÇÃO                                  */
 .menu{
@@ -66,13 +68,14 @@ body{
     cursor: pointer;
     width: 12vw;
     height: 8vh;
-
+    /* border-bottom: 4px outset; */
+    border-right: 2px outset;
 }
 #activemenu:hover{
     background-color: #f9f9f9;
     box-shadow: 12px 12px 12px rgba(90, 166, 238, 0.1), -5px -5px 10px grey ;
+    border-bottom: none;
 }
-
 
 /* MENUS NAO ATIVOS */
 
@@ -83,13 +86,13 @@ body{
     width: 12vw;
     height: 8vh;
     border-radius: 40px 10px;
-
-
+    border-right: 2px outset;
 }
 
 .sidebar button:hover{
     background-color: #f9f9f9;
     box-shadow: 12px 12px 12px rgba(90, 166, 238, 0.1), -5px -5px 10px grey ;
+    border-bottom: none;
 }
 
 /* BOTAO SAIR  */

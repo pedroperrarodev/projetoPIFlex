@@ -112,5 +112,12 @@
     </div>
   </div>
   <script src="../js/script.js"></script>
+  <script>
+        document.getElementById("senha").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") { // Verifica se a tecla pressionada é Enter
+              processa_login();
+            }
+        });
+    </script>
 </body>
 </html>
