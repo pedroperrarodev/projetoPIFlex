@@ -6,6 +6,14 @@
     text-decoration: none;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Impede rolagem extra */
+  }
+  
 #main{
     display: flex;
     width: 100vw;
@@ -15,7 +23,7 @@
 
 body{
     /* background-color: #8fc3f442; */
-    background: linear-gradient(to right, #fbdfdf, #9da3b5);
+    background: linear-gradient(45deg, rgba(128, 128, 128, 0.5), rgba(245, 245, 245, 1));
 }
 
 /* HEADER CABEÇALHO E LOGO                 */
@@ -33,7 +41,7 @@ header{
     align-items: center;
     height: 14vh;
     background-color: #8fc3f442;
-    border-bottom: 3px outset #8fb5c3;
+    border-bottom: 2px outset #8fb5c3;
     margin-bottom: 5vh;
 }
 
@@ -54,49 +62,48 @@ header img{
 .sidebar div{
     display: flex;
     flex-direction: column;
-    padding-left: 15%;
+    padding-left: 12%;
     width: 13vw;
     height: 9vh;
+    border: none;
 }
 
 /* MENU ATIVO */
 
 
 .sidebar #activemenu{
-    border: none;
-    background-color: #8fc3f442;
+    background-color: rgba(245, 245, 245, 0.8);
     cursor: pointer;
     width: 12vw;
     height: 8vh;
-    /* border-bottom: 4px outset; */
-    border-right: 2px outset;
+    
 }
 #activemenu:hover{
     background-color: #f9f9f9;
     box-shadow: 12px 12px 12px rgba(90, 166, 238, 0.1), -5px -5px 10px grey ;
-    border-bottom: none;
+    
 }
 
 /* MENUS NAO ATIVOS */
 
 .sidebar button{
-    border: none;
-    background-color: #8fc3f442;
+    background-color: #8fc3f425;
     cursor: pointer;
     width: 12vw;
     height: 8vh;
-    border-radius: 40px 10px;
-    border-right: 2px outset;
+    border: none;
+    border-bottom: 2px outset grey;
+    border-start-end-radius: 5px;
+    border-start-start-radius: 5px;
+    
 }
 
 .sidebar button:hover{
     background-color: #f9f9f9;
     box-shadow: 12px 12px 12px rgba(90, 166, 238, 0.1), -5px -5px 10px grey ;
-    border-bottom: none;
 }
 
 /* BOTAO SAIR  */
-
 
 .botaosair{
   padding: 1%;
@@ -110,7 +117,6 @@ header img{
         -ms-user-select: none;
             user-select: none;
 		-webkit-tap-highlight-color: transparent;
-
 
     width: 150px;
     height: 50px;
