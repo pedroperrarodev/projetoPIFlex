@@ -4,13 +4,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <HEAD:view/usuario/index.html></HEAD:view>
     <!-- CSS PARA O HTML -->
-    <link rel="stylesheet" type="text/css" href="../../css/homepage.css">
-    <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/homepage2.css">
+    <link rel="stylesheet" type="text/css" href="../../css/corpo2.css">
 
     <title>Home</title>
 </head>
@@ -18,7 +20,7 @@
     <header>
         <div id="logo">
             <!-- <a><img src="../../img/Horizontal Logo Projeto PI fundo transp.png"></a> -->
-            <h1>Logo</h1>
+            <h1>Projeto</h1>
         </div>
         <div class="botaosair">
             <a href="../../controller/usuario_controller.php?acao=logout"><button class="noselect"><span class='text'>Sair</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
