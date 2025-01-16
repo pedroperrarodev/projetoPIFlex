@@ -23,8 +23,9 @@ html, body {
 }
 
 body{
-    /* background-color: #8fc3f442; */
-    background: linear-gradient(45deg, rgba(128, 128, 128, 0.5), rgba(245, 245, 245, 1));
+    /* background: linear-gradient(45deg, rgba(128, 128, 128, 0.5), rgba(245, 245, 245, 1)); */
+    background: linear-gradient(45deg, rgba(86, 74, 84, 0.4), rgba(87, 81, 93, 0.4));
+    
 }
 
 /* HEADER CABEÇALHO E LOGO                 */

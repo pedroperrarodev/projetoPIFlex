@@ -8,10 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
     <!-- IMPORT DE CSS PARA HTML -->
     <link rel="stylesheet" type="text/css" href="../css/cadastro_posto_saude.css">
     <link rel="stylesheet" type="text/css" href="../css/tela_consulta_vacina.css">
-    <link rel="stylesheet" type="text/css" href="../css/corpo.css">
+    <link rel="stylesheet" type="text/css" href="../css/corpo2.css">
     <link rel="stylesheet" type="text/css" href="../css/table_posto.css">
 
 
@@ -21,7 +24,7 @@
 			function excluir(id){
 				retorno = confirm("Tem certeza que deseja excluir o ID="+id+" ?")
 				if(retorno){
-					alert("Excluindoo!");
+					alert("Excluindo!");
 					document.location.href = "../controller/admin_controller.php?acao=deletar_vacina&id="+id;
 				}
 			}
@@ -70,7 +73,7 @@
         <div class="containerprofile1">
         <h1>Consulte as vacinas cadastradas aqui</h1>
         <div>
-                <table id="posto" border="1">
+                <table id="posto" >
 		            <tr>
                         <td>ID</td>
 			            <td>Nome da Vacina</td>
@@ -84,7 +87,7 @@
                             echo "<td>".$dados[$i]["nome_vacina"]."</td>";
                             echo "<td>".$dados[$i]["fabricante"]."</td>";
                             echo "<td>".$dados[$i]["doenca_alvo"]."</td>";
-                            echo "<td align='center'><a href='#' onclick='excluir(".$dados[$i]["id"].")'>x</a></td>";
+                            echo "<td align='center'><a href='#' class='delete-btn' onclick='excluir(".$dados[$i]["id"].")'><i class='fa fa-trash'></i></a></td>";
                             echo "</tr>";
                         }
                     ?>
