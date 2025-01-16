@@ -4,9 +4,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import de Icones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <HEAD:view/usuario/index.html></HEAD:view>
     <!-- CSS PARA O HTML -->
     <link rel="stylesheet" type="text/css" href="../../css/homepage2.css">
@@ -23,7 +28,7 @@
     <header>
         <div id="logo">
             <!-- <a><img src="../../img/Horizontal Logo Projeto PI fundo transp.png"></a> -->
-            <h1>Logo</h1>
+            <h1>Projeto</h1>
         </div>
         <!-- <button>Sair</button> -->
         <div class="botaosair">
@@ -72,8 +77,8 @@
             
         </div>
 
-        <!-- <a href="tela_configusuario.html"><img id="iconeconfig" src="../../img/iconconfig.png"></a> -->
-        <a href="../../controller/admin_controller.php?acao=listarAdminstradores"><button id="buttonconfig"><img id="iconeconfig" src="../../img/iconconfig.png"></button></a>
+        <a href="../../controller/admin_controller.php?acao=listarAdminstradores"><button id="buttonconfig"><i class="fa-solid fa-gears fa-2x"></i></button></a>
+
 
        </div>
 

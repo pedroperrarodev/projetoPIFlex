@@ -25,7 +25,7 @@
 <body>
 <header>
         <div id="logo">
-            <h1>Logo</h1>
+            <h1>Projeto</h1>
         </div>
         <div class="botaosair">
             <a href="../controller/usuario_controller.php?acao=logout"><button class="noselect"><span class='text'>Sair</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
