@@ -1,5 +1,5 @@
 <?php
-    //require_once("../../infra/valida_sessao.php");
+    require_once("../infra/valida_sessao.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,8 +7,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
     <link rel="stylesheet" type="text/css" href="../css/tela_consulta_administradores.css">
-    <link rel="stylesheet" type="text/css" href="../css/corpo.css">
+    <link rel="stylesheet" type="text/css" href="../css/corpo2.css">
     <link rel="stylesheet" type="text/css" href="../css/table_posto.css">
     <script src="../../static/js/jquery-3.6.4.min.js"></script> 
     <script type="text/javascript">
@@ -89,7 +93,7 @@
                             echo "<td>".$dados[$i]["numero"]."</td>";
                             echo "<td>".$dados[$i]["num_telefone"]."</td>";
                             echo "<td>".$dados[$i]["email"]."</td>";
-                            echo "<td align='center'><a href='#' onclick='excluir(".$dados[$i]["id"].")'>x</a></td>";
+                            echo "<td align='center'><a href='#' class='delete-btn' onclick='excluir(".$dados[$i]["id"].")'><i class='fa fa-trash'></i></a></td>";
                             echo "</tr>";
                         }
                     ?>

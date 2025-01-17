@@ -1,5 +1,6 @@
 <?php
-    //require_once("../../infra/valida_sessao.php");
+    /* Cuidado com o diretório, se for colocado dá erro */
+    require_once("../infra/valida_sessao.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

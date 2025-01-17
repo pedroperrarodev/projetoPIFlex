@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/cadastro.css">
     <link rel="stylesheet" type="text/css" href="../../css/tela_cadastro_admin.css">
-    <link rel="stylesheet" type="text/css" href="../../css/corpo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/corpo2.css">
     <script src="../../static/js/jquery-3.6.4.min.js"></script> 
     <script type="text/javascript">
         $( document ).ready(function() {
@@ -95,12 +95,10 @@
         <div class="bodycadastro">
         <div class="maincadastro">
             <div class="telacadastro">
-                <a><img src=""></img></a>
                 <form action="../../controller/admin_controller.php?acao=cadastrar_admin" method="post">
                     <div class="formulariocadastro">
                       <h1>Cadastre um novo administrador</h1>
                       <p>Por favor preencha o formulário para cadastrar um novo administrador.</p>
-                      <hr>
 
                       <label for="nome_completo"><b>Nome Completo</b></label>
                       <input type="text" placeholder="Insira o Nome Completo" name="nome_completo" id="nome_completo">
@@ -131,7 +129,7 @@
                   
                       <label for="confirmar_senha"><b>Confirmar Senha</b></label>
                       <input type="password" placeholder="Repita sua Senha" name="confirmar_senha" id="confirmar_senha">
-                      <hr>
+
                       <button type="button" class="botao_registrar" onclick="processa_cadastro()">Cadastrar</button>
                     </div>
                   </form>
