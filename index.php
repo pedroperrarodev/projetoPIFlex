@@ -1,3 +1,3 @@
 <?php
-    header("Location: view/tela_login.php");
+    header("Location: view/tela_login2.php");
 ?>

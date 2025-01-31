@@ -5,10 +5,10 @@
             $acao = $get['acao'];
             if ($acao == "cadastrar_admin"){
                     $admin = new admin();
-    
+
                     $nome_completo = $post["nome_completo"];
                     $admin->__set("nome_completo", $nome_completo);
-    
+
                     $cpf = $post["cpf"];
                     $admin->__set("cpf", $cpf);
 

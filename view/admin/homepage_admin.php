@@ -1,6 +1,7 @@
 <?php
-    require_once("../../infra/valida_sessao.php");
-?>
+    require_once("../../infra/valida_sessao.php"); 
+
+    ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -67,18 +68,16 @@
             </div>
 
 
-  
        <div class="homepage">
         <div>
             <a><img src="../../img/profileicon.png"></a><br>
-            <h3>Bem vindo</h3>
-            <p>Nome de profile</p>
-            <p>Informações de profile</p>
+            <h3>Bem vindo - <?php echo $_SESSION['cpf']; ?></h3>
+
+            <!-- <p>Informações de profile</p> -->
             
         </div>
 
         <a href="../../controller/admin_controller.php?acao=listarAdminstradores"><button id="buttonconfig"><i class="fa-solid fa-gears fa-2x"></i></button></a>
-
 
        </div>
 
